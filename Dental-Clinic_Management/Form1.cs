@@ -34,7 +34,13 @@ namespace Dental_Clinic_Management
             closeFormChecker();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            closeFormChecker();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
