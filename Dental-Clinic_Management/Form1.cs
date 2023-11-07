@@ -59,6 +59,11 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 
     }

@@ -66,6 +66,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
@@ -81,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,88 +109,90 @@
             this.toolStripSeparator6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(161, 985);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(181, 985);
             this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_512__1_;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton1.Text = "Dashboard";
             this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(0, 6);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_person_512;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton2.Text = "Patient";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(0, 6);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dentist_512__1_;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton3.Text = "Dentists";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(0, 6);
             // 
             // toolStripButton4
             // 
             this.toolStripButton4.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_appointment_512__1_;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton4.Text = "Appointments";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(0, 6);
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_512__1_;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton5.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton5.Text = "Billings";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(0, 6);
             // 
             // toolStripButton6
             // 
             this.toolStripButton6.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_setting_512__1_;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(159, 24);
+            this.toolStripButton6.Size = new System.Drawing.Size(0, 24);
             this.toolStripButton6.Text = "Settings";
             this.toolStripButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(0, 6);
             // 
             // panel4
             // 
@@ -451,6 +455,17 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "Appointments ";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.pictureBox9.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(12, 277);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(131, 100);
+            this.pictureBox9.TabIndex = 17;
+            this.pictureBox9.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -482,6 +497,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1575, 985);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -518,6 +534,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -565,6 +582,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 
