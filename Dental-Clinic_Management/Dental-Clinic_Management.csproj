@@ -114,5 +114,23 @@
   <ItemGroup>
     <None Include="Resources\3-dentist.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\completed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointments.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
