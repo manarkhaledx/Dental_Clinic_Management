@@ -30,31 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.a = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -66,27 +61,32 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -100,17 +100,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(603, 176);
             this.panel4.TabIndex = 6;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.completed;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
             // 
             // label10
             // 
@@ -146,17 +135,6 @@
             this.panel1.Size = new System.Drawing.Size(603, 176);
             this.panel1.TabIndex = 12;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.cancelled;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -190,17 +168,6 @@
             this.panel2.Size = new System.Drawing.Size(603, 176);
             this.panel2.TabIndex = 13;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -232,17 +199,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(603, 176);
             this.panel3.TabIndex = 14;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox6.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.patient;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
             // 
             // label5
             // 
@@ -276,17 +232,6 @@
             this.panel5.Size = new System.Drawing.Size(603, 176);
             this.panel5.TabIndex = 15;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox7.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.dentist;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -318,17 +263,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(603, 176);
             this.panel6.TabIndex = 16;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox8.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.billing;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(18, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(153, 155);
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
             // 
             // label9
             // 
@@ -380,6 +314,16 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(375, 1238);
             this.panel8.TabIndex = 22;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(880, 1022);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -558,14 +502,69 @@
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox8.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.billing;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.dentist;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.patient;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.cancelled;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1513, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1494, -12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 69);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -582,15 +581,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button10
+            // pictureBox3
             // 
-            this.button10.Location = new System.Drawing.Point(880, 1022);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.completed;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(153, 155);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // DashboardForm
             // 
@@ -620,28 +620,28 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

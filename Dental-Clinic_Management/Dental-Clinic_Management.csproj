@@ -168,5 +168,20 @@
   <ItemGroup>
     <None Include="Resources\Grey_close_x.svg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2650853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grey_close_x.svg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8212743.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
