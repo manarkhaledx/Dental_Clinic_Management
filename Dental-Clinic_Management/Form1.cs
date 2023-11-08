@@ -84,6 +84,12 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AddRecordForm addRecordForm = new AddRecordForm();
+            addRecordForm.Show();
+        }
     }
 
     }

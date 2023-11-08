@@ -15,12 +15,34 @@ namespace Dental_Clinic_Management
         public AddRecordForm()
         {
             InitializeComponent();
+          
         }
 
-        private void AddRecordForm_Load(object sender, EventArgs e)
+
+        private void AddRecordForm_Load(object sender, EventArgs e)  //make the form always appear in the right side & centered 
         {
+            // Calculate the X-coordinate to position the form on the right side
+            int x = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
 
+            // Calculate the Y-coordinate to center the form vertically
+            int y = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
+
+            // Set the form's location
+            this.Location = new System.Drawing.Point(x, y);
         }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                // Set the shadow color to light gray
+                cp.ClassStyle |= 0x20000; // CS_DROPSHADOW
+                return cp;
+            }
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -70,6 +92,16 @@ namespace Dental_Clinic_Management
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
