@@ -138,5 +138,23 @@
   <ItemGroup>
     <None Include="Resources\icons8-dashboard-32 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dentist-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-appointment-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cash-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-setting-50 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
