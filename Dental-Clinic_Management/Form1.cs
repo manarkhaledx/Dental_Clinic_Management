@@ -79,6 +79,11 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
