@@ -103,5 +103,10 @@ namespace Dental_Clinic_Management
         {
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
