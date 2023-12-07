@@ -44,13 +44,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -306,69 +307,77 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PatientID,
-            this.Name,
-            this.Phone,
-            this.Email,
-            this.Address,
-            this.Gender,
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(556, 63);
+            this.patientID,
+            this.fristName,
+            this.lastName,
+            this.gender,
+            this.phone,
+            this.address,
+            this.email,
+            this.dOB});
+            this.dataGridView1.Location = new System.Drawing.Point(490, 131);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1111, 625);
+            this.dataGridView1.Size = new System.Drawing.Size(1261, 573);
             this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // PatientID
+            // patientID
             // 
-            this.PatientID.HeaderText = "Patient ID";
-            this.PatientID.MinimumWidth = 8;
-            this.PatientID.Name = "PatientID";
-            this.PatientID.Width = 150;
+            this.patientID.HeaderText = "PatientID";
+            this.patientID.MinimumWidth = 8;
+            this.patientID.Name = "patientID";
+            this.patientID.Width = 150;
             // 
-            // Name
+            // fristName
             // 
-            this.Name.HeaderText = "Frist Name";
-            this.Name.MinimumWidth = 8;
-            this.Name.Name = "Name";
-            this.Name.Width = 150;
+            this.fristName.HeaderText = "FristName";
+            this.fristName.MinimumWidth = 8;
+            this.fristName.Name = "fristName";
+            this.fristName.Width = 150;
             // 
-            // Phone
+            // lastName
             // 
-            this.Phone.HeaderText = "Last Name";
-            this.Phone.MinimumWidth = 8;
-            this.Phone.Name = "Phone";
-            this.Phone.Width = 150;
+            this.lastName.HeaderText = "LastName";
+            this.lastName.MinimumWidth = 8;
+            this.lastName.Name = "lastName";
+            this.lastName.Width = 150;
             // 
-            // Email
+            // gender
             // 
-            this.Email.HeaderText = "Date Of Birth";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.Width = 150;
+            this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 8;
+            this.gender.Name = "gender";
+            this.gender.Width = 150;
             // 
-            // Address
+            // phone
             // 
-            this.Address.HeaderText = "Phone";
-            this.Address.MinimumWidth = 8;
-            this.Address.Name = "Address";
-            this.Address.Width = 150;
+            this.phone.HeaderText = "Phone";
+            this.phone.MinimumWidth = 8;
+            this.phone.Name = "phone";
+            this.phone.Width = 150;
             // 
-            // Gender
+            // address
             // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 8;
-            this.Gender.Name = "Gender";
-            this.Gender.Width = 150;
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 8;
+            this.address.Name = "address";
+            this.address.Width = 150;
             // 
-            // Column1
+            // email
             // 
-            this.Column1.HeaderText = "Address";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 8;
+            this.email.Name = "email";
+            this.email.Width = 150;
+            // 
+            // dOB
+            // 
+            this.dOB.HeaderText = "DOB";
+            this.dOB.MinimumWidth = 8;
+            this.dOB.Name = "dOB";
+            this.dOB.Width = 150;
             // 
             // Patient
             // 
@@ -410,12 +419,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PatientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOB;
     }
 }
