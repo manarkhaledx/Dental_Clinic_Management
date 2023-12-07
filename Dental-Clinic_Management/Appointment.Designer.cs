@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class Patient
+    partial class Appointment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.patientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -46,35 +37,39 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel7.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.appointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel7
+            // dOB
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.pictureBox9);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(422, 1163);
-            this.panel7.TabIndex = 28;
+            this.dOB.HeaderText = "DOB";
+            this.dOB.MinimumWidth = 8;
+            this.dOB.Name = "dOB";
+            this.dOB.Width = 150;
             // 
             // panel8
             // 
@@ -90,84 +85,8 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(422, 1163);
+            this.panel8.Size = new System.Drawing.Size(422, 1133);
             this.panel8.TabIndex = 22;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.patientID,
-            this.fristName,
-            this.lastName,
-            this.gender,
-            this.phone,
-            this.address,
-            this.email,
-            this.dOB});
-            this.dataGridView1.Location = new System.Drawing.Point(490, 131);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1261, 573);
-            this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // patientID
-            // 
-            this.patientID.HeaderText = "PatientID";
-            this.patientID.MinimumWidth = 8;
-            this.patientID.Name = "patientID";
-            this.patientID.Width = 150;
-            // 
-            // fristName
-            // 
-            this.fristName.HeaderText = "FristName";
-            this.fristName.MinimumWidth = 8;
-            this.fristName.Name = "fristName";
-            this.fristName.Width = 150;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "LastName";
-            this.lastName.MinimumWidth = 8;
-            this.lastName.Name = "lastName";
-            this.lastName.Width = 150;
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Gender";
-            this.gender.MinimumWidth = 8;
-            this.gender.Name = "gender";
-            this.gender.Width = 150;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Phone";
-            this.phone.MinimumWidth = 8;
-            this.phone.Name = "phone";
-            this.phone.Width = 150;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 8;
-            this.address.Name = "address";
-            this.address.Width = 150;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 8;
-            this.email.Name = "email";
-            this.email.Width = 150;
-            // 
-            // dOB
-            // 
-            this.dOB.HeaderText = "DOB";
-            this.dOB.MinimumWidth = 8;
-            this.dOB.Name = "dOB";
-            this.dOB.Width = 150;
             // 
             // button9
             // 
@@ -289,6 +208,60 @@
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
             // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 8;
+            this.address.Name = "address";
+            this.address.Width = 150;
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Phone";
+            this.phone.MinimumWidth = 8;
+            this.phone.Name = "phone";
+            this.phone.Width = 150;
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 8;
+            this.gender.Name = "gender";
+            this.gender.Width = 150;
+            // 
+            // lastName
+            // 
+            this.lastName.HeaderText = "LastName";
+            this.lastName.MinimumWidth = 8;
+            this.lastName.Name = "lastName";
+            this.lastName.Width = 150;
+            // 
+            // fristName
+            // 
+            this.fristName.HeaderText = "FristName";
+            this.fristName.MinimumWidth = 8;
+            this.fristName.Name = "fristName";
+            this.fristName.Width = 150;
+            // 
+            // patientID
+            // 
+            this.patientID.HeaderText = "PatientID";
+            this.patientID.MinimumWidth = 8;
+            this.patientID.Name = "patientID";
+            this.patientID.Width = 150;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(1987, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 56);
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -325,6 +298,18 @@
             this.button2.Text = "DashBoard";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2047, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 56);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -343,6 +328,13 @@
             this.button1.Text = "DashBoard";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 8;
+            this.email.Name = "email";
+            this.email.Width = 150;
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -355,55 +347,81 @@
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox1
+            // panel7
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1742, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 56);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.button3);
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.pictureBox9);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(422, 1133);
+            this.panel7.TabIndex = 31;
             // 
-            // pictureBox2
+            // dataGridView1
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1682, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 56);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.appointmentID,
+            this.time,
+            this.date});
+            this.dataGridView1.Location = new System.Drawing.Point(905, 60);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(515, 307);
+            this.dataGridView1.TabIndex = 32;
             // 
-            // Patient
+            // appointmentID
+            // 
+            this.appointmentID.HeaderText = "AppointmentID";
+            this.appointmentID.MinimumWidth = 8;
+            this.appointmentID.Name = "appointmentID";
+            this.appointmentID.Width = 150;
+            // 
+            // time
+            // 
+            this.time.HeaderText = "Time";
+            this.time.MinimumWidth = 8;
+            this.time.Name = "time";
+            this.time.Width = 150;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Date";
+            this.date.MinimumWidth = 8;
+            this.date.Name = "date";
+            this.date.Width = 150;
+            // 
+            // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1803, 1163);
+            this.ClientSize = new System.Drawing.Size(2114, 1133);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "Patient";
-            this.Text = "Patient";
-            this.panel7.ResumeLayout(false);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel7);
+            this.Name = "Appointment";
+            this.Text = "Appointment";
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOB;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
@@ -412,20 +430,23 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientID;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOB;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }
