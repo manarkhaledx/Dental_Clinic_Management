@@ -219,5 +219,14 @@
   <ItemGroup>
     <None Include="Resources\8212743.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiddenEyeIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326_file_guardar_save_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibleEyeIcon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

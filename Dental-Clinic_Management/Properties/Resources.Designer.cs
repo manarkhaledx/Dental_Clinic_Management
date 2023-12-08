@@ -123,6 +123,16 @@ namespace Dental_Clinic_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hiddenEyeIcon {
+            get {
+                object obj = ResourceManager.GetObject("hiddenEyeIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_appointment_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-appointment-50 (1)", resourceCulture);
@@ -276,6 +286,26 @@ namespace Dental_Clinic_Management.Properties {
         internal static System.Drawing.Bitmap patient {
             get {
                 object obj = ResourceManager.GetObject("patient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save {
+            get {
+                object obj = ResourceManager.GetObject("Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visibleEyeIcon {
+            get {
+                object obj = ResourceManager.GetObject("visibleEyeIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

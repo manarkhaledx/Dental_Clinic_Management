@@ -16,5 +16,25 @@ namespace Dental_Clinic_Management
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (passTxtBox.UseSystemPasswordChar == true)
+            {
+                passTxtBox.UseSystemPasswordChar = false;
+                eyeBox.Image = Properties.Resources.visibleEyeIcon;
+            }
+            else
+            {
+                passTxtBox.UseSystemPasswordChar = true;
+                eyeBox.Image = Properties.Resources.hiddenEyeIcon;
+            }
+            //end
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
