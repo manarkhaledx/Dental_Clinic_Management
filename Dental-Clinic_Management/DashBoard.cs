@@ -29,16 +29,6 @@ namespace Dental_Clinic_Management
 
 
         }
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            closeFormChecker();
-        }
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            closeFormChecker();
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -99,6 +89,11 @@ namespace Dental_Clinic_Management
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitPictureBox_Click(object sender, EventArgs e)
+        {
+            closeFormChecker();
         }
     }
 
