@@ -44,10 +44,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.appointmentsPanel = new System.Windows.Forms.Panel();
@@ -69,7 +69,7 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.a = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
@@ -96,7 +96,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.panel8.Controls.Add(this.button4);
+            this.panel8.Controls.Add(this.button5);
             this.panel8.Controls.Add(this.button8);
             this.panel8.Controls.Add(this.button7);
             this.panel8.Controls.Add(this.button6);
@@ -316,24 +316,6 @@
             this.pictureBox4.TabIndex = 34;
             this.pictureBox4.TabStop = false;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_setting_50__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 599);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(422, 78);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Prescreption";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(1132, 971);
@@ -366,6 +348,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(678, 220);
             this.panel6.TabIndex = 42;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(493, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 38);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Billings";
             // 
             // pictureBox8
             // 
@@ -604,15 +596,23 @@
             this.a.TabIndex = 1;
             this.a.Text = "Completed Appointments";
             // 
-            // label11
+            // button5
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(493, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 38);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Billings";
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(-3, 605);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(422, 78);
+            this.button5.TabIndex = 25;
+            this.button5.Text = "Prescreption";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // dentistForm
             // 
@@ -682,7 +682,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
@@ -708,5 +707,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button5;
     }
 }

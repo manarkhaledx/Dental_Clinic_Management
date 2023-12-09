@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class Billing
+    partial class settings
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
-            this.panel8 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.allergiesLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.saveButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,16 +47,8 @@
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.billingDataGridView = new System.Windows.Forms.DataGridView();
-            this.appointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billingDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.pickDateLabel = new System.Windows.Forms.Label();
-            this.filterButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -59,31 +60,19 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billingDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.panel8.Controls.Add(this.panel1);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(422, 1071);
-            this.panel8.TabIndex = 22;
             // 
             // panel7
             // 
@@ -97,8 +86,106 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(422, 1071);
+            this.panel7.Size = new System.Drawing.Size(422, 1117);
             this.panel7.TabIndex = 46;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.panel8.Controls.Add(this.panel1);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(422, 1117);
+            this.panel8.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(992, 403);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(237, 28);
+            this.comboBox1.TabIndex = 51;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(992, 185);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(237, 26);
+            this.textBox1.TabIndex = 52;
+            // 
+            // allergiesLabel
+            // 
+            this.allergiesLabel.AutoSize = true;
+            this.allergiesLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allergiesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.allergiesLabel.Location = new System.Drawing.Point(548, 169);
+            this.allergiesLabel.Name = "allergiesLabel";
+            this.allergiesLabel.Size = new System.Drawing.Size(336, 54);
+            this.allergiesLabel.TabIndex = 55;
+            this.allergiesLabel.Text = "Enter Your Passoword:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.label1.Location = new System.Drawing.Point(548, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(350, 54);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Pick Account to change:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(992, 621);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(237, 26);
+            this.textBox2.TabIndex = 57;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(992, 829);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(237, 26);
+            this.textBox3.TabIndex = 58;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.label2.Location = new System.Drawing.Point(562, 605);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(380, 54);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Enter The New Username:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.label3.Location = new System.Drawing.Point(562, 813);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(373, 54);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Enter The New Password:";
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Location = new System.Drawing.Point(1503, 959);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(153, 70);
+            this.saveButton.TabIndex = 61;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -170,7 +257,7 @@
             // 
             this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exitPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.exitPictureBox.Location = new System.Drawing.Point(1961, -62);
+            this.exitPictureBox.Location = new System.Drawing.Point(1933, -62);
             this.exitPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(46, 56);
@@ -182,7 +269,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox3.Location = new System.Drawing.Point(1845, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(1776, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(46, 56);
@@ -195,117 +282,36 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(1783, 23);
+            this.pictureBox4.Location = new System.Drawing.Point(1702, 13);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(54, 56);
             this.pictureBox4.TabIndex = 48;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2033, -65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 56);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1901, -62);
+            this.pictureBox2.Location = new System.Drawing.Point(1873, -62);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 56);
             this.pictureBox2.TabIndex = 45;
             this.pictureBox2.TabStop = false;
             // 
-            // billingDataGridView
+            // pictureBox1
             // 
-            this.billingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.billingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.appointmentID,
-            this.patientId,
-            this.patientName,
-            this.totalBilling});
-            this.billingDataGridView.Location = new System.Drawing.Point(466, 229);
-            this.billingDataGridView.Name = "billingDataGridView";
-            this.billingDataGridView.RowHeadersWidth = 62;
-            this.billingDataGridView.RowTemplate.Height = 28;
-            this.billingDataGridView.Size = new System.Drawing.Size(1409, 717);
-            this.billingDataGridView.TabIndex = 50;
-            // 
-            // appointmentID
-            // 
-            this.appointmentID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.appointmentID.HeaderText = "AppointmentID";
-            this.appointmentID.MinimumWidth = 8;
-            this.appointmentID.Name = "appointmentID";
-            // 
-            // patientId
-            // 
-            this.patientId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientId.HeaderText = "PatientID";
-            this.patientId.MinimumWidth = 8;
-            this.patientId.Name = "patientId";
-            // 
-            // patientName
-            // 
-            this.patientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientName.HeaderText = "PatientName";
-            this.patientName.MinimumWidth = 8;
-            this.patientName.Name = "patientName";
-            // 
-            // totalBilling
-            // 
-            this.totalBilling.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalBilling.HeaderText = "TotalBilling";
-            this.totalBilling.MinimumWidth = 8;
-            this.totalBilling.Name = "totalBilling";
-            // 
-            // billingDateTimePicker
-            // 
-            this.billingDateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.billingDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.billingDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
-            this.billingDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billingDateTimePicker.Location = new System.Drawing.Point(871, 137);
-            this.billingDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.billingDateTimePicker.Name = "billingDateTimePicker";
-            this.billingDateTimePicker.Size = new System.Drawing.Size(593, 50);
-            this.billingDateTimePicker.TabIndex = 51;
-            // 
-            // pickDateLabel
-            // 
-            this.pickDateLabel.AutoSize = true;
-            this.pickDateLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickDateLabel.Location = new System.Drawing.Point(1001, 32);
-            this.pickDateLabel.Name = "pickDateLabel";
-            this.pickDateLabel.Size = new System.Drawing.Size(289, 65);
-            this.pickDateLabel.TabIndex = 52;
-            this.pickDateLabel.Text = "Pick a date";
-            this.pickDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // filterButton
-            // 
-            this.filterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.filterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.filterButton.FlatAppearance.BorderSize = 0;
-            this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.filterButton.Location = new System.Drawing.Point(1722, 978);
-            this.filterButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(153, 70);
-            this.filterButton.TabIndex = 53;
-            this.filterButton.Text = "Filter";
-            this.filterButton.UseVisualStyleBackColor = false;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2005, -65);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 56);
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -319,7 +325,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 1071);
+            this.panel1.Size = new System.Drawing.Size(422, 1117);
             this.panel1.TabIndex = 32;
             // 
             // panel2
@@ -334,7 +340,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 1071);
+            this.panel2.Size = new System.Drawing.Size(422, 1117);
             this.panel2.TabIndex = 22;
             // 
             // button5
@@ -487,32 +493,37 @@
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
             // 
-            // Billing
+            // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1903, 1071);
-            this.Controls.Add(this.filterButton);
-            this.Controls.Add(this.pickDateLabel);
-            this.Controls.Add(this.billingDateTimePicker);
-            this.Controls.Add(this.billingDataGridView);
-            this.Controls.Add(this.exitPictureBox);
+            this.ClientSize = new System.Drawing.Size(1846, 1117);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.allergiesLabel);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.exitPictureBox);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "Billing";
-            this.Text = "billingForm";
-            this.panel8.ResumeLayout(false);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "settings";
+            this.Text = "settings";
+            this.Load += new System.EventHandler(this.settings_Load);
             this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billingDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -523,25 +534,27 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView billingDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalBilling;
-        private System.Windows.Forms.DateTimePicker billingDateTimePicker;
-        private System.Windows.Forms.Label pickDateLabel;
-        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label allergiesLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;
