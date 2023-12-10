@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.billingDataGridView = new System.Windows.Forms.DataGridView();
-            this.pickDateLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.appointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickDateLabel = new System.Windows.Forms.Label();
+            this.prescriptionViewLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.billingDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,31 +44,13 @@
             this.appointmentID,
             this.patientName,
             this.prescription});
-            this.billingDataGridView.Location = new System.Drawing.Point(48, 230);
+            this.billingDataGridView.Location = new System.Drawing.Point(43, 184);
+            this.billingDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.billingDataGridView.Name = "billingDataGridView";
             this.billingDataGridView.RowHeadersWidth = 62;
             this.billingDataGridView.RowTemplate.Height = 28;
-            this.billingDataGridView.Size = new System.Drawing.Size(1316, 717);
+            this.billingDataGridView.Size = new System.Drawing.Size(1170, 574);
             this.billingDataGridView.TabIndex = 59;
-            // 
-            // pickDateLabel
-            // 
-            this.pickDateLabel.AutoSize = true;
-            this.pickDateLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickDateLabel.Location = new System.Drawing.Point(774, 45);
-            this.pickDateLabel.Name = "pickDateLabel";
-            this.pickDateLabel.Size = new System.Drawing.Size(407, 65);
-            this.pickDateLabel.TabIndex = 58;
-            this.pickDateLabel.Text = "Medical History";
-            this.pickDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(1430, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 717);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "prescription view";
             // 
             // appointmentID
             // 
@@ -91,14 +73,34 @@
             this.prescription.MinimumWidth = 8;
             this.prescription.Name = "prescription";
             // 
+            // pickDateLabel
+            // 
+            this.pickDateLabel.AutoSize = true;
+            this.pickDateLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickDateLabel.Location = new System.Drawing.Point(688, 36);
+            this.pickDateLabel.Name = "pickDateLabel";
+            this.pickDateLabel.Size = new System.Drawing.Size(336, 52);
+            this.pickDateLabel.TabIndex = 58;
+            this.pickDateLabel.Text = "Medical History";
+            this.pickDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // prescriptionViewLabel
+            // 
+            this.prescriptionViewLabel.Location = new System.Drawing.Point(1271, 184);
+            this.prescriptionViewLabel.Name = "prescriptionViewLabel";
+            this.prescriptionViewLabel.Size = new System.Drawing.Size(363, 574);
+            this.prescriptionViewLabel.TabIndex = 61;
+            this.prescriptionViewLabel.Text = "prescription view";
+            // 
             // viewMedicalHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1903, 1071);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1692, 844);
+            this.Controls.Add(this.prescriptionViewLabel);
             this.Controls.Add(this.billingDataGridView);
             this.Controls.Add(this.pickDateLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "viewMedicalHistoryForm";
             this.Text = "viewMedicalHistoryForm";
             ((System.ComponentModel.ISupportInitialize)(this.billingDataGridView)).EndInit();
@@ -110,7 +112,7 @@
         #endregion
         private System.Windows.Forms.DataGridView billingDataGridView;
         private System.Windows.Forms.Label pickDateLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label prescriptionViewLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn appointmentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn prescription;
