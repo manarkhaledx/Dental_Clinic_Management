@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.hiddenPictureBox = new System.Windows.Forms.PictureBox();
+            this.hidePictureBox = new System.Windows.Forms.PictureBox();
             this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.showMedicalHistoryButton = new System.Windows.Forms.Button();
             this.addPrescriptionButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hiddenPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel8.SuspendLayout();
@@ -64,16 +64,16 @@
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
             // 
-            // hiddenPictureBox
+            // hidePictureBox
             // 
-            this.hiddenPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hiddenPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.hiddenPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hiddenPictureBox.Location = new System.Drawing.Point(1584, 18);
-            this.hiddenPictureBox.Name = "hiddenPictureBox";
-            this.hiddenPictureBox.Size = new System.Drawing.Size(48, 45);
-            this.hiddenPictureBox.TabIndex = 58;
-            this.hiddenPictureBox.TabStop = false;
+            this.hidePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.hidePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
+            this.hidePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.hidePictureBox.Location = new System.Drawing.Point(1584, 18);
+            this.hidePictureBox.Name = "hidePictureBox";
+            this.hidePictureBox.Size = new System.Drawing.Size(48, 45);
+            this.hidePictureBox.TabIndex = 58;
+            this.hidePictureBox.TabStop = false;
             // 
             // closePictureBox
             // 
@@ -292,13 +292,13 @@
             this.Controls.Add(this.showMedicalHistoryButton);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.closePictureBox);
-            this.Controls.Add(this.hiddenPictureBox);
+            this.Controls.Add(this.hidePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "prescreptionForm";
             this.Text = "prescreptionForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hiddenPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -310,7 +310,7 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox hiddenPictureBox;
+        private System.Windows.Forms.PictureBox hidePictureBox;
         private System.Windows.Forms.PictureBox closePictureBox;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button1;

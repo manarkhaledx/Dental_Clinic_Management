@@ -31,12 +31,12 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.passTxtBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.eyeBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeBox)).BeginInit();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.eyePictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.eyePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // loginButton
@@ -74,49 +74,49 @@
             this.panel1.Size = new System.Drawing.Size(680, 2);
             this.panel1.TabIndex = 2;
             // 
-            // passTxtBox
+            // passwordTextBox
             // 
-            this.passTxtBox.Location = new System.Drawing.Point(248, 231);
-            this.passTxtBox.Name = "passTxtBox";
-            this.passTxtBox.Size = new System.Drawing.Size(255, 22);
-            this.passTxtBox.TabIndex = 3;
-            this.passTxtBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.Location = new System.Drawing.Point(248, 231);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(255, 22);
+            this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // usernameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 22);
-            this.textBox2.TabIndex = 4;
+            this.usernameTextBox.Location = new System.Drawing.Point(248, 142);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(255, 22);
+            this.usernameTextBox.TabIndex = 4;
             // 
-            // label1
+            // usernameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Username";
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(62, 148);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(70, 16);
+            this.usernameLabel.TabIndex = 5;
+            this.usernameLabel.Text = "Username";
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 231);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(62, 231);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(67, 16);
+            this.passwordLabel.TabIndex = 6;
+            this.passwordLabel.Text = "Password";
             // 
-            // eyeBox
+            // eyePictureBox
             // 
-            this.eyeBox.Image = global::Dental_Clinic_Management.Properties.Resources.visibleEyeIcon;
-            this.eyeBox.Location = new System.Drawing.Point(532, 219);
-            this.eyeBox.Name = "eyeBox";
-            this.eyeBox.Size = new System.Drawing.Size(50, 43);
-            this.eyeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.eyeBox.TabIndex = 8;
-            this.eyeBox.TabStop = false;
-            this.eyeBox.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.eyePictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.visibleEyeIcon;
+            this.eyePictureBox.Location = new System.Drawing.Point(532, 219);
+            this.eyePictureBox.Name = "eyePictureBox";
+            this.eyePictureBox.Size = new System.Drawing.Size(50, 43);
+            this.eyePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eyePictureBox.TabIndex = 8;
+            this.eyePictureBox.TabStop = false;
+            this.eyePictureBox.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Login
             // 
@@ -124,11 +124,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 422);
             this.ControlBox = false;
-            this.Controls.Add(this.eyeBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.passTxtBox);
+            this.Controls.Add(this.eyePictureBox);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
@@ -139,7 +139,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.eyeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eyePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,10 +150,10 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox passTxtBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox eyeBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.PictureBox eyePictureBox;
     }
 }

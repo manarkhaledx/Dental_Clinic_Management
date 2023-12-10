@@ -32,7 +32,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.patientButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
-            this.billingdButton = new System.Windows.Forms.Button();
+            this.billingsButton = new System.Windows.Forms.Button();
             this.appiontmentsButton = new System.Windows.Forms.Button();
             this.dentistButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
@@ -80,7 +80,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
             this.panel8.Controls.Add(this.patientButton);
             this.panel8.Controls.Add(this.settingsButton);
-            this.panel8.Controls.Add(this.billingdButton);
+            this.panel8.Controls.Add(this.billingsButton);
             this.panel8.Controls.Add(this.appiontmentsButton);
             this.panel8.Controls.Add(this.dentistButton);
             this.panel8.Controls.Add(this.dashboardButton);
@@ -125,22 +125,22 @@
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = false;
             // 
-            // billingdButton
+            // billingsButton
             // 
-            this.billingdButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.billingdButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.billingdButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.billingdButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billingdButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.billingdButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_50__1_;
-            this.billingdButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.billingdButton.Location = new System.Drawing.Point(0, 655);
-            this.billingdButton.Name = "billingdButton";
-            this.billingdButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.billingdButton.Size = new System.Drawing.Size(375, 62);
-            this.billingdButton.TabIndex = 22;
-            this.billingdButton.Text = "Billings";
-            this.billingdButton.UseVisualStyleBackColor = false;
+            this.billingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.billingsButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.billingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.billingsButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.billingsButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_50__1_;
+            this.billingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.billingsButton.Location = new System.Drawing.Point(0, 655);
+            this.billingsButton.Name = "billingsButton";
+            this.billingsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.billingsButton.Size = new System.Drawing.Size(375, 62);
+            this.billingsButton.TabIndex = 22;
+            this.billingsButton.Text = "Billings";
+            this.billingsButton.UseVisualStyleBackColor = false;
             // 
             // appiontmentsButton
             // 
@@ -394,7 +394,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button patientButton;
         private System.Windows.Forms.Button settingsButton;
-        private System.Windows.Forms.Button billingdButton;
+        private System.Windows.Forms.Button billingsButton;
         private System.Windows.Forms.Button appiontmentsButton;
         private System.Windows.Forms.Button dentistButton;
         private System.Windows.Forms.Button dashboardButton;

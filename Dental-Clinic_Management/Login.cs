@@ -19,15 +19,15 @@ namespace Dental_Clinic_Management
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (passTxtBox.UseSystemPasswordChar == true)
+            if (passwordTextBox.UseSystemPasswordChar == true)
             {
-                passTxtBox.UseSystemPasswordChar = false;
-                eyeBox.Image = Properties.Resources.visibleEyeIcon;
+                passwordTextBox.UseSystemPasswordChar = false;
+                eyePictureBox.Image = Properties.Resources.visibleEyeIcon;
             }
             else
             {
-                passTxtBox.UseSystemPasswordChar = true;
-                eyeBox.Image = Properties.Resources.hiddenEyeIcon;
+                passwordTextBox.UseSystemPasswordChar = true;
+                eyePictureBox.Image = Properties.Resources.hiddenEyeIcon;
             }
             //end
         }

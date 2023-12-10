@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.medicalHistoryLabel = new System.Windows.Forms.Label();
-            this.medicalHistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.phoneAndNameDataGridView = new System.Windows.Forms.DataGridView();
             this.patientPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewPatientRecordButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.medicalHistoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneAndNameDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +55,7 @@
             this.phoneNumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.phoneNumberTextBox.Location = new System.Drawing.Point(43, 108);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(559, 40);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(559, 32);
             this.phoneNumberTextBox.TabIndex = 23;
             this.phoneNumberTextBox.Text = "Phone Number";
             // 
@@ -65,24 +65,24 @@
             this.medicalHistoryLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicalHistoryLabel.Location = new System.Drawing.Point(688, 37);
             this.medicalHistoryLabel.Name = "medicalHistoryLabel";
-            this.medicalHistoryLabel.Size = new System.Drawing.Size(336, 52);
+            this.medicalHistoryLabel.Size = new System.Drawing.Size(275, 44);
             this.medicalHistoryLabel.TabIndex = 53;
             this.medicalHistoryLabel.Text = "Medical History";
             this.medicalHistoryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // medicalHistoryDataGridView
+            // phoneAndNameDataGridView
             // 
-            this.medicalHistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.medicalHistoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.phoneAndNameDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.phoneAndNameDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patientPhone,
             this.patientName});
-            this.medicalHistoryDataGridView.Location = new System.Drawing.Point(43, 185);
-            this.medicalHistoryDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.medicalHistoryDataGridView.Name = "medicalHistoryDataGridView";
-            this.medicalHistoryDataGridView.RowHeadersWidth = 62;
-            this.medicalHistoryDataGridView.RowTemplate.Height = 28;
-            this.medicalHistoryDataGridView.Size = new System.Drawing.Size(1252, 574);
-            this.medicalHistoryDataGridView.TabIndex = 54;
+            this.phoneAndNameDataGridView.Location = new System.Drawing.Point(43, 185);
+            this.phoneAndNameDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phoneAndNameDataGridView.Name = "phoneAndNameDataGridView";
+            this.phoneAndNameDataGridView.RowHeadersWidth = 62;
+            this.phoneAndNameDataGridView.RowTemplate.Height = 28;
+            this.phoneAndNameDataGridView.Size = new System.Drawing.Size(1252, 574);
+            this.phoneAndNameDataGridView.TabIndex = 54;
             // 
             // patientPhone
             // 
@@ -118,14 +118,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1692, 857);
             this.Controls.Add(this.viewPatientRecordButton);
-            this.Controls.Add(this.medicalHistoryDataGridView);
+            this.Controls.Add(this.phoneAndNameDataGridView);
             this.Controls.Add(this.medicalHistoryLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.phoneNumberTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "medicalHistoryForm";
             this.Text = "medicalHistoryForm";
-            ((System.ComponentModel.ISupportInitialize)(this.medicalHistoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneAndNameDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +136,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label medicalHistoryLabel;
-        private System.Windows.Forms.DataGridView medicalHistoryDataGridView;
+        private System.Windows.Forms.DataGridView phoneAndNameDataGridView;
         private System.Windows.Forms.Button viewPatientRecordButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientName;
