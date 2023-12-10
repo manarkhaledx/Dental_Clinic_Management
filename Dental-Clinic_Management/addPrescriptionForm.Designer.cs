@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveButton = new System.Windows.Forms.Button();
-            this.allergiesTextBox = new System.Windows.Forms.TextBox();
-            this.allergiesLabel = new System.Windows.Forms.Label();
-            this.addRecordLabel = new System.Windows.Forms.Label();
+            this.savePrescriptionButton = new System.Windows.Forms.Button();
+            this.prescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.prescriptionLabel = new System.Windows.Forms.Label();
+            this.addPrescriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // saveButton
+            // savePrescriptionButton
             // 
-            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.saveButton.FlatAppearance.BorderSize = 0;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(624, 731);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(136, 56);
-            this.saveButton.TabIndex = 36;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
+            this.savePrescriptionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.savePrescriptionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.savePrescriptionButton.FlatAppearance.BorderSize = 0;
+            this.savePrescriptionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePrescriptionButton.Location = new System.Drawing.Point(624, 731);
+            this.savePrescriptionButton.Name = "savePrescriptionButton";
+            this.savePrescriptionButton.Size = new System.Drawing.Size(136, 56);
+            this.savePrescriptionButton.TabIndex = 36;
+            this.savePrescriptionButton.Text = "Save";
+            this.savePrescriptionButton.UseVisualStyleBackColor = false;
             // 
-            // allergiesTextBox
+            // prescriptionTextBox
             // 
-            this.allergiesTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.allergiesTextBox.Location = new System.Drawing.Point(175, 281);
-            this.allergiesTextBox.Multiline = true;
-            this.allergiesTextBox.Name = "allergiesTextBox";
-            this.allergiesTextBox.Size = new System.Drawing.Size(515, 421);
-            this.allergiesTextBox.TabIndex = 34;
+            this.prescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.prescriptionTextBox.Location = new System.Drawing.Point(175, 281);
+            this.prescriptionTextBox.Multiline = true;
+            this.prescriptionTextBox.Name = "prescriptionTextBox";
+            this.prescriptionTextBox.Size = new System.Drawing.Size(515, 421);
+            this.prescriptionTextBox.TabIndex = 34;
             // 
-            // allergiesLabel
+            // prescriptionLabel
             // 
-            this.allergiesLabel.AutoSize = true;
-            this.allergiesLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allergiesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.allergiesLabel.Location = new System.Drawing.Point(359, 205);
-            this.allergiesLabel.Name = "allergiesLabel";
-            this.allergiesLabel.Size = new System.Drawing.Size(158, 45);
-            this.allergiesLabel.TabIndex = 32;
-            this.allergiesLabel.Text = "Prescription";
+            this.prescriptionLabel.AutoSize = true;
+            this.prescriptionLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.prescriptionLabel.Location = new System.Drawing.Point(359, 205);
+            this.prescriptionLabel.Name = "prescriptionLabel";
+            this.prescriptionLabel.Size = new System.Drawing.Size(158, 45);
+            this.prescriptionLabel.TabIndex = 32;
+            this.prescriptionLabel.Text = "Prescription";
             // 
-            // addRecordLabel
+            // addPrescriptionLabel
             // 
-            this.addRecordLabel.AutoSize = true;
-            this.addRecordLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRecordLabel.Location = new System.Drawing.Point(63, 38);
-            this.addRecordLabel.Name = "addRecordLabel";
-            this.addRecordLabel.Size = new System.Drawing.Size(372, 52);
-            this.addRecordLabel.TabIndex = 29;
-            this.addRecordLabel.Text = "Add Presecription";
+            this.addPrescriptionLabel.AutoSize = true;
+            this.addPrescriptionLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPrescriptionLabel.Location = new System.Drawing.Point(63, 38);
+            this.addPrescriptionLabel.Name = "addPrescriptionLabel";
+            this.addPrescriptionLabel.Size = new System.Drawing.Size(372, 52);
+            this.addPrescriptionLabel.TabIndex = 29;
+            this.addPrescriptionLabel.Text = "Add Presecription";
             // 
             // addPrescriptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 835);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.allergiesTextBox);
-            this.Controls.Add(this.allergiesLabel);
-            this.Controls.Add(this.addRecordLabel);
+            this.Controls.Add(this.savePrescriptionButton);
+            this.Controls.Add(this.prescriptionTextBox);
+            this.Controls.Add(this.prescriptionLabel);
+            this.Controls.Add(this.addPrescriptionLabel);
             this.Name = "addPrescriptionForm";
             this.Text = "addPrescriptionForm";
             this.ResumeLayout(false);
@@ -94,9 +94,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.TextBox allergiesTextBox;
-        private System.Windows.Forms.Label allergiesLabel;
-        private System.Windows.Forms.Label addRecordLabel;
+        private System.Windows.Forms.Button savePrescriptionButton;
+        private System.Windows.Forms.TextBox prescriptionTextBox;
+        private System.Windows.Forms.Label prescriptionLabel;
+        private System.Windows.Forms.Label addPrescriptionLabel;
     }
 }

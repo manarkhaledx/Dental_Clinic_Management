@@ -31,13 +31,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.timeTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
+            this.saveNewAppointmentButton = new System.Windows.Forms.Button();
             this.patientNameTextBox = new System.Windows.Forms.TextBox();
             this.dobDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateLabel = new System.Windows.Forms.Label();
             this.addAppointmentLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -71,29 +71,29 @@
             this.panel1.Size = new System.Drawing.Size(559, 1);
             this.panel1.TabIndex = 38;
             // 
-            // pictureBox1
+            // closePictureBox
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closePictureBox.Location = new System.Drawing.Point(20, 10);
+            this.closePictureBox.Name = "closePictureBox";
+            this.closePictureBox.Size = new System.Drawing.Size(32, 32);
+            this.closePictureBox.TabIndex = 37;
+            this.closePictureBox.TabStop = false;
             // 
-            // saveButton
+            // saveNewAppointmentButton
             // 
-            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.saveButton.FlatAppearance.BorderSize = 0;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(509, 457);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(136, 56);
-            this.saveButton.TabIndex = 36;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveNewAppointmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.saveNewAppointmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.saveNewAppointmentButton.FlatAppearance.BorderSize = 0;
+            this.saveNewAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveNewAppointmentButton.Location = new System.Drawing.Point(509, 457);
+            this.saveNewAppointmentButton.Name = "saveNewAppointmentButton";
+            this.saveNewAppointmentButton.Size = new System.Drawing.Size(136, 56);
+            this.saveNewAppointmentButton.TabIndex = 36;
+            this.saveNewAppointmentButton.Text = "Save";
+            this.saveNewAppointmentButton.UseVisualStyleBackColor = false;
             // 
             // patientNameTextBox
             // 
@@ -146,8 +146,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.timeTextBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.closePictureBox);
+            this.Controls.Add(this.saveNewAppointmentButton);
             this.Controls.Add(this.patientNameTextBox);
             this.Controls.Add(this.dobDateTimePicker);
             this.Controls.Add(this.dateLabel);
@@ -155,7 +155,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddAppointment";
             this.Text = "AddAppointment";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +166,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox timeTextBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.PictureBox closePictureBox;
+        private System.Windows.Forms.Button saveNewAppointmentButton;
         private System.Windows.Forms.TextBox patientNameTextBox;
         private System.Windows.Forms.DateTimePicker dobDateTimePicker;
         private System.Windows.Forms.Label dateLabel;
