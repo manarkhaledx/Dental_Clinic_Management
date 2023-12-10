@@ -37,7 +37,7 @@
             this.settingsButton = new System.Windows.Forms.Button();
             this.billingsButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dentalLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dentalLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
@@ -119,7 +119,7 @@
             this.panel2.Controls.Add(this.settingsButton);
             this.panel2.Controls.Add(this.billingsButton);
             this.panel2.Controls.Add(this.dashboardButton);
-            this.panel2.Controls.Add(this.pictureBox10);
+            this.panel2.Controls.Add(this.dentalLogoPictureBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -194,16 +194,16 @@
             this.dashboardButton.Text = "DashBoard";
             this.dashboardButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox10
+            // dentalLogoPictureBox
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.pictureBox10.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(375, 187);
-            this.pictureBox10.TabIndex = 17;
-            this.pictureBox10.TabStop = false;
+            this.dentalLogoPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.dentalLogoPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
+            this.dentalLogoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dentalLogoPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.dentalLogoPictureBox.Name = "dentalLogoPictureBox";
+            this.dentalLogoPictureBox.Size = new System.Drawing.Size(375, 187);
+            this.dentalLogoPictureBox.TabIndex = 17;
+            this.dentalLogoPictureBox.TabStop = false;
             // 
             // button4
             // 
@@ -353,7 +353,7 @@
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.passwordLabel.Location = new System.Drawing.Point(487, 135);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(276, 45);
+            this.passwordLabel.Size = new System.Drawing.Size(221, 37);
             this.passwordLabel.TabIndex = 55;
             this.passwordLabel.Text = "Enter Your Passoword:";
             // 
@@ -364,7 +364,7 @@
             this.pickAccountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.pickAccountLabel.Location = new System.Drawing.Point(487, 310);
             this.pickAccountLabel.Name = "pickAccountLabel";
-            this.pickAccountLabel.Size = new System.Drawing.Size(287, 45);
+            this.pickAccountLabel.Size = new System.Drawing.Size(230, 37);
             this.pickAccountLabel.TabIndex = 56;
             this.pickAccountLabel.Text = "Pick Account to change:";
             // 
@@ -391,7 +391,7 @@
             this.newUsernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.newUsernameLabel.Location = new System.Drawing.Point(500, 484);
             this.newUsernameLabel.Name = "newUsernameLabel";
-            this.newUsernameLabel.Size = new System.Drawing.Size(312, 45);
+            this.newUsernameLabel.Size = new System.Drawing.Size(249, 37);
             this.newUsernameLabel.TabIndex = 59;
             this.newUsernameLabel.Text = "Enter The New Username:";
             // 
@@ -402,7 +402,7 @@
             this.newPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.newPasswordLabel.Location = new System.Drawing.Point(500, 650);
             this.newPasswordLabel.Name = "newPasswordLabel";
-            this.newPasswordLabel.Size = new System.Drawing.Size(306, 45);
+            this.newPasswordLabel.Size = new System.Drawing.Size(245, 37);
             this.newPasswordLabel.TabIndex = 60;
             this.newPasswordLabel.Text = "Enter The New Password:";
             // 
@@ -502,7 +502,7 @@
             this.panel8.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dentalLogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
@@ -543,7 +543,7 @@
         private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button billingsButton;
         private System.Windows.Forms.Button dashboardButton;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox dentalLogoPictureBox;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
