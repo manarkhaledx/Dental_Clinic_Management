@@ -44,12 +44,12 @@
             this.appointmentID,
             this.patientName,
             this.patientPhone});
-            this.appointmentDataGridView.Location = new System.Drawing.Point(51, 209);
+            this.appointmentDataGridView.Location = new System.Drawing.Point(57, 261);
             this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.RowHeadersWidth = 62;
             this.appointmentDataGridView.RowTemplate.Height = 28;
-            this.appointmentDataGridView.Size = new System.Drawing.Size(1170, 574);
+            this.appointmentDataGridView.Size = new System.Drawing.Size(1316, 718);
             this.appointmentDataGridView.TabIndex = 63;
             // 
             // appointmentID
@@ -77,9 +77,9 @@
             // 
             this.currentAppointmentsLabel.AutoSize = true;
             this.currentAppointmentsLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentAppointmentsLabel.Location = new System.Drawing.Point(519, 56);
+            this.currentAppointmentsLabel.Location = new System.Drawing.Point(584, 70);
             this.currentAppointmentsLabel.Name = "currentAppointmentsLabel";
-            this.currentAppointmentsLabel.Size = new System.Drawing.Size(497, 52);
+            this.currentAppointmentsLabel.Size = new System.Drawing.Size(604, 65);
             this.currentAppointmentsLabel.TabIndex = 62;
             this.currentAppointmentsLabel.Text = "Appointments of the day";
             this.currentAppointmentsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,21 +91,23 @@
             this.addAppointmentButton.FlatAppearance.BorderSize = 0;
             this.addAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addAppointmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addAppointmentButton.Location = new System.Drawing.Point(1316, 761);
+            this.addAppointmentButton.Location = new System.Drawing.Point(1480, 951);
+            this.addAppointmentButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addAppointmentButton.Name = "addAppointmentButton";
-            this.addAppointmentButton.Size = new System.Drawing.Size(136, 56);
+            this.addAppointmentButton.Size = new System.Drawing.Size(153, 70);
             this.addAppointmentButton.TabIndex = 64;
             this.addAppointmentButton.Text = "Add";
             this.addAppointmentButton.UseVisualStyleBackColor = false;
             // 
             // showAppointmentsOfTheDayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1692, 844);
+            this.ClientSize = new System.Drawing.Size(1846, 1118);
             this.Controls.Add(this.addAppointmentButton);
             this.Controls.Add(this.appointmentDataGridView);
             this.Controls.Add(this.currentAppointmentsLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "showAppointmentsOfTheDayForm";
             this.Text = "showAppointmentsOfTheDayForm";
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();

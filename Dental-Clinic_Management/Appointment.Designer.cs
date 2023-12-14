@@ -128,7 +128,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(422, 1117);
+            this.panel8.Size = new System.Drawing.Size(422, 1118);
             this.panel8.TabIndex = 22;
             // 
             // button9
@@ -270,7 +270,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(422, 1117);
+            this.panel7.Size = new System.Drawing.Size(422, 1118);
             this.panel7.TabIndex = 31;
             // 
             // button3
@@ -371,11 +371,11 @@
             this.patientName,
             this.time,
             this.date});
-            this.dataGridView1.Location = new System.Drawing.Point(592, 146);
+            this.dataGridView1.Location = new System.Drawing.Point(516, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(662, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(658, 588);
             this.dataGridView1.TabIndex = 32;
             // 
             // appointmentID
@@ -410,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1846, 1117);
+            this.ClientSize = new System.Drawing.Size(1846, 1118);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

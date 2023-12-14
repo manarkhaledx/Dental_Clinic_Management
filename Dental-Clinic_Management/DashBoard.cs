@@ -95,6 +95,16 @@ namespace Dental_Clinic_Management
         {
             closeFormChecker();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
