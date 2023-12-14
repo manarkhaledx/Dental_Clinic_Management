@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class settings
+    partial class AddReceptionist
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReceptionist));
+            this.patientDataGridView = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,20 +47,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pickAccountComboBox = new System.Windows.Forms.ComboBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.pickAccountLabel = new System.Windows.Forms.Label();
-            this.newUsernameTextBox = new System.Windows.Forms.TextBox();
-            this.newPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.newUsernameLabel = new System.Windows.Forms.Label();
-            this.newPasswordLabel = new System.Windows.Forms.Label();
-            this.saveAccountButton = new System.Windows.Forms.Button();
-            this.exitPictureBox = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
-            this.hidePictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.saveNewAppointmentButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.ReceptionistID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,12 +66,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dentalLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // patientDataGridView
+            // 
+            this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ReceptionistID,
+            this.fristName,
+            this.lastName,
+            this.gender,
+            this.phone,
+            this.address,
+            this.email,
+            this.dOB});
+            this.patientDataGridView.Location = new System.Drawing.Point(522, 65);
+            this.patientDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.patientDataGridView.Name = "patientDataGridView";
+            this.patientDataGridView.RowHeadersWidth = 62;
+            this.patientDataGridView.RowTemplate.Height = 28;
+            this.patientDataGridView.Size = new System.Drawing.Size(1247, 885);
+            this.patientDataGridView.TabIndex = 30;
             // 
             // panel7
             // 
@@ -87,7 +101,7 @@
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(422, 1118);
-            this.panel7.TabIndex = 46;
+            this.panel7.TabIndex = 47;
             // 
             // panel8
             // 
@@ -346,181 +360,120 @@
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
             // 
-            // pickAccountComboBox
+            // saveNewAppointmentButton
             // 
-            this.pickAccountComboBox.FormattingEnabled = true;
-            this.pickAccountComboBox.Location = new System.Drawing.Point(994, 419);
-            this.pickAccountComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pickAccountComboBox.Name = "pickAccountComboBox";
-            this.pickAccountComboBox.Size = new System.Drawing.Size(237, 28);
-            this.pickAccountComboBox.TabIndex = 51;
+            this.saveNewAppointmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.saveNewAppointmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.saveNewAppointmentButton.FlatAppearance.BorderSize = 0;
+            this.saveNewAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveNewAppointmentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveNewAppointmentButton.Location = new System.Drawing.Point(522, 1008);
+            this.saveNewAppointmentButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.saveNewAppointmentButton.Name = "saveNewAppointmentButton";
+            this.saveNewAppointmentButton.Size = new System.Drawing.Size(153, 70);
+            this.saveNewAppointmentButton.TabIndex = 48;
+            this.saveNewAppointmentButton.Text = "SignUp";
+            this.saveNewAppointmentButton.UseVisualStyleBackColor = false;
             // 
-            // passwordTextBox
+            // button5
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(994, 202);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(237, 26);
-            this.passwordTextBox.TabIndex = 52;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(1102, 1008);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(153, 70);
+            this.button5.TabIndex = 49;
+            this.button5.Text = "Delete";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // passwordLabel
+            // button6
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.passwordLabel.Location = new System.Drawing.Point(550, 186);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(336, 54);
-            this.passwordLabel.TabIndex = 55;
-            this.passwordLabel.Text = "Enter Your Passoword:";
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(1616, 1008);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(153, 70);
+            this.button6.TabIndex = 50;
+            this.button6.Text = "Edit";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // pickAccountLabel
+            // ReceptionistID
             // 
-            this.pickAccountLabel.AutoSize = true;
-            this.pickAccountLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickAccountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.pickAccountLabel.Location = new System.Drawing.Point(550, 405);
-            this.pickAccountLabel.Name = "pickAccountLabel";
-            this.pickAccountLabel.Size = new System.Drawing.Size(350, 54);
-            this.pickAccountLabel.TabIndex = 56;
-            this.pickAccountLabel.Text = "Pick Account to change:";
+            this.ReceptionistID.HeaderText = "ReceptionistID";
+            this.ReceptionistID.MinimumWidth = 8;
+            this.ReceptionistID.Name = "ReceptionistID";
+            this.ReceptionistID.Width = 150;
             // 
-            // newUsernameTextBox
+            // fristName
             // 
-            this.newUsernameTextBox.Location = new System.Drawing.Point(994, 638);
-            this.newUsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.newUsernameTextBox.Name = "newUsernameTextBox";
-            this.newUsernameTextBox.Size = new System.Drawing.Size(237, 26);
-            this.newUsernameTextBox.TabIndex = 57;
+            this.fristName.HeaderText = "FristName";
+            this.fristName.MinimumWidth = 8;
+            this.fristName.Name = "fristName";
+            this.fristName.Width = 150;
             // 
-            // newPasswordTextBox
+            // lastName
             // 
-            this.newPasswordTextBox.Location = new System.Drawing.Point(994, 846);
-            this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.Size = new System.Drawing.Size(237, 26);
-            this.newPasswordTextBox.TabIndex = 58;
+            this.lastName.HeaderText = "LastName";
+            this.lastName.MinimumWidth = 8;
+            this.lastName.Name = "lastName";
+            this.lastName.Width = 150;
             // 
-            // newUsernameLabel
+            // gender
             // 
-            this.newUsernameLabel.AutoSize = true;
-            this.newUsernameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newUsernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.newUsernameLabel.Location = new System.Drawing.Point(564, 622);
-            this.newUsernameLabel.Name = "newUsernameLabel";
-            this.newUsernameLabel.Size = new System.Drawing.Size(380, 54);
-            this.newUsernameLabel.TabIndex = 59;
-            this.newUsernameLabel.Text = "Enter The New Username:";
+            this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 8;
+            this.gender.Name = "gender";
+            this.gender.Width = 150;
             // 
-            // newPasswordLabel
+            // phone
             // 
-            this.newPasswordLabel.AutoSize = true;
-            this.newPasswordLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.newPasswordLabel.Location = new System.Drawing.Point(564, 829);
-            this.newPasswordLabel.Name = "newPasswordLabel";
-            this.newPasswordLabel.Size = new System.Drawing.Size(373, 54);
-            this.newPasswordLabel.TabIndex = 60;
-            this.newPasswordLabel.Text = "Enter The New Password:";
+            this.phone.HeaderText = "Phone";
+            this.phone.MinimumWidth = 8;
+            this.phone.Name = "phone";
+            this.phone.Width = 150;
             // 
-            // saveAccountButton
+            // address
             // 
-            this.saveAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.saveAccountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.saveAccountButton.FlatAppearance.BorderSize = 0;
-            this.saveAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveAccountButton.Location = new System.Drawing.Point(1503, 959);
-            this.saveAccountButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.saveAccountButton.Name = "saveAccountButton";
-            this.saveAccountButton.Size = new System.Drawing.Size(153, 70);
-            this.saveAccountButton.TabIndex = 61;
-            this.saveAccountButton.Text = "Save";
-            this.saveAccountButton.UseVisualStyleBackColor = false;
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 8;
+            this.address.Name = "address";
+            this.address.Width = 150;
             // 
-            // exitPictureBox
+            // email
             // 
-            this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.exitPictureBox.Location = new System.Drawing.Point(1933, -62);
-            this.exitPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.exitPictureBox.Name = "exitPictureBox";
-            this.exitPictureBox.Size = new System.Drawing.Size(46, 56);
-            this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exitPictureBox.TabIndex = 47;
-            this.exitPictureBox.TabStop = false;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 8;
+            this.email.Name = "email";
+            this.email.Width = 150;
             // 
-            // closePictureBox
+            // dOB
             // 
-            this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closePictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.closePictureBox.Location = new System.Drawing.Point(1776, 12);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(46, 56);
-            this.closePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closePictureBox.TabIndex = 49;
-            this.closePictureBox.TabStop = false;
+            this.dOB.HeaderText = "DOB";
+            this.dOB.MinimumWidth = 8;
+            this.dOB.Name = "dOB";
+            this.dOB.Width = 150;
             // 
-            // hidePictureBox
-            // 
-            this.hidePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hidePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.hidePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hidePictureBox.Location = new System.Drawing.Point(1702, 12);
-            this.hidePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.hidePictureBox.Name = "hidePictureBox";
-            this.hidePictureBox.Size = new System.Drawing.Size(54, 56);
-            this.hidePictureBox.TabIndex = 48;
-            this.hidePictureBox.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(1873, -62);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 56);
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2005, -65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 56);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            // 
-            // settings
+            // AddReceptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1846, 1118);
-            this.Controls.Add(this.saveAccountButton);
-            this.Controls.Add(this.newPasswordLabel);
-            this.Controls.Add(this.newUsernameLabel);
-            this.Controls.Add(this.newPasswordTextBox);
-            this.Controls.Add(this.newUsernameTextBox);
-            this.Controls.Add(this.pickAccountLabel);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.pickAccountComboBox);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.saveNewAppointmentButton);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.exitPictureBox);
-            this.Controls.Add(this.closePictureBox);
-            this.Controls.Add(this.hidePictureBox);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "settings";
-            this.Text = "settings";
-            this.Load += new System.EventHandler(this.settings_Load);
+            this.Controls.Add(this.patientDataGridView);
+            this.Name = "AddReceptionist";
+            this.Text = "AddReceptionist";
+            ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -528,38 +481,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dentalLogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView patientDataGridView;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox exitPictureBox;
-        private System.Windows.Forms.PictureBox closePictureBox;
-        private System.Windows.Forms.PictureBox hidePictureBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox pickAccountComboBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.Label pickAccountLabel;
-        private System.Windows.Forms.TextBox newUsernameTextBox;
-        private System.Windows.Forms.TextBox newPasswordTextBox;
-        private System.Windows.Forms.Label newUsernameLabel;
-        private System.Windows.Forms.Label newPasswordLabel;
-        private System.Windows.Forms.Button saveAccountButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button prescriptionButton;
@@ -571,5 +501,20 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button saveNewAppointmentButton;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReceptionistID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOB;
     }
 }

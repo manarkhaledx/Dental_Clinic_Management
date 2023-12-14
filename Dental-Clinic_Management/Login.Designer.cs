@@ -45,9 +45,10 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.loginButton.Location = new System.Drawing.Point(65, 303);
+            this.loginButton.Location = new System.Drawing.Point(73, 379);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(88, 53);
+            this.loginButton.Size = new System.Drawing.Size(99, 66);
             this.loginButton.TabIndex = 0;
             this.loginButton.Text = "login";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -58,9 +59,10 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
-            this.exitButton.Location = new System.Drawing.Point(509, 303);
+            this.exitButton.Location = new System.Drawing.Point(675, 379);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(88, 53);
+            this.exitButton.Size = new System.Drawing.Size(99, 66);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -69,50 +71,54 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(19, 388);
+            this.panel1.Location = new System.Drawing.Point(21, 485);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 2);
+            this.panel1.Size = new System.Drawing.Size(765, 2);
             this.panel1.TabIndex = 2;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(248, 231);
+            this.passwordTextBox.Location = new System.Drawing.Point(279, 289);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(255, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(286, 26);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(248, 142);
+            this.usernameTextBox.Location = new System.Drawing.Point(279, 178);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(255, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(286, 26);
             this.usernameTextBox.TabIndex = 4;
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(62, 148);
+            this.usernameLabel.Location = new System.Drawing.Point(145, 184);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(70, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(83, 20);
             this.usernameLabel.TabIndex = 5;
             this.usernameLabel.Text = "Username";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(62, 231);
+            this.passwordLabel.Location = new System.Drawing.Point(145, 289);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(67, 16);
+            this.passwordLabel.Size = new System.Drawing.Size(78, 20);
             this.passwordLabel.TabIndex = 6;
             this.passwordLabel.Text = "Password";
             // 
             // eyePictureBox
             // 
             this.eyePictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.visibleEyeIcon;
-            this.eyePictureBox.Location = new System.Drawing.Point(532, 219);
+            this.eyePictureBox.Location = new System.Drawing.Point(718, 274);
+            this.eyePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eyePictureBox.Name = "eyePictureBox";
-            this.eyePictureBox.Size = new System.Drawing.Size(50, 43);
+            this.eyePictureBox.Size = new System.Drawing.Size(56, 54);
             this.eyePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eyePictureBox.TabIndex = 8;
             this.eyePictureBox.TabStop = false;
@@ -120,9 +126,9 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 422);
+            this.ClientSize = new System.Drawing.Size(800, 528);
             this.ControlBox = false;
             this.Controls.Add(this.eyePictureBox);
             this.Controls.Add(this.passwordLabel);

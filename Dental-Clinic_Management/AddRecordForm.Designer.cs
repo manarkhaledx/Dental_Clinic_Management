@@ -31,11 +31,9 @@
             this.addRecordLabel = new System.Windows.Forms.Label();
             this.dobLabel = new System.Windows.Forms.Label();
             this.dobDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.allergiesLabel = new System.Windows.Forms.Label();
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.genderGroupBox = new System.Windows.Forms.GroupBox();
-            this.allergiesTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,7 +52,7 @@
             // 
             this.addRecordLabel.AutoSize = true;
             this.addRecordLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRecordLabel.Location = new System.Drawing.Point(52, 65);
+            this.addRecordLabel.Location = new System.Drawing.Point(66, 125);
             this.addRecordLabel.Name = "addRecordLabel";
             this.addRecordLabel.Size = new System.Drawing.Size(306, 65);
             this.addRecordLabel.TabIndex = 0;
@@ -66,7 +64,7 @@
             this.dobLabel.AutoSize = true;
             this.dobLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.dobLabel.Location = new System.Drawing.Point(77, 507);
+            this.dobLabel.Location = new System.Drawing.Point(74, 603);
             this.dobLabel.Name = "dobLabel";
             this.dobLabel.Size = new System.Drawing.Size(92, 54);
             this.dobLabel.TabIndex = 5;
@@ -79,24 +77,12 @@
             this.dobDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobDateTimePicker.Location = new System.Drawing.Point(229, 507);
+            this.dobDateTimePicker.Location = new System.Drawing.Point(226, 603);
             this.dobDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dobDateTimePicker.Name = "dobDateTimePicker";
             this.dobDateTimePicker.Size = new System.Drawing.Size(486, 50);
             this.dobDateTimePicker.TabIndex = 11;
             this.dobDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // allergiesLabel
-            // 
-            this.allergiesLabel.AutoSize = true;
-            this.allergiesLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allergiesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.allergiesLabel.Location = new System.Drawing.Point(66, 841);
-            this.allergiesLabel.Name = "allergiesLabel";
-            this.allergiesLabel.Size = new System.Drawing.Size(144, 54);
-            this.allergiesLabel.TabIndex = 12;
-            this.allergiesLabel.Text = "Allergies";
-            this.allergiesLabel.Click += new System.EventHandler(this.label8_Click);
             // 
             // femaleRadioButton
             // 
@@ -128,7 +114,7 @@
             this.genderGroupBox.Controls.Add(this.maleRadioButton);
             this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.genderGroupBox.Location = new System.Drawing.Point(57, 619);
+            this.genderGroupBox.Location = new System.Drawing.Point(54, 715);
             this.genderGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.genderGroupBox.Name = "genderGroupBox";
             this.genderGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -137,23 +123,12 @@
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
             // 
-            // allergiesTextBox
-            // 
-            this.allergiesTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.allergiesTextBox.Location = new System.Drawing.Point(262, 851);
-            this.allergiesTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.allergiesTextBox.Multiline = true;
-            this.allergiesTextBox.Name = "allergiesTextBox";
-            this.allergiesTextBox.Size = new System.Drawing.Size(346, 196);
-            this.allergiesTextBox.TabIndex = 16;
-            this.allergiesTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
             // nameTextBox
             // 
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.nameTextBox.Location = new System.Drawing.Point(87, 156);
+            this.nameTextBox.Location = new System.Drawing.Point(84, 252);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(629, 48);
@@ -167,7 +142,7 @@
             this.saveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(691, 1030);
+            this.saveButton.Location = new System.Drawing.Point(693, 1000);
             this.saveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(153, 70);
@@ -179,7 +154,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(87, 214);
+            this.panel1.Location = new System.Drawing.Point(84, 310);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(629, 1);
@@ -189,7 +164,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(86, 295);
+            this.panel2.Location = new System.Drawing.Point(83, 391);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(629, 1);
@@ -200,7 +175,7 @@
             this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.phoneTextBox.Location = new System.Drawing.Point(86, 236);
+            this.phoneTextBox.Location = new System.Drawing.Point(83, 332);
             this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(629, 48);
@@ -211,7 +186,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(86, 374);
+            this.panel3.Location = new System.Drawing.Point(83, 470);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(629, 1);
@@ -222,7 +197,7 @@
             this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.emailTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.emailTextBox.Location = new System.Drawing.Point(86, 316);
+            this.emailTextBox.Location = new System.Drawing.Point(83, 412);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(629, 48);
@@ -233,7 +208,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(86, 464);
+            this.panel4.Location = new System.Drawing.Point(83, 560);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(629, 1);
@@ -244,7 +219,7 @@
             this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.addressTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.addressTextBox.Location = new System.Drawing.Point(86, 405);
+            this.addressTextBox.Location = new System.Drawing.Point(83, 501);
             this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(629, 48);
@@ -256,7 +231,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 40);
@@ -269,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 1466);
+            this.ClientSize = new System.Drawing.Size(902, 1100);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.addressTextBox);
@@ -281,9 +256,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.allergiesTextBox);
             this.Controls.Add(this.genderGroupBox);
-            this.Controls.Add(this.allergiesLabel);
             this.Controls.Add(this.dobDateTimePicker);
             this.Controls.Add(this.dobLabel);
             this.Controls.Add(this.addRecordLabel);
@@ -305,11 +278,9 @@
         private System.Windows.Forms.Label addRecordLabel;
         private System.Windows.Forms.Label dobLabel;
         private System.Windows.Forms.DateTimePicker dobDateTimePicker;
-        private System.Windows.Forms.Label allergiesLabel;
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.GroupBox genderGroupBox;
-        private System.Windows.Forms.TextBox allergiesTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.PictureBox pictureBox1;

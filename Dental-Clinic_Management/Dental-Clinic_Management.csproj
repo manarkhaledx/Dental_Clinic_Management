@@ -58,11 +58,23 @@
     <Compile Include="AddAppointment.Designer.cs">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="addNewReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewReceptionist.Designer.cs">
+      <DependentUpon>addNewReceptionist.cs</DependentUpon>
+    </Compile>
     <Compile Include="addPrescriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addPrescriptionForm.Designer.cs">
       <DependentUpon>addPrescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReceptionist.Designer.cs">
+      <DependentUpon>AddReceptionist.cs</DependentUpon>
     </Compile>
     <Compile Include="AddRecordForm.cs">
       <SubType>Form</SubType>
@@ -147,8 +159,14 @@
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addNewReceptionist.resx">
+      <DependentUpon>addNewReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addPrescriptionForm.resx">
       <DependentUpon>addPrescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReceptionist.resx">
+      <DependentUpon>AddReceptionist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddRecordForm.resx">
       <DependentUpon>AddRecordForm.cs</DependentUpon>
