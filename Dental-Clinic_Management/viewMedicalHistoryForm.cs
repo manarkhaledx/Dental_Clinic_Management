@@ -16,5 +16,15 @@ namespace Dental_Clinic_Management
         {
             InitializeComponent();
         }
+
+        private void medicalHistoryDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void totalCostTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
