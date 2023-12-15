@@ -52,12 +52,11 @@
             // 
             this.addRecordLabel.AutoSize = true;
             this.addRecordLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRecordLabel.Location = new System.Drawing.Point(44, 81);
-            this.addRecordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addRecordLabel.Location = new System.Drawing.Point(59, 100);
             this.addRecordLabel.Name = "addRecordLabel";
-            this.addRecordLabel.Size = new System.Drawing.Size(204, 44);
+            this.addRecordLabel.Size = new System.Drawing.Size(429, 65);
             this.addRecordLabel.TabIndex = 0;
-            this.addRecordLabel.Text = "Add Record";
+            this.addRecordLabel.Text = "Patient\'s Record";
             this.addRecordLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // dobLabel
@@ -65,10 +64,9 @@
             this.dobLabel.AutoSize = true;
             this.dobLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.dobLabel.Location = new System.Drawing.Point(49, 392);
-            this.dobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dobLabel.Location = new System.Drawing.Point(65, 482);
             this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(64, 37);
+            this.dobLabel.Size = new System.Drawing.Size(78, 45);
             this.dobLabel.TabIndex = 5;
             this.dobLabel.Text = "DOB";
             this.dobLabel.Click += new System.EventHandler(this.label6_Click);
@@ -79,20 +77,20 @@
             this.dobDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobDateTimePicker.Location = new System.Drawing.Point(151, 392);
-            this.dobDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dobDateTimePicker.Location = new System.Drawing.Point(201, 482);
+            this.dobDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dobDateTimePicker.Name = "dobDateTimePicker";
-            this.dobDateTimePicker.Size = new System.Drawing.Size(325, 36);
+            this.dobDateTimePicker.Size = new System.Drawing.Size(432, 43);
             this.dobDateTimePicker.TabIndex = 11;
             this.dobDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // femaleRadioButton
             // 
             this.femaleRadioButton.AutoSize = true;
-            this.femaleRadioButton.Location = new System.Drawing.Point(35, 32);
-            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.femaleRadioButton.Location = new System.Drawing.Point(47, 39);
+            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(99, 41);
+            this.femaleRadioButton.Size = new System.Drawing.Size(122, 49);
             this.femaleRadioButton.TabIndex = 13;
             this.femaleRadioButton.TabStop = true;
             this.femaleRadioButton.Text = "Female";
@@ -101,10 +99,10 @@
             // maleRadioButton
             // 
             this.maleRadioButton.AutoSize = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(35, 77);
-            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.maleRadioButton.Location = new System.Drawing.Point(47, 95);
+            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(80, 41);
+            this.maleRadioButton.Size = new System.Drawing.Size(98, 49);
             this.maleRadioButton.TabIndex = 14;
             this.maleRadioButton.TabStop = true;
             this.maleRadioButton.Text = "Male";
@@ -116,11 +114,11 @@
             this.genderGroupBox.Controls.Add(this.maleRadioButton);
             this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.genderGroupBox.Location = new System.Drawing.Point(36, 465);
-            this.genderGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.genderGroupBox.Location = new System.Drawing.Point(48, 572);
+            this.genderGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.genderGroupBox.Name = "genderGroupBox";
-            this.genderGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.genderGroupBox.Size = new System.Drawing.Size(212, 133);
+            this.genderGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.genderGroupBox.Size = new System.Drawing.Size(283, 164);
             this.genderGroupBox.TabIndex = 15;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
@@ -130,10 +128,10 @@
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.nameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.nameTextBox.Location = new System.Drawing.Point(56, 164);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.nameTextBox.Location = new System.Drawing.Point(75, 202);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(419, 32);
+            this.nameTextBox.Size = new System.Drawing.Size(559, 40);
             this.nameTextBox.TabIndex = 17;
             this.nameTextBox.Text = "Name";
             this.nameTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -144,10 +142,10 @@
             this.savePatientRecordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.savePatientRecordButton.FlatAppearance.BorderSize = 0;
             this.savePatientRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePatientRecordButton.Location = new System.Drawing.Point(462, 650);
-            this.savePatientRecordButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.savePatientRecordButton.Location = new System.Drawing.Point(616, 800);
+            this.savePatientRecordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.savePatientRecordButton.Name = "savePatientRecordButton";
-            this.savePatientRecordButton.Size = new System.Drawing.Size(102, 46);
+            this.savePatientRecordButton.Size = new System.Drawing.Size(136, 57);
             this.savePatientRecordButton.TabIndex = 20;
             this.savePatientRecordButton.Text = "Save";
             this.savePatientRecordButton.UseVisualStyleBackColor = false;
@@ -156,20 +154,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(56, 202);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Location = new System.Drawing.Point(75, 249);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(419, 1);
+            this.panel1.Size = new System.Drawing.Size(559, 1);
             this.panel1.TabIndex = 22;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(55, 254);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel2.Location = new System.Drawing.Point(73, 313);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 1);
+            this.panel2.Size = new System.Drawing.Size(559, 1);
             this.panel2.TabIndex = 24;
             // 
             // phoneTextBox
@@ -177,10 +175,10 @@
             this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.phoneTextBox.Location = new System.Drawing.Point(55, 216);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.phoneTextBox.Location = new System.Drawing.Point(73, 266);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(419, 32);
+            this.phoneTextBox.Size = new System.Drawing.Size(559, 40);
             this.phoneTextBox.TabIndex = 23;
             this.phoneTextBox.Text = "Phone";
             // 
@@ -188,10 +186,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(55, 306);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel3.Location = new System.Drawing.Point(73, 377);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(419, 1);
+            this.panel3.Size = new System.Drawing.Size(559, 1);
             this.panel3.TabIndex = 26;
             // 
             // emailTextBox
@@ -199,10 +197,10 @@
             this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.emailTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.emailTextBox.Location = new System.Drawing.Point(55, 268);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.emailTextBox.Location = new System.Drawing.Point(73, 330);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(419, 32);
+            this.emailTextBox.Size = new System.Drawing.Size(559, 40);
             this.emailTextBox.TabIndex = 25;
             this.emailTextBox.Text = "Email";
             // 
@@ -210,10 +208,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(55, 364);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel4.Location = new System.Drawing.Point(73, 448);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(419, 1);
+            this.panel4.Size = new System.Drawing.Size(559, 1);
             this.panel4.TabIndex = 28;
             // 
             // addressTextBox
@@ -221,10 +219,10 @@
             this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.addressTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.addressTextBox.Location = new System.Drawing.Point(55, 326);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.addressTextBox.Location = new System.Drawing.Point(73, 401);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(419, 32);
+            this.addressTextBox.Size = new System.Drawing.Size(559, 40);
             this.addressTextBox.TabIndex = 27;
             this.addressTextBox.Text = "Address";
             // 
@@ -233,20 +231,20 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AddRecordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(601, 715);
+            this.ClientSize = new System.Drawing.Size(801, 880);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.addressTextBox);
@@ -263,7 +261,7 @@
             this.Controls.Add(this.dobLabel);
             this.Controls.Add(this.addRecordLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddRecordForm";
             this.Text = "AddRecordForm";
             this.Load += new System.EventHandler(this.AddRecordForm_Load);
