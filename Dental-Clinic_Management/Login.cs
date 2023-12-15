@@ -22,12 +22,12 @@ namespace Dental_Clinic_Management
             if (passwordTextBox.UseSystemPasswordChar == true)
             {
                 passwordTextBox.UseSystemPasswordChar = false;
-                eyePictureBox.Image = Properties.Resources.visibleEyeIcon;
+                viewPasswordPictureBox.Image = Properties.Resources.visibleEyeIcon;
             }
             else
             {
                 passwordTextBox.UseSystemPasswordChar = true;
-                eyePictureBox.Image = Properties.Resources.hiddenEyeIcon;
+                viewPasswordPictureBox.Image = Properties.Resources.hiddenEyeIcon;
             }
             //end
         }

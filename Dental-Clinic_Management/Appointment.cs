@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dental_Clinic_Management
 {
-    public partial class Appointment : Form
+    public partial class appointmentsButton : Form
     {
-        public Appointment()
+        public appointmentsButton()
         {
             InitializeComponent();
         }

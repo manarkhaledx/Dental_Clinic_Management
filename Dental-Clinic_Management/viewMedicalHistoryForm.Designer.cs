@@ -44,12 +44,12 @@
             this.appointmentID,
             this.patientName,
             this.prescription});
-            this.medicalHistoryDataGridView.Location = new System.Drawing.Point(48, 230);
-            this.medicalHistoryDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.medicalHistoryDataGridView.Location = new System.Drawing.Point(32, 150);
+            this.medicalHistoryDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.medicalHistoryDataGridView.Name = "medicalHistoryDataGridView";
             this.medicalHistoryDataGridView.RowHeadersWidth = 62;
             this.medicalHistoryDataGridView.RowTemplate.Height = 28;
-            this.medicalHistoryDataGridView.Size = new System.Drawing.Size(1376, 718);
+            this.medicalHistoryDataGridView.Size = new System.Drawing.Size(917, 467);
             this.medicalHistoryDataGridView.TabIndex = 59;
             // 
             // appointmentID
@@ -77,30 +77,32 @@
             // 
             this.medicalHistoryLabel.AutoSize = true;
             this.medicalHistoryLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicalHistoryLabel.Location = new System.Drawing.Point(774, 45);
+            this.medicalHistoryLabel.Location = new System.Drawing.Point(516, 29);
+            this.medicalHistoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.medicalHistoryLabel.Name = "medicalHistoryLabel";
-            this.medicalHistoryLabel.Size = new System.Drawing.Size(407, 65);
+            this.medicalHistoryLabel.Size = new System.Drawing.Size(275, 44);
             this.medicalHistoryLabel.TabIndex = 58;
             this.medicalHistoryLabel.Text = "Medical History";
             this.medicalHistoryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // prescriptionViewLabel
             // 
-            this.prescriptionViewLabel.Location = new System.Drawing.Point(1430, 230);
+            this.prescriptionViewLabel.Location = new System.Drawing.Point(953, 150);
+            this.prescriptionViewLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.prescriptionViewLabel.Name = "prescriptionViewLabel";
-            this.prescriptionViewLabel.Size = new System.Drawing.Size(408, 718);
+            this.prescriptionViewLabel.Size = new System.Drawing.Size(272, 467);
             this.prescriptionViewLabel.TabIndex = 61;
             this.prescriptionViewLabel.Text = "prescription view";
             // 
             // viewMedicalHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1846, 1118);
+            this.ClientSize = new System.Drawing.Size(1231, 690);
             this.Controls.Add(this.prescriptionViewLabel);
             this.Controls.Add(this.medicalHistoryDataGridView);
             this.Controls.Add(this.medicalHistoryLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "viewMedicalHistoryForm";
             this.Text = "viewMedicalHistoryForm";
             ((System.ComponentModel.ISupportInitialize)(this.medicalHistoryDataGridView)).EndInit();
