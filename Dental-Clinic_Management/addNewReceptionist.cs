@@ -16,5 +16,10 @@ namespace Dental_Clinic_Management
         {
             InitializeComponent();
         }
+
+        private void addNewReceptionist_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
