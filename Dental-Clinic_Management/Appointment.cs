@@ -16,5 +16,15 @@ namespace Dental_Clinic_Management
         {
             InitializeComponent();
         }
+
+        private void appointmentDateandTimeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dentistButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

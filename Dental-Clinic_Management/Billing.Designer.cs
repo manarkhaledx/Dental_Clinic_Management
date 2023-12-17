@@ -58,7 +58,7 @@
             this.totalBilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billingHistoryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pickDateLabel = new System.Windows.Forms.Label();
-            this.filterButton = new System.Windows.Forms.Button();
+            this.filterBillingButton = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -414,8 +414,8 @@
             this.patientId,
             this.patientName,
             this.totalBilling});
-            this.totalBillingsDataGridView.Location = new System.Drawing.Point(311, 149);
-            this.totalBillingsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.totalBillingsDataGridView.Location = new System.Drawing.Point(311, 143);
+            this.totalBillingsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.totalBillingsDataGridView.Name = "totalBillingsDataGridView";
             this.totalBillingsDataGridView.RowHeadersWidth = 62;
             this.totalBillingsDataGridView.RowTemplate.Height = 28;
@@ -474,27 +474,27 @@
             this.pickDateLabel.Text = "Pick a date";
             this.pickDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // filterButton
+            // filterBillingButton
             // 
-            this.filterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.filterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.filterButton.FlatAppearance.BorderSize = 0;
-            this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.filterButton.Location = new System.Drawing.Point(1148, 636);
-            this.filterButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(102, 46);
-            this.filterButton.TabIndex = 53;
-            this.filterButton.Text = "Filter";
-            this.filterButton.UseVisualStyleBackColor = false;
+            this.filterBillingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.filterBillingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.filterBillingButton.FlatAppearance.BorderSize = 0;
+            this.filterBillingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filterBillingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.filterBillingButton.Location = new System.Drawing.Point(1148, 636);
+            this.filterBillingButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.filterBillingButton.Name = "filterBillingButton";
+            this.filterBillingButton.Size = new System.Drawing.Size(102, 46);
+            this.filterBillingButton.TabIndex = 53;
+            this.filterBillingButton.Text = "Filter";
+            this.filterBillingButton.UseVisualStyleBackColor = false;
             // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 690);
-            this.Controls.Add(this.filterButton);
+            this.Controls.Add(this.filterBillingButton);
             this.Controls.Add(this.pickDateLabel);
             this.Controls.Add(this.billingHistoryDateTimePicker);
             this.Controls.Add(this.totalBillingsDataGridView);
@@ -504,7 +504,7 @@
             this.Controls.Add(this.hidePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Billing";
             this.Text = "billingForm";
             this.panel8.ResumeLayout(false);
@@ -544,7 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalBilling;
         private System.Windows.Forms.DateTimePicker billingHistoryDateTimePicker;
         private System.Windows.Forms.Label pickDateLabel;
-        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.Button filterBillingButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button prescriptionButton;

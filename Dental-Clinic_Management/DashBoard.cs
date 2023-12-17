@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dental_Clinic_Management
 {
-    public partial class DashboardForm : Form
+    public partial class recepDashboardForm : Form
     {
-        public DashboardForm()
+        public recepDashboardForm()
         {
             InitializeComponent();
         }
