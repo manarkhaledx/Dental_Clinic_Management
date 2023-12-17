@@ -47,12 +47,12 @@
             this.appointmentID,
             this.patientName,
             this.prescription});
-            this.medicalHistoryDataGridView.Location = new System.Drawing.Point(115, 176);
-            this.medicalHistoryDataGridView.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.medicalHistoryDataGridView.Location = new System.Drawing.Point(86, 143);
+            this.medicalHistoryDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.medicalHistoryDataGridView.Name = "medicalHistoryDataGridView";
             this.medicalHistoryDataGridView.RowHeadersWidth = 62;
             this.medicalHistoryDataGridView.RowTemplate.Height = 28;
-            this.medicalHistoryDataGridView.Size = new System.Drawing.Size(1480, 575);
+            this.medicalHistoryDataGridView.Size = new System.Drawing.Size(1110, 467);
             this.medicalHistoryDataGridView.TabIndex = 59;
             this.medicalHistoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medicalHistoryDataGridView_CellContentClick);
             // 
@@ -81,9 +81,10 @@
             // 
             this.medicalHistoryLabel.AutoSize = true;
             this.medicalHistoryLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicalHistoryLabel.Location = new System.Drawing.Point(688, 36);
+            this.medicalHistoryLabel.Location = new System.Drawing.Point(516, 29);
+            this.medicalHistoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.medicalHistoryLabel.Name = "medicalHistoryLabel";
-            this.medicalHistoryLabel.Size = new System.Drawing.Size(336, 52);
+            this.medicalHistoryLabel.Size = new System.Drawing.Size(275, 44);
             this.medicalHistoryLabel.TabIndex = 58;
             this.medicalHistoryLabel.Text = "Medical History";
             this.medicalHistoryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,10 +93,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(757, 154);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(568, 125);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 6);
+            this.panel2.Size = new System.Drawing.Size(212, 5);
             this.panel2.TabIndex = 64;
             // 
             // totalCostTextBox
@@ -104,9 +105,10 @@
             this.totalCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalCostTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.totalCostTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostTextBox.Location = new System.Drawing.Point(757, 113);
+            this.totalCostTextBox.Location = new System.Drawing.Point(568, 92);
+            this.totalCostTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.totalCostTextBox.Name = "totalCostTextBox";
-            this.totalCostTextBox.Size = new System.Drawing.Size(283, 40);
+            this.totalCostTextBox.Size = new System.Drawing.Size(212, 32);
             this.totalCostTextBox.TabIndex = 63;
             this.totalCostTextBox.TextChanged += new System.EventHandler(this.totalCostTextBox_TextChanged);
             // 
@@ -115,9 +117,10 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(542, 113);
+            this.totalCostLabel.Location = new System.Drawing.Point(406, 92);
+            this.totalCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(196, 45);
+            this.totalCostLabel.Size = new System.Drawing.Size(157, 37);
             this.totalCostLabel.TabIndex = 62;
             this.totalCostLabel.Text = "Phone Number:";
             // 
@@ -128,28 +131,29 @@
             this.searchButton.FlatAppearance.BorderSize = 0;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.searchButton.Location = new System.Drawing.Point(1459, 779);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchButton.Location = new System.Drawing.Point(1094, 633);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(136, 57);
+            this.searchButton.Size = new System.Drawing.Size(102, 46);
             this.searchButton.TabIndex = 65;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
             // 
             // viewMedicalHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1641, 849);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.medicalHistoryDataGridView);
             this.Controls.Add(this.medicalHistoryLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "viewMedicalHistoryForm";
             this.Text = "viewMedicalHistoryForm";
+            this.Load += new System.EventHandler(this.viewMedicalHistoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.medicalHistoryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

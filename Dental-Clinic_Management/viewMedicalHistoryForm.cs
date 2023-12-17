@@ -26,5 +26,10 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void viewMedicalHistoryForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

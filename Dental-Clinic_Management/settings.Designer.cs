@@ -433,7 +433,7 @@
             this.saveAccountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.saveAccountButton.FlatAppearance.BorderSize = 0;
             this.saveAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveAccountButton.Location = new System.Drawing.Point(1002, 623);
+            this.saveAccountButton.Location = new System.Drawing.Point(981, 621);
             this.saveAccountButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.saveAccountButton.Name = "saveAccountButton";
             this.saveAccountButton.Size = new System.Drawing.Size(102, 46);
