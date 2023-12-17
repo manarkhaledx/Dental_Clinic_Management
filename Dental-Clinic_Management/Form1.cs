@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dental_Clinic_Management
 {
-    public partial class ViewReceptionist : Form
+    public partial class Form1 : Form
     {
-        public ViewReceptionist()
+        public Form1()
         {
             InitializeComponent();
         }

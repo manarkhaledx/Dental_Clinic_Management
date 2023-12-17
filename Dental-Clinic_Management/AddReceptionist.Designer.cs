@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class AddReceptionist
+    partial class ViewReceptionist
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReceptionist));
-            this.patientDataGridView = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReceptionist));
+            this.recepDataGridView = new System.Windows.Forms.DataGridView();
             this.ReceptionistID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,10 +55,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.signUpPatientButton = new System.Windows.Forms.Button();
-            this.deletePatientButton = new System.Windows.Forms.Button();
-            this.editPatientButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).BeginInit();
+            this.signUpRecepButton = new System.Windows.Forms.Button();
+            this.deleteRecepButton = new System.Windows.Forms.Button();
+            this.editRecepButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.recepDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,10 +68,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
-            // patientDataGridView
+            // recepDataGridView
             // 
-            this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.recepDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.recepDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ReceptionistID,
             this.fristName,
             this.lastName,
@@ -80,13 +80,13 @@
             this.address,
             this.email,
             this.dOB});
-            this.patientDataGridView.Location = new System.Drawing.Point(348, 42);
-            this.patientDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.patientDataGridView.Name = "patientDataGridView";
-            this.patientDataGridView.RowHeadersWidth = 62;
-            this.patientDataGridView.RowTemplate.Height = 28;
-            this.patientDataGridView.Size = new System.Drawing.Size(831, 575);
-            this.patientDataGridView.TabIndex = 30;
+            this.recepDataGridView.Location = new System.Drawing.Point(309, 31);
+            this.recepDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.recepDataGridView.Name = "recepDataGridView";
+            this.recepDataGridView.RowHeadersWidth = 62;
+            this.recepDataGridView.RowTemplate.Height = 28;
+            this.recepDataGridView.Size = new System.Drawing.Size(911, 569);
+            this.recepDataGridView.TabIndex = 30;
             // 
             // ReceptionistID
             // 
@@ -416,65 +416,65 @@
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
             // 
-            // signUpPatientButton
+            // signUpRecepButton
             // 
-            this.signUpPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.signUpPatientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.signUpPatientButton.FlatAppearance.BorderSize = 0;
-            this.signUpPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUpPatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.signUpPatientButton.Location = new System.Drawing.Point(348, 655);
-            this.signUpPatientButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.signUpPatientButton.Name = "signUpPatientButton";
-            this.signUpPatientButton.Size = new System.Drawing.Size(102, 46);
-            this.signUpPatientButton.TabIndex = 48;
-            this.signUpPatientButton.Text = "SignUp";
-            this.signUpPatientButton.UseVisualStyleBackColor = false;
+            this.signUpRecepButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.signUpRecepButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.signUpRecepButton.FlatAppearance.BorderSize = 0;
+            this.signUpRecepButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUpRecepButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.signUpRecepButton.Location = new System.Drawing.Point(348, 655);
+            this.signUpRecepButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.signUpRecepButton.Name = "signUpRecepButton";
+            this.signUpRecepButton.Size = new System.Drawing.Size(102, 46);
+            this.signUpRecepButton.TabIndex = 48;
+            this.signUpRecepButton.Text = "SignUp";
+            this.signUpRecepButton.UseVisualStyleBackColor = false;
             // 
-            // deletePatientButton
+            // deleteRecepButton
             // 
-            this.deletePatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.deletePatientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.deletePatientButton.FlatAppearance.BorderSize = 0;
-            this.deletePatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletePatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deletePatientButton.Location = new System.Drawing.Point(735, 655);
-            this.deletePatientButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.deletePatientButton.Name = "deletePatientButton";
-            this.deletePatientButton.Size = new System.Drawing.Size(102, 46);
-            this.deletePatientButton.TabIndex = 49;
-            this.deletePatientButton.Text = "Delete";
-            this.deletePatientButton.UseVisualStyleBackColor = false;
+            this.deleteRecepButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.deleteRecepButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteRecepButton.FlatAppearance.BorderSize = 0;
+            this.deleteRecepButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteRecepButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteRecepButton.Location = new System.Drawing.Point(735, 655);
+            this.deleteRecepButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.deleteRecepButton.Name = "deleteRecepButton";
+            this.deleteRecepButton.Size = new System.Drawing.Size(102, 46);
+            this.deleteRecepButton.TabIndex = 49;
+            this.deleteRecepButton.Text = "Delete";
+            this.deleteRecepButton.UseVisualStyleBackColor = false;
             // 
-            // editPatientButton
+            // editRecepButton
             // 
-            this.editPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.editPatientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.editPatientButton.FlatAppearance.BorderSize = 0;
-            this.editPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editPatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.editPatientButton.Location = new System.Drawing.Point(1077, 655);
-            this.editPatientButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.editPatientButton.Name = "editPatientButton";
-            this.editPatientButton.Size = new System.Drawing.Size(102, 46);
-            this.editPatientButton.TabIndex = 50;
-            this.editPatientButton.Text = "Edit";
-            this.editPatientButton.UseVisualStyleBackColor = false;
+            this.editRecepButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.editRecepButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.editRecepButton.FlatAppearance.BorderSize = 0;
+            this.editRecepButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editRecepButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.editRecepButton.Location = new System.Drawing.Point(1077, 655);
+            this.editRecepButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.editRecepButton.Name = "editRecepButton";
+            this.editRecepButton.Size = new System.Drawing.Size(102, 46);
+            this.editRecepButton.TabIndex = 50;
+            this.editRecepButton.Text = "Edit";
+            this.editRecepButton.UseVisualStyleBackColor = false;
             // 
-            // AddReceptionist
+            // ViewReceptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 690);
-            this.Controls.Add(this.editPatientButton);
-            this.Controls.Add(this.deletePatientButton);
-            this.Controls.Add(this.signUpPatientButton);
+            this.Controls.Add(this.editRecepButton);
+            this.Controls.Add(this.deleteRecepButton);
+            this.Controls.Add(this.signUpRecepButton);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.patientDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "AddReceptionist";
-            this.Text = "AddReceptionist";
-            ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
+            this.Controls.Add(this.recepDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ViewReceptionist";
+            this.Text = "ViewReceptionist";
+            ((System.ComponentModel.ISupportInitialize)(this.recepDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -488,7 +488,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView patientDataGridView;
+        private System.Windows.Forms.DataGridView recepDataGridView;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel1;
@@ -506,9 +506,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button signUpPatientButton;
-        private System.Windows.Forms.Button deletePatientButton;
-        private System.Windows.Forms.Button editPatientButton;
+        private System.Windows.Forms.Button signUpRecepButton;
+        private System.Windows.Forms.Button deleteRecepButton;
+        private System.Windows.Forms.Button editRecepButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceptionistID;
         private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;

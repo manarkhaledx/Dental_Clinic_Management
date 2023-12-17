@@ -37,6 +37,8 @@
             this.appointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateLabel = new System.Windows.Forms.Label();
             this.addAppointmentLabel = new System.Windows.Forms.Label();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +57,8 @@
             this.timeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.timeTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.timeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.timeTextBox.Location = new System.Drawing.Point(30, 214);
-            this.timeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timeTextBox.Location = new System.Drawing.Point(30, 215);
+            this.timeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(419, 32);
             this.timeTextBox.TabIndex = 39;
@@ -78,7 +80,7 @@
             this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.closePictureBox.Location = new System.Drawing.Point(15, 8);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(24, 26);
             this.closePictureBox.TabIndex = 37;
@@ -91,7 +93,7 @@
             this.saveNewAppointmentButton.FlatAppearance.BorderSize = 0;
             this.saveNewAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveNewAppointmentButton.Location = new System.Drawing.Point(382, 371);
-            this.saveNewAppointmentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveNewAppointmentButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveNewAppointmentButton.Name = "saveNewAppointmentButton";
             this.saveNewAppointmentButton.Size = new System.Drawing.Size(102, 46);
             this.saveNewAppointmentButton.TabIndex = 36;
@@ -104,7 +106,7 @@
             this.patientNameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.patientNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
             this.patientNameTextBox.Location = new System.Drawing.Point(31, 162);
-            this.patientNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.patientNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.patientNameTextBox.Name = "patientNameTextBox";
             this.patientNameTextBox.Size = new System.Drawing.Size(419, 32);
             this.patientNameTextBox.TabIndex = 35;
@@ -117,7 +119,7 @@
             this.appointmentDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.appointmentDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointmentDateTimePicker.Location = new System.Drawing.Point(126, 298);
-            this.appointmentDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.appointmentDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.appointmentDateTimePicker.Name = "appointmentDateTimePicker";
             this.appointmentDateTimePicker.Size = new System.Drawing.Size(325, 36);
             this.appointmentDateTimePicker.TabIndex = 31;
@@ -145,11 +147,35 @@
             this.addAppointmentLabel.TabIndex = 29;
             this.addAppointmentLabel.Text = "Add Appointment";
             // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
+            this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.phoneTextBox.Location = new System.Drawing.Point(30, 110);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(419, 32);
+            this.phoneTextBox.TabIndex = 41;
+            this.phoneTextBox.Text = "Phone Number";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(32, 147);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(419, 1);
+            this.panel3.TabIndex = 42;
+            // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 439);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.timeTextBox);
             this.Controls.Add(this.panel1);
@@ -159,7 +185,7 @@
             this.Controls.Add(this.appointmentDateTimePicker);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.addAppointmentLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddAppointment";
             this.Text = "AddAppointment";
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
@@ -179,5 +205,7 @@
         private System.Windows.Forms.DateTimePicker appointmentDateTimePicker;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label addAppointmentLabel;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.Panel panel3;
     }
 }
