@@ -40,9 +40,6 @@ namespace Dental_Clinic_Management
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
         }
     }
 }
