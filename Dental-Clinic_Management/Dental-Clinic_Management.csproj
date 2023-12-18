@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="Patient.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patient.Designer.cs">
       <DependentUpon>Patient.cs</DependentUpon>
