@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,20 +33,4 @@ namespace Dental_Clinic_Management
         }
     }
 
-    public class PatientQueries
-    {
-        
-        public int patientID;
-        public string fristName;
-        public string lastName;
-        public string city;
-        public string street;
-        public string phone;
-        public string gender;
-        public string dateOfBirth;
-        public static void addPatient(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-    }
 }

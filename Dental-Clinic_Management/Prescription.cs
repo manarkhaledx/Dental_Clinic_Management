@@ -12,15 +12,19 @@ namespace Dental_Clinic_Management
     using System;
     using System.Collections.Generic;
     
-    public partial class Appointment
+    public partial class Prescription
     {
-        public int app_id { get; set; }
-        public Nullable<System.TimeSpan> app_time { get; set; }
-        public Nullable<System.DateTime> app_date { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Prescription()
+        {
+            this.Drugs = new HashSet<Drug>();
+        }
+    
+        public int prescp_no { get; set; }
     
         public virtual Dentist Dentist { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Drug> Drugs { get; set; }
         public virtual Patient Patient { get; set; }
-        public virtual Payment Payment { get; set; }
-        public virtual Receptionist Receptionist { get; set; }
     }
 }
