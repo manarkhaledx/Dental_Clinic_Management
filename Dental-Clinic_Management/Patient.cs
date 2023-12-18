@@ -41,6 +41,47 @@ namespace Dental_Clinic_Management
         {
 
         }
->>>>>>> parent of a06415a (commit)
+        private void Patient_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class PatientQueries
+    {
+        
+        public int patientID;
+        public string fristName;
+        public string lastName;
+        public string city;
+        public string street;
+        public string phone;
+        public string gender;
+        public string dateOfBirth;
+        public static void addPatient(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        private void Patient_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class PatientQueries
+    {
+        
+        public int patientID;
+        public string fristName;
+        public string lastName;
+        public string city;
+        public string street;
+        public string phone;
+        public string gender;
+        public string dateOfBirth;
+        public static void addPatient(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
