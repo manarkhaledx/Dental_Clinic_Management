@@ -16,5 +16,12 @@ namespace Dental_Clinic_Management
         {
             InitializeComponent();
         }
+
+        private void AddAppointment_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet1.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1);
+
+        }
     }
 }
