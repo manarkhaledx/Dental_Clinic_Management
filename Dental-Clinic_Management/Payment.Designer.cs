@@ -11,14 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -68,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.paymentMethodGroupBox.SuspendLayout();
-            this.SuspendLayout();
             // 
             // closePictureBox
             // 
@@ -483,19 +474,7 @@
             // 
             // Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 687);
-            this.Controls.Add(this.closePictureBox);
-            this.Controls.Add(this.hidePictureBox);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.exitPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Payment";
-            this.Text = "Payment";
-            this.Load += new System.EventHandler(this.Payment_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -508,7 +487,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             this.paymentMethodGroupBox.ResumeLayout(false);
             this.paymentMethodGroupBox.PerformLayout();
-            this.ResumeLayout(false);
 
         }
 

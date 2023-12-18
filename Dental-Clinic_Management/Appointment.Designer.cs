@@ -1,24 +1,11 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class appointmentsButton
+    partial class Appointment : AppointmentBase
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -65,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDateandTimeDataGridView)).BeginInit();
-            this.SuspendLayout();
             // 
             // dOB
             // 
@@ -307,7 +293,6 @@
             this.appointmentDateandTimeDataGridView.RowTemplate.Height = 28;
             this.appointmentDateandTimeDataGridView.Size = new System.Drawing.Size(764, 482);
             this.appointmentDateandTimeDataGridView.TabIndex = 32;
-            this.appointmentDateandTimeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentDateandTimeDataGridView_CellContentClick);
             // 
             // appointmentID
             // 
@@ -422,30 +407,7 @@
             this.deleteAppButton.TabIndex = 51;
             this.deleteAppButton.Text = "Delete";
             this.deleteAppButton.UseVisualStyleBackColor = false;
-            // 
-            // appointmentsButton
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1231, 690);
-            this.Controls.Add(this.deleteAppButton);
-            this.Controls.Add(this.editAppButton);
-            this.Controls.Add(this.filterAppButton);
-            this.Controls.Add(this.appointmentDateandTimeDataGridView);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel7);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "appointmentsButton";
-            this.Text = "Appointment";
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dentalCarePictureBox)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentDateandTimeDataGridView)).EndInit();
-            this.ResumeLayout(false);
+           
 
         }
 
