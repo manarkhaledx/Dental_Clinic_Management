@@ -12,15 +12,12 @@ namespace Dental_Clinic_Management
     using System;
     using System.Collections.Generic;
     
-    public partial class Appointment
+    public partial class sysdiagram
     {
-        public int app_id { get; set; }
-        public Nullable<System.TimeSpan> app_time { get; set; }
-        public Nullable<System.DateTime> app_date { get; set; }
-    
-        public virtual Dentist Dentist { get; set; }
-        public virtual Patient Patient { get; set; }
-        public virtual Payment Payment { get; set; }
-        public virtual Receptionist Receptionist { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
