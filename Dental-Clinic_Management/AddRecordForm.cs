@@ -140,51 +140,58 @@ namespace Dental_Clinic_Management
             try
             {
                 if (firstNameTextBox.Text != string.Empty || lastNameTextBox.Text != string.Empty || phoneTextBox.Text != string.Empty
-                    || (femaleRadioButton.Checked || maleRadioButton.Checked) || dobDateTimePicker.Value != null || addressTextBox.Text != string.Empty)
+                    || (maleRadioButton.Checked || femaleRadioButton.Checked) || dobDateTimePicker.Value != null || addressTextBox.Text != string.Empty)
                 {
-
-
-                    using (SqlConnection con = getConnection())
+                    // Validate phone number input
+                    if (phoneTextBox.Text.Length == 11 && int.TryParse(phoneTextBox.Text, out _))
                     {
-                        con.Open();
-
-                        // Check if phone already exists in patient table
-                        using (SqlCommand patientCmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
+                        using (SqlConnection con = getConnection())
                         {
+                            con.Open();
 
-
-                            using (SqlDataReader patientDr = patientCmd.ExecuteReader())
+                            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Fname=@Fname AND Lname=@Lname AND Phone=@Phone", con))
                             {
-                                if (patientDr.Read())
-                                {
-                                    MessageBox.Show("Phone number already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                cmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
+                                cmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
+                                cmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
 
-                                    return;
+                                using (SqlDataReader dr = cmd.ExecuteReader())
+                                {
+                                    if (dr.Read())
+                                    {
+                                        MessageBox.Show("Patient already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                    }
+                                    else
+                                    {
+                                        dr.Close();
+
+                                        using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Patient (Fname, Lname, Phone, gender, DOB, pat_address) " +
+                                            "VALUES (@Fname, @Lname, @Phone, @gender, @DOB, @pat_address)", con))
+                                        {
+                                            insertCmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
+                                            insertCmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
+                                            insertCmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
+                                            insertCmd.Parameters.AddWithValue("gender", femaleRadioButton.Checked ? "Female" : "Male");
+                                            insertCmd.Parameters.AddWithValue("DOB", dobDateTimePicker.Value);
+                                            insertCmd.Parameters.AddWithValue("pat_address", addressTextBox.Text);
+
+                                            insertCmd.ExecuteNonQuery();
+
+                                            MessageBox.Show("Patient information added successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            // Optionally, you may navigate to another form or perform additional actions here.
+                                            //
+                                            return;
+                                        }
+                                    }
                                 }
                             }
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-                        // If username is unique, proceed to insert into Receptionist table
-                        using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Patient (Fname, Lname, Phone, pat_address, gender, DOB) " +
-                            "VALUES (@Fname, @Lname, @Phone, @pat_address, @gender, @DOB)", con))
-                        {
-                            insertCmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
-                            insertCmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
-                            insertCmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
-                            insertCmd.Parameters.AddWithValue("gender", femaleRadioButton.Checked ? "Female" : "Male");
-                            insertCmd.Parameters.AddWithValue("DOB", dobDateTimePicker.Value);
-                            insertCmd.Parameters.AddWithValue("recep_address", addressTextBox.Text);
-
-
-                            insertCmd.ExecuteNonQuery();
-
-                            MessageBox.Show("patient added  successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            Login loginForm = new Login();
-                            loginForm.ShowDialog();
-                            return;
-                        }
                     }
                 }
                 else
@@ -192,14 +199,11 @@ namespace Dental_Clinic_Management
                     MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }
