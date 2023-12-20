@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace Dental_Clinic_Management
 {
-    class clinicDB
+    internal class clinicDB
     {
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = MARK;database=Dental clinic;integrated security = true";
+            con.ConnectionString = "data source = MARK;database=Pharmacy;integrated security = true";
             return con;
         }
         public DataSet getData(string query)
