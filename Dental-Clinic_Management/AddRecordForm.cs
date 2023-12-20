@@ -129,7 +129,7 @@ namespace Dental_Clinic_Management
             if (firstNameTextBox.Text!=string.Empty&&lastNameTextBox.Text!=string.Empty&&genderGroupBox!=null&&phoneTextBox.Text!=string.Empty&&addressTextBox.Text!=string.Empty)
             {
                 
-                patientDataBaseQueries.addPatient(this.firstNameTextBox.Text, this.lastNameTextBox.Text, gender, this.phoneTextBox.Text, this.addressTextBox.Text, this.dobDateTimePicker.Text);
+                PatientDataBaseQueries.AddPatient(this.firstNameTextBox.Text, this.lastNameTextBox.Text, gender, this.phoneTextBox.Text, this.addressTextBox.Text, this.dobDateTimePicker.Value);
                 MessageBox.Show(" Patient saved successfully :)");
                 //Patient p1=new Patient();
                //p1.ShowDialog();
