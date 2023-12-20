@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Dental_Clinic_Management.Patient;
 
 namespace Dental_Clinic_Management
 {
@@ -107,6 +108,37 @@ namespace Dental_Clinic_Management
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private string GetSelectedRadioButtonValue()
+        {
+            // Iterate through radio buttons to find the selected one
+            foreach (RadioButton radioButton in genderGroupBox.Controls)
+            {
+                if (radioButton.Checked)
+                {
+                    return radioButton.Text; // You can change this based on your scenario
+                }
+            }
+
+            return null; // No radio button selected
+        }
+
+        private void savePatientButton_Click(object sender, EventArgs e)
+        {
+            string gender = GetSelectedRadioButtonValue();
+            if (firstNameTextBox.Text!=string.Empty&&lastNameTextBox.Text!=string.Empty&&genderGroupBox!=null&&phoneTextBox.Text!=string.Empty&&addressTextBox.Text!=string.Empty)
+            {
+                
+                patientDataBaseQueries.addPatient(this.firstNameTextBox.Text, this.lastNameTextBox.Text, gender, this.phoneTextBox.Text, this.addressTextBox.Text, this.dobDateTimePicker.Text);
+                MessageBox.Show(" Patient saved successfully :)");
+                //Patient p1=new Patient();
+               //p1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(" Please enter all the data fields ;)");
+            }
+            
         }
     }
 }
