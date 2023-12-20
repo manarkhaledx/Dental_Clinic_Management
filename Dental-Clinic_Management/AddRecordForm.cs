@@ -2,22 +2,34 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using static Dental_Clinic_Management.Patient;
 
 namespace Dental_Clinic_Management
 {
     public partial class AddRecordForm : Form
+
     {
+        SqlCommand cmd;
+        SqlDataReader dr;
         public AddRecordForm()
         {
             InitializeComponent();
-          
+
         }
+        protected SqlConnection getConnection()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            return con;
+        }
+
 
 
         private void AddRecordForm_Load(object sender, EventArgs e)  //make the form always appear in the right side & centered 
@@ -125,20 +137,69 @@ namespace Dental_Clinic_Management
 
         private void savePatientButton_Click(object sender, EventArgs e)
         {
-            string gender = GetSelectedRadioButtonValue();
-            if (firstNameTextBox.Text!=string.Empty&&lastNameTextBox.Text!=string.Empty&&genderGroupBox!=null&&phoneTextBox.Text!=string.Empty&&addressTextBox.Text!=string.Empty)
+            try
             {
-                
-                patientDataBaseQueries.addPatient(this.firstNameTextBox.Text, this.lastNameTextBox.Text, gender, this.phoneTextBox.Text, this.addressTextBox.Text, this.dobDateTimePicker.Text);
-                MessageBox.Show(" Patient saved successfully :)");
-                //Patient p1=new Patient();
-               //p1.ShowDialog();
+                if (firstNameTextBox.Text != string.Empty || lastNameTextBox.Text != string.Empty || phoneTextBox.Text != string.Empty
+                    || (femaleRadioButton.Checked || maleRadioButton.Checked) || dobDateTimePicker.Value != null || addressTextBox.Text != string.Empty)
+                {
+
+
+                    using (SqlConnection con = getConnection())
+                    {
+                        con.Open();
+
+                        // Check if phone already exists in patient table
+                        using (SqlCommand patientCmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
+                        {
+
+
+                            using (SqlDataReader patientDr = patientCmd.ExecuteReader())
+                            {
+                                if (patientDr.Read())
+                                {
+                                    MessageBox.Show("Phone number already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                    return;
+                                }
+                            }
+                        }
+
+
+                        // If username is unique, proceed to insert into Receptionist table
+                        using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Patient (Fname, Lname, Phone, pat_address, gender, DOB) " +
+                            "VALUES (@Fname, @Lname, @Phone, @pat_address, @gender, @DOB)", con))
+                        {
+                            insertCmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
+                            insertCmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
+                            insertCmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
+                            insertCmd.Parameters.AddWithValue("gender", femaleRadioButton.Checked ? "Female" : "Male");
+                            insertCmd.Parameters.AddWithValue("DOB", dobDateTimePicker.Value);
+                            insertCmd.Parameters.AddWithValue("recep_address", addressTextBox.Text);
+
+
+                            insertCmd.ExecuteNonQuery();
+
+                            MessageBox.Show("patient added  successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            Login loginForm = new Login();
+                            loginForm.ShowDialog();
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show(" Please enter all the data fields ;)");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
     }
 }

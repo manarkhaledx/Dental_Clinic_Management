@@ -22,22 +22,15 @@ namespace Dental_Clinic_Management
         {
 
         }
+        protected SqlConnection getConnection()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            return con;
+        }
         public static class patientDataBaseQueries
         {
-            readonly static SqlConnection con = new SqlConnection(@"data source = DESKTOP-8JPNOOB\MSSQLSERVER01;database=Clinic;integrated security = true");
-            static SqlCommand cmd;
-            readonly static SqlDataReader dr;
-            public static void addPatient(string firstName, string lastName,string Gender,string phone,string address,string dateOfBirth)
-            {
-                cmd = new SqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                string patient = $"insert into Patient (Fname,Lname,Phone,pat_address,gender,DOB) values('{firstName}', '{lastName}','{phone}','{address}','{Gender}','{dateOfBirth}')";
-                cmd.CommandText = patient;
-                cmd.ExecuteReader();
-                con.Close();
-            }
-
+            
         }
     }
 }
