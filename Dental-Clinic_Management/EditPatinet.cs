@@ -43,6 +43,9 @@ namespace Dental_Clinic_Management
                     // Call the method to edit patient information
                     patientDataBaseQueries.EditPatient(phone, fname, lname, phone, address, dob, femaleRadioButton);
                     MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Patient ob = new Patient;
+                    ob.ShowDialog();
                     // Optionally, you may navigate to another form or perform additional actions here.
                 }
                 else

@@ -33,19 +33,7 @@ namespace Dental_Clinic_Management
 
         private void Patient_Load(object sender, EventArgs e)
         {
-/*            DialogResult result = MessageBox.Show($"Are You sure you want to edit patient data", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-*/            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
-
-          /*  if (result == DialogResult.Yes)
-            {
-                AddRecordForm obj = new AddRecordForm();
-                this.Hide();
-                obj.ShowDialog();
-            }
-            else if (result == DialogResult.No)
-            {
-                MessageBox.Show("no");
-            }*/
+            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
         }
         public static class patientDataBaseQueries
         {
@@ -263,9 +251,7 @@ namespace Dental_Clinic_Management
                         {
                             if (dr.Read())
                             {
-                                dr.Close();
-
-                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone", con))
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone AND ID=@ID", con))
                                 {
                                     updateCmd.Parameters.AddWithValue("Phone", newPhone);
                                     updateCmd.Parameters.AddWithValue("NewFname", newFname);
@@ -274,12 +260,16 @@ namespace Dental_Clinic_Management
                                     updateCmd.Parameters.AddWithValue("NewDOB", newDOB);
                                     updateCmd.Parameters.AddWithValue("NewAddress", newAddress);
 
+                                    updateCmd.Parameters.AddWithValue("ID", dr["ID"]);
+
+                                    dr.Close();
+
                                     int rowsAffected = updateCmd.ExecuteNonQuery();
 
                                     if (rowsAffected > 0)
                                     {
                                         MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        // Optionally, you may navigate to another form or perform additional actions here.
+
                                     }
                                     else
                                     {
@@ -295,6 +285,7 @@ namespace Dental_Clinic_Management
                     }
                 }
             }
+
 
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             public static void loadAllPatientsInDataGridView(DataGridView dataGridView)
@@ -459,6 +450,7 @@ namespace Dental_Clinic_Management
                 // Open the EditPatientForm and pass the patient data
 
                 EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
+                this.Hide();
                 editForm.ShowDialog();
             }
             else
