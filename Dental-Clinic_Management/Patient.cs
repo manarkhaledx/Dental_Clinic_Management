@@ -36,7 +36,7 @@ namespace Dental_Clinic_Management
             DialogResult result = MessageBox.Show($"Are You sure you want to edit patient data", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
 
-            if (result == DialogResult.Yes)
+          /*  if (result == DialogResult.Yes)
             {
                 AddRecordForm obj = new AddRecordForm();
                 this.Hide();
@@ -45,7 +45,7 @@ namespace Dental_Clinic_Management
             else if (result == DialogResult.No)
             {
                 MessageBox.Show("no");
-            }
+            }*/
         }
         public static class patientDataBaseQueries
         {
@@ -185,16 +185,64 @@ namespace Dental_Clinic_Management
                             DataTable dt = new DataTable();
                             adapter.Fill(dt);
 
-                            dataGridView.DataSource = dt;
+                            // Clear existing columns (if any)
+                            dataGridView.Columns.Clear();
 
-                            // Optional: Customize column names in the DataGridView
-                            dataGridView.Columns["patient_id"].HeaderText = "id";
-                            dataGridView.Columns["Fname"].HeaderText = "First Name";
-                            dataGridView.Columns["Lname"].HeaderText = "Last Name";
-                            dataGridView.Columns["gender"].HeaderText = "Gender";
-                            dataGridView.Columns["Phone"].HeaderText = "phone";
-                            dataGridView.Columns["pat_address"].HeaderText = "Address";
-                            dataGridView.Columns["DOB"].HeaderText = "Date of Birth";
+                            // Set AutoGenerateColumns to false
+                            dataGridView.AutoGenerateColumns = false;
+
+                            // Manually add columns and map them to DataTable columns
+                            DataGridViewTextBoxColumn colPatientID = new DataGridViewTextBoxColumn();
+                            colPatientID.Name = "patient_id";
+                            colPatientID.DataPropertyName = "patient_id";
+                            colPatientID.HeaderText = "Patient ID";
+                            colPatientID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPatientID);
+
+                            DataGridViewTextBoxColumn colFname = new DataGridViewTextBoxColumn();
+                            colFname.Name = "Fname";
+                            colFname.DataPropertyName = "Fname";
+                            colFname.HeaderText = "First Name";
+                            colFname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colFname);
+
+                            DataGridViewTextBoxColumn colLname = new DataGridViewTextBoxColumn();
+                            colLname.Name = "Lname";
+                            colLname.DataPropertyName = "Lname";
+                            colLname.HeaderText = "Last Name";
+                            colLname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colLname);
+
+                            DataGridViewTextBoxColumn colPhone = new DataGridViewTextBoxColumn();
+                            colPhone.Name = "Phone";
+                            colPhone.DataPropertyName = "Phone";
+                            colPhone.HeaderText = "Phone";
+                            colPhone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPhone);
+
+                            DataGridViewTextBoxColumn colPatAddress = new DataGridViewTextBoxColumn();
+                            colPatAddress.Name = "pat_address";
+                            colPatAddress.DataPropertyName = "pat_address";
+                            colPatAddress.HeaderText = "Patient Address";
+                            colPatAddress.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPatAddress);
+
+                            DataGridViewTextBoxColumn colGender = new DataGridViewTextBoxColumn();
+                            colGender.Name = "gender";
+                            colGender.DataPropertyName = "gender";
+                            colGender.HeaderText = "Gender";
+                            colGender.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colGender);
+
+                            DataGridViewTextBoxColumn colDOB = new DataGridViewTextBoxColumn();
+                            colDOB.Name = "DOB";
+                            colDOB.DataPropertyName = "DOB";
+                            colDOB.HeaderText = "Date of Birth";
+                            colDOB.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colDOB);
+
+                            // Set the DataSource
+                            dataGridView.DataSource = dt;
                         }
                     }
                 }
