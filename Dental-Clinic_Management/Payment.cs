@@ -73,13 +73,37 @@ namespace Dental_Clinic_Management
                     cmd = new SqlCommand(query, con);
                     dr = cmd.ExecuteReader();
 
+                    decimal totalCost = 0;
+                    int itemCounter = 0;
+                    StringBuilder serviceNameBuilder = new StringBuilder();
+
                     while (dr.Read())
                     {
                         // Display service name in the list box
-                        serviceListBox.Items.Add(dr["ser_name"].ToString());
+                        string serviceName = dr["ser_name"].ToString();
+                        serviceListBox.Items.Add(serviceName);
+
+                        // Append service name to the label
+                        serviceNameBuilder.Append(serviceName);
+                        serviceNameBuilder.Append(", ");
+
+                        // Sum up service prices
+                        totalCost += Convert.ToDecimal(dr["ser_price"]);
+                        itemCounter++;
+
+                        // If more than 3 items, show the remaining items as "..."
+                        if (itemCounter >= 3)
+                        {
+                            serviceNameBuilder.Append("...");
+                            break;
+                        }
                     }
 
                     dr.Close();
+
+                    // Set the labels
+                    serviceNameLabel.Text = serviceNameBuilder.ToString();
+                    serviceCostLabel.Text = totalCost.ToString();
                 }
             }
             catch (Exception ex)
@@ -87,6 +111,7 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void Payment_Load(object sender, EventArgs e)
         {
