@@ -127,38 +127,6 @@ namespace Dental_Clinic_Management
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-            public static void searchPatient(string phone)
-            {
-                using (SqlConnection con = getConnection())
-                {
-                    con.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
-                    {
-                        cmd.Parameters.AddWithValue("Phone", phone);
-
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.Read())
-                            {
-                                // Patient found, you can display or process the information as needed
-                                string fname = dr["Fname"].ToString();
-                                string lname = dr["Lname"].ToString();
-                                string gender = dr["gender"].ToString();
-                                DateTime dob = Convert.ToDateTime(dr["DOB"]);
-                                string address = dr["pat_address"].ToString();
-
-                                MessageBox.Show($"Patient Information:\n\nName: {fname} {lname}\nGender: {gender}\nDOB: {dob.ToShortDateString()}\nAddress: {address}", "Patient Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Patient not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                }
-            }
-
             public static void SearchPatient(string phoneNumber , DataGridView dataGridView)
             {
                 using (SqlConnection con = getConnection())
@@ -394,9 +362,6 @@ namespace Dental_Clinic_Management
                 // If the TextBox is empty, load all patients
                 patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
             }
-
-
-
         }
 
         private void deletePatientButton_Click(object sender, EventArgs e)
@@ -457,6 +422,11 @@ namespace Dental_Clinic_Management
             {
                 MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }
