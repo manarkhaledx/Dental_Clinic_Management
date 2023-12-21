@@ -251,15 +251,12 @@ namespace Dental_Clinic_Management
             DataGridView dataGrid = patientDataGridView;
 
             // You can set a minimum length if needed before starting the search
-            if (phone.Length >= 1)
+            if (phone.Length == 11)
             {
                 patientDataBaseQueries.searchPatient(phone);
             }
-            else
-            {
-                // If the TextBox is empty, load all patients
-                patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
-            }
+            
+           
         }
 
         private void deletePatientButton_Click(object sender, EventArgs e)
@@ -272,7 +269,6 @@ namespace Dental_Clinic_Management
                     if (searchTextBox.Text.Length == 11 && int.TryParse(searchTextBox.Text, out _))
                     {
                         patientDataBaseQueries.deletePatient(searchTextBox.Text);
-                        MessageBox.Show("user deleted successfully!");
                     }
                     else
                     {
