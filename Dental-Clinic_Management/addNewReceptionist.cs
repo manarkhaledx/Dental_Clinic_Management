@@ -23,7 +23,7 @@ namespace Dental_Clinic_Management
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = MARK;database=Pharmacy;integrated security = true";
+            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security = true";
             return con;
         }
 

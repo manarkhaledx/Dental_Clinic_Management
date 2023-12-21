@@ -22,7 +22,7 @@ namespace Dental_Clinic_Management
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = MARK;database=Pharmacy;integrated security = true";
+            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security = true";
             return con;
         }
 
@@ -60,58 +60,26 @@ namespace Dental_Clinic_Management
 
         private void addItemButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Clear existing items in the list box
-                serviceListBox.Items.Clear();
+            // Clear existing items in the list box
+            serviceListBox.Items.Clear();
 
-                // Fetch data from the database and populate the list box
-                using (SqlConnection con = getConnection())
+            // Fetch data from the database and populate the list box
+            using (SqlConnection con = getConnection())
+            {
+                con.Open();
+                string query = "SELECT [ser_id], [ser_name], [ser_price], [payment_id] FROM [Clinic].[dbo].[dent_services]";
+                cmd = new SqlCommand(query, con);
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
                 {
-                    con.Open();
-                    string query = "SELECT [ser_id], [ser_name], [ser_price], [payment_id] FROM [Clinic].[dbo].[dent_services]";
-                    cmd = new SqlCommand(query, con);
-                    dr = cmd.ExecuteReader();
-
-                    decimal totalCost = 0;
-                    int itemCounter = 0;
-                    StringBuilder serviceNameBuilder = new StringBuilder();
-
-                    while (dr.Read())
-                    {
-                        // Display service name in the list box
-                        string serviceName = dr["ser_name"].ToString();
-                        serviceListBox.Items.Add(serviceName);
-
-                        // Append service name to the label
-                        serviceNameBuilder.Append(serviceName);
-                        serviceNameBuilder.Append(", ");
-
-                        // Sum up service prices
-                        totalCost += Convert.ToDecimal(dr["ser_price"]);
-                        itemCounter++;
-
-                        // If more than 3 items, show the remaining items as "..."
-                        if (itemCounter >= 3)
-                        {
-                            serviceNameBuilder.Append("...");
-                            break;
-                        }
-                    }
-
-                    dr.Close();
-
-                    // Set the labels
-                    serviceNameLabel.Text = serviceNameBuilder.ToString();
-                    serviceCostLabel.Text = totalCost.ToString();
+                    // Display service name in the list box
+                    serviceListBox.Items.Add(dr["ser_name"].ToString());
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                dr.Close();
             }
         }
-
 
         private void Payment_Load(object sender, EventArgs e)
         {
