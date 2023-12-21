@@ -60,10 +60,10 @@
             this.confirmButton.FlatAppearance.BorderSize = 0;
             this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.confirmButton.Location = new System.Drawing.Point(1454, 950);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.confirmButton.Location = new System.Drawing.Point(969, 618);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(184, 71);
+            this.confirmButton.Size = new System.Drawing.Size(123, 46);
             this.confirmButton.TabIndex = 77;
             this.confirmButton.Text = "Confirm Payment";
             this.confirmButton.UseVisualStyleBackColor = false;
@@ -74,9 +74,10 @@
             this.serviceCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.serviceCostTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.serviceCostTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceCostTextBox.Location = new System.Drawing.Point(521, 574);
+            this.serviceCostTextBox.Location = new System.Drawing.Point(347, 373);
+            this.serviceCostTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.serviceCostTextBox.Name = "serviceCostTextBox";
-            this.serviceCostTextBox.Size = new System.Drawing.Size(318, 48);
+            this.serviceCostTextBox.Size = new System.Drawing.Size(212, 32);
             this.serviceCostTextBox.TabIndex = 82;
             // 
             // serviceCostLabel
@@ -84,9 +85,10 @@
             this.serviceCostLabel.AutoSize = true;
             this.serviceCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceCostLabel.Location = new System.Drawing.Point(555, 477);
+            this.serviceCostLabel.Location = new System.Drawing.Point(370, 310);
+            this.serviceCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.serviceCostLabel.Name = "serviceCostLabel";
-            this.serviceCostLabel.Size = new System.Drawing.Size(196, 54);
+            this.serviceCostLabel.Size = new System.Drawing.Size(130, 37);
             this.serviceCostLabel.TabIndex = 81;
             this.serviceCostLabel.Text = "Service Cost:";
             // 
@@ -95,9 +97,10 @@
             this.serviceNameLabel.AutoSize = true;
             this.serviceNameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceNameLabel.Location = new System.Drawing.Point(555, 277);
+            this.serviceNameLabel.Location = new System.Drawing.Point(370, 180);
+            this.serviceNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.serviceNameLabel.Name = "serviceNameLabel";
-            this.serviceNameLabel.Size = new System.Drawing.Size(215, 54);
+            this.serviceNameLabel.Size = new System.Drawing.Size(142, 37);
             this.serviceNameLabel.TabIndex = 80;
             this.serviceNameLabel.Text = "Service Name:";
             // 
@@ -107,9 +110,10 @@
             this.addServiceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addServiceTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.addServiceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.addServiceTextBox.Location = new System.Drawing.Point(521, 362);
+            this.addServiceTextBox.Location = new System.Drawing.Point(347, 235);
+            this.addServiceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addServiceTextBox.Name = "addServiceTextBox";
-            this.addServiceTextBox.Size = new System.Drawing.Size(318, 48);
+            this.addServiceTextBox.Size = new System.Drawing.Size(212, 32);
             this.addServiceTextBox.TabIndex = 79;
             // 
             // paymentMethodGroupBox
@@ -118,11 +122,11 @@
             this.paymentMethodGroupBox.Controls.Add(this.visaRadioButton);
             this.paymentMethodGroupBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentMethodGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.paymentMethodGroupBox.Location = new System.Drawing.Point(943, 816);
-            this.paymentMethodGroupBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.paymentMethodGroupBox.Location = new System.Drawing.Point(629, 530);
+            this.paymentMethodGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.paymentMethodGroupBox.Name = "paymentMethodGroupBox";
-            this.paymentMethodGroupBox.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.paymentMethodGroupBox.Size = new System.Drawing.Size(318, 205);
+            this.paymentMethodGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.paymentMethodGroupBox.Size = new System.Drawing.Size(212, 133);
             this.paymentMethodGroupBox.TabIndex = 78;
             this.paymentMethodGroupBox.TabStop = false;
             this.paymentMethodGroupBox.Text = "Payment Method";
@@ -130,10 +134,10 @@
             // cashRadioButton
             // 
             this.cashRadioButton.AutoSize = true;
-            this.cashRadioButton.Location = new System.Drawing.Point(52, 49);
-            this.cashRadioButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cashRadioButton.Location = new System.Drawing.Point(35, 32);
+            this.cashRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cashRadioButton.Name = "cashRadioButton";
-            this.cashRadioButton.Size = new System.Drawing.Size(115, 58);
+            this.cashRadioButton.Size = new System.Drawing.Size(80, 41);
             this.cashRadioButton.TabIndex = 13;
             this.cashRadioButton.TabStop = true;
             this.cashRadioButton.Text = "Cash";
@@ -142,10 +146,10 @@
             // visaRadioButton
             // 
             this.visaRadioButton.AutoSize = true;
-            this.visaRadioButton.Location = new System.Drawing.Point(52, 118);
-            this.visaRadioButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.visaRadioButton.Location = new System.Drawing.Point(35, 77);
+            this.visaRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.visaRadioButton.Name = "visaRadioButton";
-            this.visaRadioButton.Size = new System.Drawing.Size(107, 58);
+            this.visaRadioButton.Size = new System.Drawing.Size(74, 41);
             this.visaRadioButton.TabIndex = 14;
             this.visaRadioButton.TabStop = true;
             this.visaRadioButton.Text = "Visa";
@@ -154,10 +158,10 @@
             // serviceListBox
             // 
             this.serviceListBox.FormattingEnabled = true;
-            this.serviceListBox.ItemHeight = 20;
-            this.serviceListBox.Location = new System.Drawing.Point(893, 139);
+            this.serviceListBox.Location = new System.Drawing.Point(595, 90);
+            this.serviceListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.serviceListBox.Name = "serviceListBox";
-            this.serviceListBox.Size = new System.Drawing.Size(688, 544);
+            this.serviceListBox.Size = new System.Drawing.Size(460, 355);
             this.serviceListBox.TabIndex = 75;
             // 
             // addItemButton
@@ -167,10 +171,10 @@
             this.addItemButton.FlatAppearance.BorderSize = 0;
             this.addItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addItemButton.Location = new System.Drawing.Point(566, 139);
-            this.addItemButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.addItemButton.Location = new System.Drawing.Point(377, 90);
+            this.addItemButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.addItemButton.Name = "addItemButton";
-            this.addItemButton.Size = new System.Drawing.Size(184, 71);
+            this.addItemButton.Size = new System.Drawing.Size(123, 46);
             this.addItemButton.TabIndex = 76;
             this.addItemButton.Text = "Add Item";
             this.addItemButton.UseVisualStyleBackColor = false;
@@ -179,10 +183,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(943, 791);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel2.Location = new System.Drawing.Point(629, 514);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 8);
+            this.panel2.Size = new System.Drawing.Size(212, 5);
             this.panel2.TabIndex = 74;
             // 
             // totalCostTextBox
@@ -191,9 +195,10 @@
             this.totalCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalCostTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.totalCostTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostTextBox.Location = new System.Drawing.Point(943, 734);
+            this.totalCostTextBox.Location = new System.Drawing.Point(629, 477);
+            this.totalCostTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.totalCostTextBox.Name = "totalCostTextBox";
-            this.totalCostTextBox.Size = new System.Drawing.Size(318, 48);
+            this.totalCostTextBox.Size = new System.Drawing.Size(212, 32);
             this.totalCostTextBox.TabIndex = 73;
             // 
             // totalCostLabel
@@ -201,9 +206,10 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(764, 734);
+            this.totalCostLabel.Location = new System.Drawing.Point(509, 477);
+            this.totalCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(174, 54);
+            this.totalCostLabel.Size = new System.Drawing.Size(115, 37);
             this.totalCostLabel.TabIndex = 72;
             this.totalCostLabel.Text = "Total Cost:";
             // 
@@ -217,9 +223,9 @@
             this.panel8.Controls.Add(this.pictureBox10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(422, 1178);
+            this.panel8.Size = new System.Drawing.Size(281, 487);
             this.panel8.TabIndex = 71;
             // 
             // paymentButton
@@ -231,11 +237,11 @@
             this.paymentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.paymentButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_50__1_;
             this.paymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.paymentButton.Location = new System.Drawing.Point(0, 454);
-            this.paymentButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.paymentButton.Location = new System.Drawing.Point(0, 295);
+            this.paymentButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.paymentButton.Size = new System.Drawing.Size(422, 78);
+            this.paymentButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.paymentButton.Size = new System.Drawing.Size(281, 51);
             this.paymentButton.TabIndex = 26;
             this.paymentButton.Text = "Payment";
             this.paymentButton.UseVisualStyleBackColor = false;
@@ -249,11 +255,11 @@
             this.prescriptionButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prescriptionButton.Image = ((System.Drawing.Image)(resources.GetObject("prescriptionButton.Image")));
             this.prescriptionButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.prescriptionButton.Location = new System.Drawing.Point(-3, 605);
-            this.prescriptionButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.prescriptionButton.Location = new System.Drawing.Point(-2, 393);
+            this.prescriptionButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.prescriptionButton.Name = "prescriptionButton";
-            this.prescriptionButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.prescriptionButton.Size = new System.Drawing.Size(422, 78);
+            this.prescriptionButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.prescriptionButton.Size = new System.Drawing.Size(281, 51);
             this.prescriptionButton.TabIndex = 25;
             this.prescriptionButton.Text = "  Prescreption";
             this.prescriptionButton.UseVisualStyleBackColor = false;
@@ -267,11 +273,11 @@
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_setting_50__1_;
             this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(0, 752);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.settingsButton.Location = new System.Drawing.Point(0, 489);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.settingsButton.Size = new System.Drawing.Size(422, 78);
+            this.settingsButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.settingsButton.Size = new System.Drawing.Size(281, 51);
             this.settingsButton.TabIndex = 23;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = false;
@@ -285,11 +291,11 @@
             this.dashboardButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dashboardButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
             this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardButton.Location = new System.Drawing.Point(0, 300);
-            this.dashboardButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dashboardButton.Location = new System.Drawing.Point(0, 195);
+            this.dashboardButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.dashboardButton.Size = new System.Drawing.Size(422, 78);
+            this.dashboardButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.dashboardButton.Size = new System.Drawing.Size(281, 51);
             this.dashboardButton.TabIndex = 19;
             this.dashboardButton.Text = "DashBoard";
             this.dashboardButton.UseVisualStyleBackColor = false;
@@ -300,17 +306,17 @@
             this.pictureBox10.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(422, 234);
+            this.pictureBox10.Size = new System.Drawing.Size(281, 152);
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
             // 
             // Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2020, 1178);
+            this.ClientSize = new System.Drawing.Size(976, 487);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.serviceCostTextBox);
             this.Controls.Add(this.serviceCostLabel);
@@ -323,6 +329,7 @@
             this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.panel8);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Payment";
             this.Text = "Payment";
             this.paymentMethodGroupBox.ResumeLayout(false);
