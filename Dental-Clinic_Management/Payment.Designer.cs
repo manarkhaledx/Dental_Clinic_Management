@@ -85,7 +85,7 @@
             this.serviceCostLabel.AutoSize = true;
             this.serviceCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceCostLabel.Location = new System.Drawing.Point(555, 477);
+            this.serviceCostLabel.Location = new System.Drawing.Point(764, 159);
             this.serviceCostLabel.Name = "serviceCostLabel";
             this.serviceCostLabel.Size = new System.Drawing.Size(196, 54);
             this.serviceCostLabel.TabIndex = 81;
@@ -97,7 +97,7 @@
             this.serviceNameLabel.AutoSize = true;
             this.serviceNameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceNameLabel.Location = new System.Drawing.Point(555, 277);
+            this.serviceNameLabel.Location = new System.Drawing.Point(539, 159);
             this.serviceNameLabel.Name = "serviceNameLabel";
             this.serviceNameLabel.Size = new System.Drawing.Size(215, 54);
             this.serviceNameLabel.TabIndex = 80;
@@ -129,6 +129,7 @@
             this.paymentMethodGroupBox.TabIndex = 78;
             this.paymentMethodGroupBox.TabStop = false;
             this.paymentMethodGroupBox.Text = "Payment Method";
+            this.paymentMethodGroupBox.Enter += new System.EventHandler(this.paymentMethodGroupBox_Enter);
             // 
             // cashRadioButton
             // 
@@ -141,6 +142,7 @@
             this.cashRadioButton.TabStop = true;
             this.cashRadioButton.Text = "Cash";
             this.cashRadioButton.UseVisualStyleBackColor = true;
+            this.cashRadioButton.CheckedChanged += new System.EventHandler(this.cashRadioButton_CheckedChanged);
             // 
             // visaRadioButton
             // 
@@ -153,12 +155,13 @@
             this.visaRadioButton.TabStop = true;
             this.visaRadioButton.Text = "Visa";
             this.visaRadioButton.UseVisualStyleBackColor = true;
+            this.visaRadioButton.CheckedChanged += new System.EventHandler(this.visaRadioButton_CheckedChanged);
             // 
             // serviceListBox
             // 
             this.serviceListBox.FormattingEnabled = true;
             this.serviceListBox.ItemHeight = 20;
-            this.serviceListBox.Location = new System.Drawing.Point(893, 139);
+            this.serviceListBox.Location = new System.Drawing.Point(1162, 172);
             this.serviceListBox.Name = "serviceListBox";
             this.serviceListBox.Size = new System.Drawing.Size(688, 544);
             this.serviceListBox.TabIndex = 75;
@@ -171,7 +174,7 @@
             this.addItemButton.FlatAppearance.BorderSize = 0;
             this.addItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addItemButton.Location = new System.Drawing.Point(566, 139);
+            this.addItemButton.Location = new System.Drawing.Point(966, 150);
             this.addItemButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.addItemButton.Name = "addItemButton";
             this.addItemButton.Size = new System.Drawing.Size(184, 71);
@@ -206,11 +209,12 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(764, 734);
+            this.totalCostLabel.Location = new System.Drawing.Point(539, 734);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(174, 54);
             this.totalCostLabel.TabIndex = 72;
             this.totalCostLabel.Text = "Total Cost:";
+            this.totalCostLabel.Click += new System.EventHandler(this.totalCostLabel_Click);
             // 
             // panel8
             // 

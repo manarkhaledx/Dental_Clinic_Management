@@ -77,8 +77,9 @@ namespace Dental_Clinic_Management
                         if (result != null)
                         {
                             decimal serviceCost = Convert.ToDecimal(result);
+                            serviceCostLabel.Text = serviceCost.ToString("C");
                             totalCost += serviceCost;
-                            serviceCostLabel.Text = "Total Cost: " + totalCost.ToString("C");
+                            totalCostLabel.Text = "Total Cost: " + totalCost.ToString("C");
                         }
                     }
                 }
@@ -88,14 +89,63 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("Error adding item: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
 
 
 
-    private void confirmButton_Click(object sender, EventArgs e)
+
+        private void confirmButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Check if a payment method is selected
+                if (paymentMethodGroupBox.Controls.OfType<RadioButton>().Any(rb => rb.Checked))
+                {
+                    // Get the selected payment method
+                    string paymentMethod = paymentMethodGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked)?.Text;
 
+                    // Update the database with the new amount, payment method, and current date
+                    using (SqlConnection con = getConnection())
+                    {
+                        con.Open();
+
+                        // Update the 'amount', 'method', and 'pay_date' in the 'Payment' table
+                        string updateQuery = "UPDATE [Clinic].[dbo].[Payment] SET [amount] = [amount] + @totalCost, [method] = @method, [pay_date] = @payDate WHERE [payment_id] = (SELECT MAX([payment_id]) FROM [Clinic].[dbo].[Payment])";
+                        cmd = new SqlCommand(updateQuery, con);
+                        cmd.Parameters.AddWithValue("@totalCost", totalCost);
+                        cmd.Parameters.AddWithValue("@method", paymentMethod);
+                        cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
+                        cmd.ExecuteNonQuery();
+
+                        // Insert a new payment record with the updated amount, payment method, and current date
+                        string insertQuery = "INSERT INTO [Clinic].[dbo].[Payment] ([pay_date], [amount], [method]) VALUES (@payDate, @totalCost, @method)";
+                        cmd = new SqlCommand(insertQuery, con);
+                        cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@totalCost", totalCost);
+                        cmd.Parameters.AddWithValue("@method", paymentMethod);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Payment confirmed and updated in the database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Clear the form for the next payment
+                    serviceNameLabel.Text = "";
+                    serviceCostLabel.Text = "Service Cost: $0.00";
+                    totalCost = 0;
+                    totalCostLabel.Text = "Total Cost: $0.00";
+                    paymentMethodGroupBox.Controls.OfType<RadioButton>().ToList().ForEach(rb => rb.Checked = false);
+                }
+                else
+                {
+                    MessageBox.Show("Please select a payment method.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error confirming payment: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
 
         private void serviceNameLabel_Click(object sender, EventArgs e)
         {
@@ -103,6 +153,26 @@ namespace Dental_Clinic_Management
         }
 
         private void serviceCostLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paymentMethodGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalCostLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cashRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visaRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
