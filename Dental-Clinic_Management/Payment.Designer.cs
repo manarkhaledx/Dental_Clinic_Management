@@ -67,6 +67,7 @@
             this.confirmButton.TabIndex = 77;
             this.confirmButton.Text = "Confirm Payment";
             this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // serviceCostTextBox
             // 
@@ -89,6 +90,7 @@
             this.serviceCostLabel.Size = new System.Drawing.Size(196, 54);
             this.serviceCostLabel.TabIndex = 81;
             this.serviceCostLabel.Text = "Service Cost:";
+            this.serviceCostLabel.Click += new System.EventHandler(this.serviceCostLabel_Click);
             // 
             // serviceNameLabel
             // 
@@ -100,6 +102,7 @@
             this.serviceNameLabel.Size = new System.Drawing.Size(215, 54);
             this.serviceNameLabel.TabIndex = 80;
             this.serviceNameLabel.Text = "Service Name:";
+            this.serviceNameLabel.Click += new System.EventHandler(this.serviceNameLabel_Click);
             // 
             // addServiceTextBox
             // 
@@ -159,6 +162,7 @@
             this.serviceListBox.Name = "serviceListBox";
             this.serviceListBox.Size = new System.Drawing.Size(688, 544);
             this.serviceListBox.TabIndex = 75;
+            this.serviceListBox.SelectedIndexChanged += new System.EventHandler(this.serviceListBox_SelectedIndexChanged);
             // 
             // addItemButton
             // 
@@ -174,6 +178,7 @@
             this.addItemButton.TabIndex = 76;
             this.addItemButton.Text = "Add Item";
             this.addItemButton.UseVisualStyleBackColor = false;
+            this.addItemButton.Click += new System.EventHandler(this.addItemButton_Click);
             // 
             // panel2
             // 
@@ -325,6 +330,7 @@
             this.Controls.Add(this.panel8);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             this.paymentMethodGroupBox.ResumeLayout(false);
             this.paymentMethodGroupBox.PerformLayout();
             this.panel8.ResumeLayout(false);

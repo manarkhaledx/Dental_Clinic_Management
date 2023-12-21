@@ -16,7 +16,7 @@ namespace Dental_Clinic_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new addPrescriptionForm());
+            Application.Run(new Payment());
         }
     }
 }
