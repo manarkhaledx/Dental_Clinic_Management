@@ -145,48 +145,7 @@ namespace Dental_Clinic_Management
                     // Validate phone number input
                     if (phoneTextBox.Text.Length == 11 && int.TryParse(phoneTextBox.Text, out _))
                     {
-                        using (SqlConnection con = getConnection())
-                        {
-                            con.Open();
-
-                            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Fname=@Fname AND Lname=@Lname AND Phone=@Phone", con))
-                            {
-                                cmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
-                                cmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
-                                cmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
-
-                                using (SqlDataReader dr = cmd.ExecuteReader())
-                                {
-                                    if (dr.Read())
-                                    {
-                                        MessageBox.Show("Patient already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                                    }
-                                    else
-                                    {
-                                        dr.Close();
-
-                                        using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Patient (Fname, Lname, Phone, gender, DOB, pat_address) " +
-                                            "VALUES (@Fname, @Lname, @Phone, @gender, @DOB, @pat_address)", con))
-                                        {
-                                            insertCmd.Parameters.AddWithValue("Fname", firstNameTextBox.Text);
-                                            insertCmd.Parameters.AddWithValue("Lname", lastNameTextBox.Text);
-                                            insertCmd.Parameters.AddWithValue("Phone", phoneTextBox.Text);
-                                            insertCmd.Parameters.AddWithValue("gender", femaleRadioButton.Checked ? "Female" : "Male");
-                                            insertCmd.Parameters.AddWithValue("DOB", dobDateTimePicker.Value);
-                                            insertCmd.Parameters.AddWithValue("pat_address", addressTextBox.Text);
-
-                                            insertCmd.ExecuteNonQuery();
-
-                                            MessageBox.Show("Patient information added successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            // Optionally, you may navigate to another form or perform additional actions here.
-                                            //
-                                            return;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        patientDataBaseQueries.addPatient(firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, maleRadioButton, dobDateTimePicker.Value, addressTextBox.Text);
                     }
                     else
                     {
