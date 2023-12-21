@@ -26,6 +26,7 @@ namespace Dental_Clinic_Management
             return con;
         }
 
+
         private void serviceListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -37,24 +38,51 @@ namespace Dental_Clinic_Management
                     {
                         con.Open();
                         string query = "SELECT [ser_id], [ser_name], [ser_price], [payment_id] FROM [Clinic].[dbo].[dent_services] WHERE [ser_name] = @serviceName";
-                        cmd = new SqlCommand(query, con);
-                        cmd.Parameters.AddWithValue("@serviceName", serviceListBox.SelectedItem.ToString());
-                        dr = cmd.ExecuteReader();
-
-                        if (dr.Read())
+                        using (SqlCommand cmd = new SqlCommand(query, con))
                         {
-                            // Display service details in labels
-                            serviceNameLabel.Text = dr["ser_name"].ToString();
-                            serviceCostLabel.Text = dr["ser_price"].ToString();
+                            cmd.Parameters.AddWithValue("@serviceName", serviceListBox.SelectedItem.ToString());
+                            using (SqlDataReader dr = cmd.ExecuteReader())
+                            {
+                                if (dr.Read())
+                                {
+                                    // Display service details in labels
+                                    serviceNameLabel.Text = dr["ser_name"].ToString();
+                                    serviceCostLabel.Text = dr["ser_price"].ToString();
+                                }
+                            }
                         }
 
-                        dr.Close();
+                        // Update data in serviceListBox
+                        UpdateServiceListBox();
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateServiceListBox()
+        {
+            // Repopulate the serviceListBox with updated data from the database
+            serviceListBox.Items.Clear();
+
+            using (SqlConnection con = getConnection())
+            {
+                con.Open();
+                string query = "SELECT [ser_name] FROM [Clinic].[dbo].[dent_services]";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            // Add each service name to the serviceListBox
+                            serviceListBox.Items.Add(dr["ser_name"].ToString());
+                        }
+                    }
+                }
             }
         }
 
