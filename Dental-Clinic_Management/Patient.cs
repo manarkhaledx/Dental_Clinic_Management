@@ -33,8 +33,8 @@ namespace Dental_Clinic_Management
 
         private void Patient_Load(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show($"Are You sure you want to edit patient data", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
+/*            DialogResult result = MessageBox.Show($"Are You sure you want to edit patient data", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+*/            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
 
           /*  if (result == DialogResult.Yes)
             {
@@ -171,6 +171,84 @@ namespace Dental_Clinic_Management
                 }
             }
 
+            public static void SearchPatient(string phoneNumber , DataGridView dataGridView)
+            {
+                using (SqlConnection con = getConnection())
+                {
+                    con.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT patient_id, Fname, Lname, Phone, pat_address, gender, DOB FROM Patient WHERE Phone LIKE @Phone", con))
+                    {
+                        cmd.Parameters.AddWithValue("Phone", phoneNumber + "%");
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            // Clear existing columns (if any)
+                            dataGridView.Columns.Clear();
+
+                            // Set AutoGenerateColumns to false
+                            dataGridView.AutoGenerateColumns = false;
+
+                            // Manually add columns and map them to DataTable columns
+                            DataGridViewTextBoxColumn colPatientID = new DataGridViewTextBoxColumn();
+                            colPatientID.Name = "patient_id";
+                            colPatientID.DataPropertyName = "patient_id";
+                            colPatientID.HeaderText = "Patient ID";
+                            colPatientID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPatientID);
+
+                            DataGridViewTextBoxColumn colFname = new DataGridViewTextBoxColumn();
+                            colFname.Name = "Fname";
+                            colFname.DataPropertyName = "Fname";
+                            colFname.HeaderText = "First Name";
+                            colFname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colFname);
+
+                            DataGridViewTextBoxColumn colLname = new DataGridViewTextBoxColumn();
+                            colLname.Name = "Lname";
+                            colLname.DataPropertyName = "Lname";
+                            colLname.HeaderText = "Last Name";
+                            colLname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colLname);
+
+                            DataGridViewTextBoxColumn colPhone = new DataGridViewTextBoxColumn();
+                            colPhone.Name = "Phone";
+                            colPhone.DataPropertyName = "Phone";
+                            colPhone.HeaderText = "Phone";
+                            colPhone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPhone);
+
+                            DataGridViewTextBoxColumn colPatAddress = new DataGridViewTextBoxColumn();
+                            colPatAddress.Name = "pat_address";
+                            colPatAddress.DataPropertyName = "pat_address";
+                            colPatAddress.HeaderText = "Patient Address";
+                            colPatAddress.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPatAddress);
+
+                            DataGridViewTextBoxColumn colGender = new DataGridViewTextBoxColumn();
+                            colGender.Name = "gender";
+                            colGender.DataPropertyName = "gender";
+                            colGender.HeaderText = "Gender";
+                            colGender.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colGender);
+
+                            DataGridViewTextBoxColumn colDOB = new DataGridViewTextBoxColumn();
+                            colDOB.Name = "DOB";
+                            colDOB.DataPropertyName = "DOB";
+                            colDOB.HeaderText = "Date of Birth";
+                            colDOB.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colDOB);
+
+                            // Set the DataSource
+                            dataGridView.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            //--------------------------------------------------------------------------------------------------------------------------------------------------------
             public static void EditPatient(string phone, string newFname, string newLname, string newPhone, string newAddress, DateTime newDOB, RadioButton rad)
             {
                 using (SqlConnection con = getConnection())
@@ -295,97 +373,64 @@ namespace Dental_Clinic_Management
                 }
             }
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            public static void editPatient(string phone, TextBox fnameTextBox, TextBox lnameTextBox, TextBox phoneTextBox, TextBox addressTextBox, DateTime date, RadioButton rad)
+            public static void DeletePatient(int patientId)
             {
                 using (SqlConnection con = getConnection())
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
-                    {
-                        cmd.Parameters.AddWithValue("Phone", phone);
+                    // Assuming 'Patients' table has a column named 'PatientId'
+                    string query = "DELETE FROM Patients WHERE patient_id = @patient_id";
+                    SqlCommand command = new SqlCommand(query, con);
+                    command.Parameters.AddWithValue("@patient_id", patientId);
 
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.Read())
-                            {
-                                dr.Close();
-
-                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone", con))
-                                {
-                                    updateCmd.Parameters.AddWithValue("Phone", phone);
-                                    updateCmd.Parameters.AddWithValue("NewFname", fnameTextBox.Text);
-                                    updateCmd.Parameters.AddWithValue("NewLname", lnameTextBox.Text);
-                                    updateCmd.Parameters.AddWithValue("NewGender", rad.Checked ? "Female" : "Male");
-                                    updateCmd.Parameters.AddWithValue("NewDOB", date);
-                                    updateCmd.Parameters.AddWithValue("NewAddress", addressTextBox.Text);
-
-                                    int rowsAffected = updateCmd.ExecuteNonQuery();
-
-                                    if (rowsAffected > 0)
-                                    {
-                                        MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        // Optionally, you may navigate to another form or perform additional actions here.
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Failed to update patient information. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Patient not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
+                    command.ExecuteNonQuery();
                 }
             }
-
         }
         private void totalCostTextBox_TextChanged(object sender, EventArgs e)
         {
-            bool phoneFound =false;
             string phone = searchTextBox.Text.Trim();
             DataGridView dataGrid = patientDataGridView;
 
             // You can set a minimum length if needed before starting the search
-            if (phone.Length == 11)
+            if (phone.Length >= 1)
             {
-                patientDataBaseQueries.searchPatient(phone);
-               
+                patientDataBaseQueries.SearchPatient(phone , dataGrid);
             }
-            
-           
-       
+            else
+            {
+                // If the TextBox is empty, load all patients
+                patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
+            }
+
+
+
         }
 
         private void deletePatientButton_Click(object sender, EventArgs e)
         {
-            try
+            DataGridView dataGrid = patientDataGridView;
+            if (patientDataGridView.SelectedRows.Count > 0)
             {
-                if (searchTextBox.Text != string.Empty)
-                {
-                    // Validate phone number input
-                    if (searchTextBox.Text.Length == 11 && int.TryParse(searchTextBox.Text, out _))
-                    {
-                        patientDataBaseQueries.deletePatient(searchTextBox.Text);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Get the selected patient ID from the DataGridView
+                int selectedPatientId = Convert.ToInt32(patientDataGridView.SelectedRows[0].Cells["PatientIdColumn"].Value);
 
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Ask for confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this patient?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (result == DialogResult.Yes)
+                {
+                    // Delete the patient from the database
+                    patientDataBaseQueries.DeletePatient(selectedPatientId);
+
+                    // Refresh the DataGridView after deletion
+                    patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -413,8 +458,8 @@ namespace Dental_Clinic_Management
 
                 // Open the EditPatientForm and pass the patient data
 
-                EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
-                editForm.ShowDialog();
+                //EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
+                //editForm.ShowDialog();
             }
             else
             {
