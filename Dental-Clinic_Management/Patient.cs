@@ -34,6 +34,7 @@ namespace Dental_Clinic_Management
         private void Patient_Load(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show($"Are You sure you want to edit patient data", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
 
             if (result == DialogResult.Yes)
             {
@@ -177,7 +178,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT Fname, Lname, gender, DOB, pat_address FROM Patient", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT patient_id, Fname, Lname,Phone,pat_address, gender, DOB FROM Patient", con))
                     {
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
@@ -187,11 +188,13 @@ namespace Dental_Clinic_Management
                             dataGridView.DataSource = dt;
 
                             // Optional: Customize column names in the DataGridView
+                            dataGridView.Columns["patient_id"].HeaderText = "id";
                             dataGridView.Columns["Fname"].HeaderText = "First Name";
                             dataGridView.Columns["Lname"].HeaderText = "Last Name";
                             dataGridView.Columns["gender"].HeaderText = "Gender";
-                            dataGridView.Columns["DOB"].HeaderText = "Date of Birth";
+                            dataGridView.Columns["Phone"].HeaderText = "phone";
                             dataGridView.Columns["pat_address"].HeaderText = "Address";
+                            dataGridView.Columns["DOB"].HeaderText = "Date of Birth";
                         }
                     }
                 }
@@ -247,6 +250,7 @@ namespace Dental_Clinic_Management
         }
         private void totalCostTextBox_TextChanged(object sender, EventArgs e)
         {
+            bool phoneFound =false;
             string phone = searchTextBox.Text.Trim();
             DataGridView dataGrid = patientDataGridView;
 
@@ -254,9 +258,11 @@ namespace Dental_Clinic_Management
             if (phone.Length == 11)
             {
                 patientDataBaseQueries.searchPatient(phone);
+               
             }
             
            
+       
         }
 
         private void deletePatientButton_Click(object sender, EventArgs e)
