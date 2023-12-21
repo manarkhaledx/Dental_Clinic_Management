@@ -47,6 +47,7 @@
             this.savePrescriptionButton.TabIndex = 36;
             this.savePrescriptionButton.Text = "Save";
             this.savePrescriptionButton.UseVisualStyleBackColor = false;
+            this.savePrescriptionButton.Click += new System.EventHandler(this.savePrescriptionButton_Click);
             // 
             // prescriptionTextBox
             // 
@@ -57,6 +58,7 @@
             this.prescriptionTextBox.Name = "prescriptionTextBox";
             this.prescriptionTextBox.Size = new System.Drawing.Size(720, 643);
             this.prescriptionTextBox.TabIndex = 34;
+            this.prescriptionTextBox.TextChanged += new System.EventHandler(this.prescriptionTextBox_TextChanged);
             // 
             // prescriptionLabel
             // 
@@ -91,6 +93,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "addPrescriptionForm";
             this.Text = "addPrescriptionForm";
+            this.Load += new System.EventHandler(this.addPrescriptionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
