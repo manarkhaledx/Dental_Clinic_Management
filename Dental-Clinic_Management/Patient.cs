@@ -366,8 +366,8 @@ namespace Dental_Clinic_Management
 
                 // Open the EditPatientForm and pass the patient data
 
-                AddRecordForm editForm = new AddRecordForm(fname, lname, phone, gender, dob, address);
-                editForm.ShowDialog();
+                //AddRecordForm editForm = new AddRecordForm(fname, lname, phone, gender, dob, address);
+                //editForm.ShowDialog();
             }
             else
             {
