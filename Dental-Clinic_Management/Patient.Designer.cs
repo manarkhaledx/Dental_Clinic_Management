@@ -46,13 +46,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.patientDataGridView = new System.Windows.Forms.DataGridView();
-            this.patientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -324,14 +317,6 @@
             // patientDataGridView
             // 
             this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.patientID,
-            this.fristName,
-            this.lastName,
-            this.gender,
-            this.phone,
-            this.address,
-            this.DateOfBirth});
             this.patientDataGridView.Location = new System.Drawing.Point(534, 157);
             this.patientDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.patientDataGridView.Name = "patientDataGridView";
@@ -340,55 +325,6 @@
             this.patientDataGridView.Size = new System.Drawing.Size(1402, 735);
             this.patientDataGridView.TabIndex = 68;
             this.patientDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientDataGridView_CellContentClick);
-            // 
-            // patientID
-            // 
-            this.patientID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientID.HeaderText = "PatientID";
-            this.patientID.MinimumWidth = 8;
-            this.patientID.Name = "patientID";
-            // 
-            // fristName
-            // 
-            this.fristName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fristName.HeaderText = "FristName";
-            this.fristName.MinimumWidth = 8;
-            this.fristName.Name = "fristName";
-            // 
-            // lastName
-            // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastName.HeaderText = "LastName";
-            this.lastName.MinimumWidth = 8;
-            this.lastName.Name = "lastName";
-            // 
-            // gender
-            // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gender.HeaderText = "Gender";
-            this.gender.MinimumWidth = 8;
-            this.gender.Name = "gender";
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phone.HeaderText = "Phone";
-            this.phone.MinimumWidth = 8;
-            this.phone.Name = "phone";
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 8;
-            this.address.Name = "address";
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateOfBirth.HeaderText = "DateOfBirth";
-            this.DateOfBirth.MinimumWidth = 8;
-            this.DateOfBirth.Name = "DateOfBirth";
             // 
             // Patient
             // 
@@ -439,12 +375,5 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView patientDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
     }
 }

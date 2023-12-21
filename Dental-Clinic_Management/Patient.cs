@@ -352,7 +352,7 @@ namespace Dental_Clinic_Management
         {
             //searchPhone= searchTextBox.Text; 
 
-
+            //patientDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             if (patientDataGridView.SelectedRows.Count > 0)
             {
                 // Retrieve data from the selected row
@@ -366,8 +366,8 @@ namespace Dental_Clinic_Management
 
                 // Open the EditPatientForm and pass the patient data
 
-                //AddRecordForm editForm = new AddRecordForm(fname, lname, phone, gender, dob, address);
-                //editForm.ShowDialog();
+                EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
+                editForm.ShowDialog();
             }
             else
             {
