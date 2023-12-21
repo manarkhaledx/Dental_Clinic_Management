@@ -171,6 +171,53 @@ namespace Dental_Clinic_Management
                 }
             }
 
+            public static void EditPatient(string phone, string newFname, string newLname, string newPhone, string newAddress, DateTime newDOB, RadioButton rad)
+            {
+                using (SqlConnection con = getConnection())
+                {
+                    con.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
+                    {
+                        cmd.Parameters.AddWithValue("Phone", phone);
+
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.Read())
+                            {
+                                dr.Close();
+
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone", con))
+                                {
+                                    updateCmd.Parameters.AddWithValue("Phone", newPhone);
+                                    updateCmd.Parameters.AddWithValue("NewFname", newFname);
+                                    updateCmd.Parameters.AddWithValue("NewLname", newLname);
+                                    updateCmd.Parameters.AddWithValue("NewGender", rad.Checked ? "Female" : "Male");
+                                    updateCmd.Parameters.AddWithValue("NewDOB", newDOB);
+                                    updateCmd.Parameters.AddWithValue("NewAddress", newAddress);
+
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                                    if (rowsAffected > 0)
+                                    {
+                                        MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        // Optionally, you may navigate to another form or perform additional actions here.
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Failed to update patient information. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Patient not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             public static void loadAllPatientsInDataGridView(DataGridView dataGridView)
             {
