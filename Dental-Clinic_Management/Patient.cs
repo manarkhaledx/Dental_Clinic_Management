@@ -380,7 +380,7 @@ namespace Dental_Clinic_Management
                     con.Open();
 
                     // Assuming 'Patients' table has a column named 'PatientId'
-                    string query = "DELETE FROM Patients WHERE patient_id = @patient_id";
+                    string query = "DELETE FROM Patient WHERE patient_id = @patient_id";
                     SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@patient_id", patientId);
 
@@ -414,7 +414,7 @@ namespace Dental_Clinic_Management
             if (patientDataGridView.SelectedRows.Count > 0)
             {
                 // Get the selected patient ID from the DataGridView
-                int selectedPatientId = Convert.ToInt32(patientDataGridView.SelectedRows[0].Cells["PatientIdColumn"].Value);
+                int selectedPatientId = Convert.ToInt32(patientDataGridView.SelectedRows[0].Cells["patient_id"].Value);
 
                 // Ask for confirmation
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this patient?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -458,8 +458,8 @@ namespace Dental_Clinic_Management
 
                 // Open the EditPatientForm and pass the patient data
 
-                //EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
-                //editForm.ShowDialog();
+                EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
+                editForm.ShowDialog();
             }
             else
             {
