@@ -40,12 +40,12 @@ namespace Dental_Clinic_Management
             // Assuming you have TextBox controls named txtSupplierId, txtName, txtContactPerson,
             // txtPhoneNumber, txtTime, and txtDate
             SqlCommand cmd = new SqlCommand("INSERT INTO Appointment " +
-                                           "( app_time, app_date) " +
-                                           "VALUES ( @app_time, @app_time)", conn);
+                                           "( pat_phone,app_time, app_date) " +
+                                           "VALUES (@pat_phone, @app_time, @app_date)", conn);
 
-           
+            cmd.Parameters.AddWithValue("@pat_phone", phoneTextBox.Text);
             cmd.Parameters.AddWithValue("@app_time", timeTextBox.Text);
-            cmd.Parameters.AddWithValue("@app_date", appointmentDateTimePicker.Text);
+            cmd.Parameters.AddWithValue("@app_date", appointmentDateTimePicker.Value);
 
 
             cmd.ExecuteNonQuery();
