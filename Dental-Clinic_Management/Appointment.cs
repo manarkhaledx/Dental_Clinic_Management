@@ -92,6 +92,100 @@ namespace Dental_Clinic_Management
                     }
                 }
             }
+            //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            public static void deleteAppointment(int appointment_id)
+            {
+                using (SqlConnection con = getConnection())
+                {
+                    con.Open();
+
+                    try
+                    {
+                        // Check if the appointment with the given ID exists
+                        using (SqlCommand selectCmd = new SqlCommand("SELECT * FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                        {
+                            selectCmd.Parameters.AddWithValue("@AppointmentID", appointment_id);
+
+                            using (SqlDataReader dr = selectCmd.ExecuteReader())
+                            {
+                                if (dr.Read())
+                                {
+                                    dr.Close();
+
+                                    // Delete the appointment
+                                    using (SqlCommand deleteCmd = new SqlCommand("DELETE FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                                    {
+                                        deleteCmd.Parameters.AddWithValue("@AppointmentID", appointment_id);
+                                        int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+                                        if (rowsAffected > 0)
+                                        {
+                                            MessageBox.Show("Appointment deleted successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            // Optionally, you may navigate to another form or perform additional actions here.
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Failed to delete appointment. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Appointment not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+            public static void EditAppointment(int appointmentID, string newPhone, string newTime, DateTime newDate)
+            {
+                using (SqlConnection con = getConnection())
+                {
+                    con.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM appointment WHERE appoitment_id=@AppointmentID", con))
+                    {
+                        cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
+
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.Read())
+                            {
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE appointment SET pat_phone=@newPhone, app_time=@newTime, app_date=@newDate WHERE appoitment_id=@AppointmentID", con))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@newPhone", newPhone);
+                                    updateCmd.Parameters.AddWithValue("@newTime", newTime);
+                                    updateCmd.Parameters.AddWithValue("@newDate", newDate);
+
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                                    if (rowsAffected > 0)
+                                    {
+                                        MessageBox.Show("Appointment information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Failed to update appointment information. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Appointment not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+
+
         }
 
         private void phoneTextBox_TextChanged(object sender, EventArgs e)
@@ -112,7 +206,7 @@ namespace Dental_Clinic_Management
         }
 
 
-        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       /* private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == appointmentDataGridView.Columns["Delete"].Index)
             {
@@ -127,7 +221,7 @@ namespace Dental_Clinic_Management
                 DataGridView dataGrid = appointmentDataGridView;
                 appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
             }
-        }
+        }*/
 
         // Add this method to delete the appointment
         private void DeleteAppointment(int appointmentID)
@@ -143,7 +237,7 @@ namespace Dental_Clinic_Management
                 }
             }
         }
-        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       /* private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -174,17 +268,66 @@ namespace Dental_Clinic_Management
                     appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
                 }
             }
-        }
+        }*/
 
         // Add this method to edit the appointment
         private void EditAppointment(int appointmentID)
         {
             // You can open a new form for editing or handle it within the current form
             // For simplicity, let's assume you have a form called EditAppointmentForm
-            using (Appointment editForm = new  Appointment(appointmentID))
+           /* using (  editForm = new  (appointmentID))
             {
                 // Show the edit form
                 editForm.ShowDialog();
+            }*/
+        }
+
+        private void deleteAppButton_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGrid = appointmentDataGridView;
+            if (appointmentDataGridView.SelectedRows.Count > 0)
+            {
+                // Get the selected patient ID from the DataGridView
+                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["appointment_id"].Value);
+
+                // Ask for confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Delete the patient from the database
+                    appointmentDataBaseQueries.deleteAppointment(selectedPatientId);
+
+                    // Refresh the DataGridView after deletion
+                    //appointmentDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void editAppButton_Click(object sender, EventArgs e)
+        {
+            if (appointmentDataGridView.SelectedRows.Count > 0)
+            {
+                // Retrieve data from the selected row
+                DataGridViewRow selectedRow = appointmentDataGridView.SelectedRows[0];
+                int appointmentID = Convert.ToInt32(selectedRow.Cells["appointment_id"].Value);
+                string phone = selectedRow.Cells["pat_phone"].Value.ToString();
+                string time = selectedRow.Cells["app_time"].Value.ToString();
+                DateTime date = Convert.ToDateTime(selectedRow.Cells["app_date"].Value);
+
+                // Open the EditPatientForm and pass the patient data
+
+                EditAppointmentForm editForm = new EditAppointmentForm(appointmentID, phone, time, date);
+                this.Hide();
+                editForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -67,24 +67,21 @@ namespace Dental_Clinic_Management
 
                             // Set AutoGenerateColumns to false
                             dataGridView.AutoGenerateColumns = false;
+                            DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
+                            appointmentID.Name = "appointment_id";
+                            appointmentID.DataPropertyName = "appointment_id";
+                            appointmentID.HeaderText = "Appointment ID";
+                            appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(appointmentID);
 
                             // Manually add columns and map them to DataTable columns
-                            DataGridViewTextBoxColumn colFname = new DataGridViewTextBoxColumn();
-                            colFname.Name = "pat_phone";
-                            colFname.DataPropertyName = "pat_phone";
-                            colFname.HeaderText = "Appointment ID";
-                            colFname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            dataGridView.Columns.Add(colFname);
-
-
-                            DataGridViewTextBoxColumn colPatientID = new DataGridViewTextBoxColumn();
-                            colPatientID.Name = "pat_phone";
-                            colPatientID.DataPropertyName = "pat_phone";
-                            colPatientID.HeaderText = "Patient Phone";
-                            colPatientID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            dataGridView.Columns.Add(colPatientID);
-
-
+                            DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
+                            patphone.Name = "pat_phone";
+                            patphone.DataPropertyName = "pat_phone";
+                            patphone.HeaderText = "Patient Phone";
+                            patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(patphone);
+]
                             // Set the DataSource
                             dataGridView.DataSource = dt;
                         }
