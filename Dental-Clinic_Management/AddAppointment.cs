@@ -142,7 +142,7 @@ namespace Dental_Clinic_Management
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT patient_id FROM patient WHERE pat_phone=@phone", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT patient_id FROM patient WHERE Phone=@phone", con))
                 {
                     cmd.Parameters.AddWithValue("@phone", phone);
 
