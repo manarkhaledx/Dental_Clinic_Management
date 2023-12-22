@@ -28,51 +28,56 @@ namespace Dental_Clinic_Management
 
         public static void ShowAppointmentsInDataGridView(DataGridView dataGridView, DateTime dateOfTheDay)
         {
-            using (SqlConnection con = getConnection())
+            try
             {
-                con.Open();
-
-                using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, p.Fname + ' ' + p.Lname AS PatientName, a.pat_phone FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@dateOfTheDay", con))
+                using (SqlConnection con = getConnection())
                 {
-                    cmd.Parameters.AddWithValue("@dateOfTheDay", dateOfTheDay);
+                    con.Open();
 
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    string queryString = "SELECT a.app_id, p.Fname + ' ' + p.Lname AS PatientName, a.pat_phone FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@dateOfTheDay";
+
+                    using (SqlCommand cmd = new SqlCommand(queryString, con))
                     {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
+                        cmd.Parameters.AddWithValue("@dateOfTheDay", dateOfTheDay);
 
-                        // Clear existing columns (if any)
-                        dataGridView.Columns.Clear();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
 
-                        // Set AutoGenerateColumns to false
-                        dataGridView.AutoGenerateColumns = false;
+                            dataGridView.Columns.Clear();
+                            dataGridView.AutoGenerateColumns = false;
 
-                        // Manually add columns and map them to DataTable columns
-                        DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
-                        appointmentID.Name = "appointment_id";
-                        appointmentID.DataPropertyName = "app_id";
-                        appointmentID.HeaderText = "Appointment ID";
-                        appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        dataGridView.Columns.Add(appointmentID);
+                            // Create columns manually
+                            DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
+                            appointmentID.Name = "AppointmentID";
+                            appointmentID.DataPropertyName = "app_id";
+                            appointmentID.HeaderText = "Appointment ID";
+                            appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(appointmentID);
 
-                        DataGridViewTextBoxColumn patientName = new DataGridViewTextBoxColumn();
-                        patientName.Name = "PatientName";
-                        patientName.DataPropertyName = "PatientName";
-                        patientName.HeaderText = "Patient Name";
-                        patientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        dataGridView.Columns.Add(patientName);
+                            DataGridViewTextBoxColumn patientName = new DataGridViewTextBoxColumn();
+                            patientName.Name = "PatientName";
+                            patientName.DataPropertyName = "PatientName";
+                            patientName.HeaderText = "Patient Name";
+                            patientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(patientName);
 
-                        DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
-                        patphone.Name = "pat_phone";
-                        patphone.DataPropertyName = "pat_phone";
-                        patphone.HeaderText = "Patient Phone";
-                        patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        dataGridView.Columns.Add(patphone);
+                            DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
+                            patphone.Name = "pat_phone";
+                            patphone.DataPropertyName = "pat_phone";
+                            patphone.HeaderText = "Patient Phone";
+                            patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(patphone);
 
-                        // Set the DataSource
-                        dataGridView.DataSource = dt;
+                            dataGridView.DataSource = dt;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -109,8 +114,15 @@ namespace Dental_Clinic_Management
 
         private void showAppointmentsOfTheDayForm_Load(object sender, EventArgs e)
         {
-            DateTime dateOfTheDay = DateTime.Now;
-            ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+            try
+            {
+                DateTime dateOfTheDay = DateTime.Now;
+                ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
