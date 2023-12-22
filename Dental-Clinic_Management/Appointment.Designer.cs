@@ -100,6 +100,7 @@
             this.filterAppButton.TabIndex = 54;
             this.filterAppButton.Text = "Filter";
             this.filterAppButton.UseVisualStyleBackColor = false;
+            this.filterAppButton.Click += new System.EventHandler(this.filterAppButton_Click);
             // 
             // appointmentDataGridView
             // 

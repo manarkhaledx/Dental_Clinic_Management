@@ -95,6 +95,80 @@ namespace Dental_Clinic_Management
             }
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+            public static void ShowAppointmentsInDataGridView(DataGridView dataGridView, DateTime dateOfTheDay)
+            {
+                try
+                {
+                    using (SqlConnection con = getConnection())
+                    {
+                        con.Open();
+
+                        string queryString = "SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@dateOfTheDay";
+
+                        using (SqlCommand cmd = new SqlCommand(queryString, con))
+                        {
+                            cmd.Parameters.AddWithValue("@dateOfTheDay", dateOfTheDay);
+
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                            {
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+
+                                dataGridView.Columns.Clear();
+                                dataGridView.AutoGenerateColumns = false;
+
+                                // Create columns manually
+                                DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
+                                appointmentID.Name = "AppointmentID";
+                                appointmentID.DataPropertyName = "app_id";
+                                appointmentID.HeaderText = "Appointment ID";
+                                appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                dataGridView.Columns.Add(appointmentID);
+
+                                DataGridViewTextBoxColumn patientName = new DataGridViewTextBoxColumn();
+                                patientName.Name = "PatientName";
+                                patientName.DataPropertyName = "PatientName";
+                                patientName.HeaderText = "Patient Name";
+                                patientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                dataGridView.Columns.Add(patientName);
+
+                                DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
+                                patphone.Name = "pat_phone";
+                                patphone.DataPropertyName = "pat_phone";
+                                patphone.HeaderText = "Patient Phone";
+                                patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                dataGridView.Columns.Add(patphone);
+
+                                DataGridViewTextBoxColumn colTime = new DataGridViewTextBoxColumn();
+                                colTime.Name = "Time";
+                                colTime.DataPropertyName = "app_time";
+                                colTime.HeaderText = "Time";
+                                colTime.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                dataGridView.Columns.Add(colTime);
+
+                                DataGridViewTextBoxColumn colDate = new DataGridViewTextBoxColumn();
+                                colDate.Name = "Date";
+                                colDate.DataPropertyName = "app_date";
+                                colDate.HeaderText = "Date";
+                                colDate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                dataGridView.Columns.Add(colDate);
+
+                                dataGridView.DataSource = dt;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+
+
+
+            //---------------------------------------------------------------------------------------------------------------------------------------------------------------
             public static void deleteAppointment(int appointment_id)
             {
                 using (SqlConnection con = getConnection())
@@ -351,7 +425,28 @@ namespace Dental_Clinic_Management
 
         private void Appointment_Load(object sender, EventArgs e)
         {
+            try
+            {
+                DateTime dateOfTheDay = DateTime.Today;
+                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void filterAppButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value;
+                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

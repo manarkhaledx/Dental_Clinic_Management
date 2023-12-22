@@ -81,37 +81,6 @@ namespace Dental_Clinic_Management
             }
         }
 
-        public static int GetPatientIDByPhone(SqlConnection con, string phone)
-        {
-            try
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT patient_id FROM patient WHERE Phone=@phone", con))
-                {
-                    cmd.Parameters.AddWithValue("@phone", phone);
-
-                    // ExecuteScalar is used to retrieve a single value from the query result
-                    object result = cmd.ExecuteScalar();
-
-                    // Check if a result was found
-                    if (result != null)
-                    {
-                        // Convert the result to an integer (patientID)
-                        return Convert.ToInt32(result);
-                    }
-                    else
-                    {
-                        // Return 0 if no matching patientID was found
-                        return 0;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-                return 0;
-            }
-        }
-
         private void showAppointmentsOfTheDayForm_Load(object sender, EventArgs e)
         {
             try
