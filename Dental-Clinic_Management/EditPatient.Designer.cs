@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_Management
 {
-    partial class EditPatient
+    partial class EditPatinet
     {
         /// <summary>
         /// Required designer variable.
