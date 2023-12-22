@@ -35,7 +35,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.pat_phone LIKE @Phone", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.pat_id = p.patient_id WHERE a.pat_phone LIKE @Phone", con))
                     {
                         cmd.Parameters.AddWithValue("Phone", phoneNumber + "%");
 
@@ -53,7 +53,7 @@ namespace Dental_Clinic_Management
                             // Create columns manually
                             DataGridViewTextBoxColumn colAppointmentID = new DataGridViewTextBoxColumn();
                             colAppointmentID.Name = "AppointmentID";
-                            colAppointmentID.DataPropertyName = "appoitment_id";
+                            colAppointmentID.DataPropertyName = "app_id";
                             colAppointmentID.HeaderText = "Appointment ID";
                             colAppointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                             dataGridView.Columns.Add(colAppointmentID);
@@ -103,7 +103,7 @@ namespace Dental_Clinic_Management
                     try
                     {
                         // Check if the appointment with the given ID exists
-                        using (SqlCommand selectCmd = new SqlCommand("SELECT * FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                        using (SqlCommand selectCmd = new SqlCommand("SELECT * FROM appointment WHERE app_id = @AppointmentID", con))
                         {
                             selectCmd.Parameters.AddWithValue("@AppointmentID", appointment_id);
 
@@ -114,7 +114,7 @@ namespace Dental_Clinic_Management
                                     dr.Close();
 
                                     // Delete the appointment
-                                    using (SqlCommand deleteCmd = new SqlCommand("DELETE FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                                    using (SqlCommand deleteCmd = new SqlCommand("DELETE FROM appointment WHERE app_id = @AppointmentID", con))
                                     {
                                         deleteCmd.Parameters.AddWithValue("@AppointmentID", appointment_id);
                                         int rowsAffected = deleteCmd.ExecuteNonQuery();
@@ -158,7 +158,7 @@ namespace Dental_Clinic_Management
                         {
                             if (dr.Read())
                             {
-                                using (SqlCommand updateCmd = new SqlCommand("UPDATE appointment SET pat_phone=@newPhone, app_time=@newTime, app_date=@newDate WHERE appoitment_id=@AppointmentID", con))
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE appointment SET pat_phone=@newPhone, app_time=@newTime, app_date=@newDate WHERE app_id=@AppointmentID", con))
                                 {
                                     updateCmd.Parameters.AddWithValue("@newPhone", newPhone);
                                     updateCmd.Parameters.AddWithValue("@newTime", newTime);
@@ -184,6 +184,68 @@ namespace Dental_Clinic_Management
                     }
                 }
             }
+            //-----------------------------------------------------------------------------------------------------------------------------------------------
+            public static void LoadAllAppointmentsInDataGridView(DataGridView dataGridView)
+            {
+                using (SqlConnection con = getConnection())
+                {
+                    con.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.pat_id = p.patient_id", con))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            // Clear existing columns (if any)
+                            dataGridView.Columns.Clear();
+
+                            // Set AutoGenerateColumns to false
+                            dataGridView.AutoGenerateColumns = false;
+
+                            // Create columns manually
+                            DataGridViewTextBoxColumn colAppointmentID = new DataGridViewTextBoxColumn();
+                            colAppointmentID.Name = "AppointmentID";
+                            colAppointmentID.DataPropertyName = "app_id";
+                            colAppointmentID.HeaderText = "Appointment ID";
+                            colAppointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colAppointmentID);
+
+                            DataGridViewTextBoxColumn colPatientName = new DataGridViewTextBoxColumn();
+                            colPatientName.Name = "PatientName";
+                            colPatientName.DataPropertyName = "PatientName";
+                            colPatientName.HeaderText = "Patient Name";
+                            colPatientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPatientName);
+
+                            DataGridViewTextBoxColumn colPhone = new DataGridViewTextBoxColumn();
+                            colPhone.Name = "Phone";
+                            colPhone.DataPropertyName = "pat_phone";
+                            colPhone.HeaderText = "Phone";
+                            colPhone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colPhone);
+
+                            DataGridViewTextBoxColumn colTime = new DataGridViewTextBoxColumn();
+                            colTime.Name = "Time";
+                            colTime.DataPropertyName = "app_time";
+                            colTime.HeaderText = "Time";
+                            colTime.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colTime);
+
+                            DataGridViewTextBoxColumn colDate = new DataGridViewTextBoxColumn();
+                            colDate.Name = "Date";
+                            colDate.DataPropertyName = "app_date";
+                            colDate.HeaderText = "Date";
+                            colDate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dataGridView.Columns.Add(colDate);
+
+                            // Set the DataSource
+                            dataGridView.DataSource = dt;
+                        }
+                    }
+                }
+            }
 
 
         }
@@ -201,27 +263,11 @@ namespace Dental_Clinic_Management
             else
             {
                 // If the TextBox is empty, load all patients
-                //appointmentDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
+                appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
             }
         }
 
 
-       /* private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex == appointmentDataGridView.Columns["Delete"].Index)
-            {
-                // Get the appointment ID from the selected row
-                int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
-
-                // Call the method to delete the appointment
-                DeleteAppointment(appointmentID);
-
-                // Refresh the DataGridView after deletion
-                string phone = phoneTextBox.Text.Trim();
-                DataGridView dataGrid = appointmentDataGridView;
-                appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
-            }
-        }*/
 
         // Add this method to delete the appointment
         private void DeleteAppointment(int appointmentID)
@@ -237,50 +283,7 @@ namespace Dental_Clinic_Management
                 }
             }
         }
-       /* private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                if (e.ColumnIndex == appointmentDataGridView.Columns["Delete"].Index)
-                {
-                    // Get the appointment ID from the selected row
-                    int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
-
-                    // Call the method to delete the appointment
-                    DeleteAppointment(appointmentID);
-
-                    // Refresh the DataGridView after deletion
-                    string phone = phoneTextBox.Text.Trim();
-                    DataGridView dataGrid = appointmentDataGridView;
-                    appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
-                }
-                else if (e.ColumnIndex == appointmentDataGridView.Columns["Edit"].Index)
-                {
-                    // Get the appointment ID from the selected row
-                    int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
-
-                    // Call the method to edit the appointment
-                    EditAppointment(appointmentID);
-
-                    // Refresh the DataGridView after editing
-                    string phone = phoneTextBox.Text.Trim();
-                    DataGridView dataGrid = appointmentDataGridView;
-                    appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
-                }
-            }
-        }*/
-
-        // Add this method to edit the appointment
-        private void EditAppointment(int appointmentID)
-        {
-            // You can open a new form for editing or handle it within the current form
-            // For simplicity, let's assume you have a form called EditAppointmentForm
-           /* using (  editForm = new  (appointmentID))
-            {
-                // Show the edit form
-                editForm.ShowDialog();
-            }*/
-        }
+  
 
         private void deleteAppButton_Click(object sender, EventArgs e)
         {
@@ -299,7 +302,7 @@ namespace Dental_Clinic_Management
                     appointmentDataBaseQueries.deleteAppointment(selectedPatientId);
 
                     // Refresh the DataGridView after deletion
-                    //appointmentDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
+                    appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
                 }
             }
             else
