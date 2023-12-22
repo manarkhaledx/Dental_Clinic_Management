@@ -13,6 +13,7 @@ namespace Dental_Clinic_Management
 {
     public partial class EditPatinet : Form
     {
+
         public EditPatinet(string fname, string lname, string phone, string gender, DateTime dob, string address)
         {
             InitializeComponent();
