@@ -2,21 +2,34 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using static Dental_Clinic_Management.Patient;
 
 namespace Dental_Clinic_Management
 {
     public partial class AddRecordForm : Form
+
     {
+        SqlCommand cmd;
+        SqlDataReader dr;
         public AddRecordForm()
         {
             InitializeComponent();
-          
+
         }
+        protected SqlConnection getConnection()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            return con;
+        }
+
 
 
         private void AddRecordForm_Load(object sender, EventArgs e)  //make the form always appear in the right side & centered 
@@ -107,6 +120,49 @@ namespace Dental_Clinic_Management
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private string GetSelectedRadioButtonValue()
+        {
+            // Iterate through radio buttons to find the selected one
+            foreach (RadioButton radioButton in genderGroupBox.Controls)
+            {
+                if (radioButton.Checked)
+                {
+                    return radioButton.Text; // You can change this based on your scenario
+                }
+            }
+
+            return null; // No radio button selected
+        }
+
+        private void savePatientButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (firstNameTextBox.Text != string.Empty || lastNameTextBox.Text != string.Empty || phoneTextBox.Text != string.Empty
+                    || (maleRadioButton.Checked || femaleRadioButton.Checked) || dobDateTimePicker.Value != null || addressTextBox.Text != string.Empty)
+                {
+                    // Validate phone number input
+                    if (phoneTextBox.Text.Length == 11 && int.TryParse(phoneTextBox.Text, out _))
+                    {
+                        patientDataBaseQueries.addPatient(firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, maleRadioButton, dobDateTimePicker.Value, addressTextBox.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
