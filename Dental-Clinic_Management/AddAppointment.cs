@@ -51,7 +51,7 @@ namespace Dental_Clinic_Management
                         if (patientID > 0)
                         {
                             // Insert the new appointment using the retrieved patientID
-                            using (SqlCommand cmd = new SqlCommand("INSERT INTO appointment (pat_phone, app_time, app_date, patientID) VALUES (@phone, @time, @date, @patientID)", con))
+                            using (SqlCommand cmd = new SqlCommand("INSERT INTO appointment (pat_phone, app_time, app_date, patient_id) VALUES (@phone, @time, @date, @patientID)", con))
                             {
                                 cmd.Parameters.AddWithValue("@phone", phone);
                                 cmd.Parameters.AddWithValue("@time", time);
