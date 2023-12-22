@@ -45,6 +45,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.totalCostLabel = new System.Windows.Forms.Label();
+            this.billingHistoryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -310,11 +311,24 @@
             this.totalCostLabel.TabIndex = 74;
             this.totalCostLabel.Text = "Phone Number:";
             // 
+            // billingHistoryDateTimePicker
+            // 
+            this.billingHistoryDateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
+            this.billingHistoryDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.billingHistoryDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
+            this.billingHistoryDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billingHistoryDateTimePicker.Location = new System.Drawing.Point(584, 41);
+            this.billingHistoryDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billingHistoryDateTimePicker.Name = "billingHistoryDateTimePicker";
+            this.billingHistoryDateTimePicker.Size = new System.Drawing.Size(516, 50);
+            this.billingHistoryDateTimePicker.TabIndex = 76;
+            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1984, 1045);
+            this.Controls.Add(this.billingHistoryDateTimePicker);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.deleteAppButton);
@@ -354,5 +368,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label totalCostLabel;
+        private System.Windows.Forms.DateTimePicker billingHistoryDateTimePicker;
     }
 }
