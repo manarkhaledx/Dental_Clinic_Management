@@ -440,7 +440,7 @@ namespace Dental_Clinic_Management
         {
             try
             {
-                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value;
+                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value.Date;
                 appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
             catch (Exception ex)
