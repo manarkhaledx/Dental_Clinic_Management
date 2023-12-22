@@ -116,7 +116,7 @@ namespace Dental_Clinic_Management
         {
             try
             {
-                DateTime dateOfTheDay = DateTime.Now;
+                DateTime dateOfTheDay = DateTime.Today;
                 ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
             catch (Exception ex)

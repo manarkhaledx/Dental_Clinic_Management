@@ -343,6 +343,16 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("Please select an appointment to proceed with payment.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Appointment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

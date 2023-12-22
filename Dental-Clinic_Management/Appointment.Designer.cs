@@ -111,6 +111,7 @@
             this.appointmentDataGridView.RowTemplate.Height = 28;
             this.appointmentDataGridView.Size = new System.Drawing.Size(1146, 742);
             this.appointmentDataGridView.TabIndex = 53;
+            this.appointmentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentDataGridView_CellContentClick);
             // 
             // panel7
             // 
@@ -362,6 +363,7 @@
             this.Name = "Appointment";
             this.Text = "Appointment";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Appointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
