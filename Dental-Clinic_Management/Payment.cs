@@ -16,10 +16,12 @@ namespace Dental_Clinic_Management
         SqlCommand cmd;
         SqlDataReader dr;
         private decimal totalCost;
+        private int appointmentId; // New field to store app_id
 
-        public Payment()
+        public Payment(int app_id)
         {
             InitializeComponent();
+            this.appointmentId = app_id;
         }
         protected SqlConnection getConnection()
         {
@@ -27,6 +29,9 @@ namespace Dental_Clinic_Management
             con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security = true";
             return con;
         }
+        
+
+       
         private void Payment_Load(object sender, EventArgs e)
         {
             try
@@ -108,20 +113,22 @@ namespace Dental_Clinic_Management
                     {
                         con.Open();
 
-                        // Update the 'amount', 'method', and 'pay_date' in the 'Payment' table
-                        string updateQuery = "UPDATE [Clinic].[dbo].[Payment] SET [amount] = [amount] + @totalCost, [method] = @method, [pay_date] = @payDate WHERE [payment_id] = (SELECT MAX([payment_id]) FROM [Clinic].[dbo].[Payment])";
+                        // Update the 'amount', 'method', 'pay_date', and 'app_id' in the 'Payment' table
+                        string updateQuery = "UPDATE [Clinic].[dbo].[Payment] SET [amount] = [amount] + @totalCost, [method] = @method, [pay_date] = @payDate, [app_id] = @appId WHERE [payment_id] = (SELECT MAX([payment_id]) FROM [Clinic].[dbo].[Payment])";
                         cmd = new SqlCommand(updateQuery, con);
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
                         cmd.Parameters.AddWithValue("@method", paymentMethod);
                         cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@appId", appointmentId);
                         cmd.ExecuteNonQuery();
 
                         // Insert a new payment record with the updated amount, payment method, and current date
-                        string insertQuery = "INSERT INTO [Clinic].[dbo].[Payment] ([pay_date], [amount], [method]) VALUES (@payDate, @totalCost, @method)";
+                        string insertQuery = "INSERT INTO [Clinic].[dbo].[Payment] ([pay_date], [amount], [method], [app_id]) VALUES (@payDate, @totalCost, @method, @appId)";
                         cmd = new SqlCommand(insertQuery, con);
                         cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
                         cmd.Parameters.AddWithValue("@method", paymentMethod);
+                        cmd.Parameters.AddWithValue("@appId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
 
@@ -144,10 +151,12 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("Error confirming payment: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+    
 
 
 
-        private void serviceNameLabel_Click(object sender, EventArgs e)
+
+private void serviceNameLabel_Click(object sender, EventArgs e)
         {
 
         }

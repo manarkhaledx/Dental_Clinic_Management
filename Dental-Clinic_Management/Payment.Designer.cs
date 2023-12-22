@@ -85,7 +85,7 @@
             this.serviceCostLabel.AutoSize = true;
             this.serviceCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceCostLabel.Location = new System.Drawing.Point(764, 159);
+            this.serviceCostLabel.Location = new System.Drawing.Point(539, 854);
             this.serviceCostLabel.Name = "serviceCostLabel";
             this.serviceCostLabel.Size = new System.Drawing.Size(196, 54);
             this.serviceCostLabel.TabIndex = 81;
@@ -174,7 +174,7 @@
             this.addItemButton.FlatAppearance.BorderSize = 0;
             this.addItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addItemButton.Location = new System.Drawing.Point(966, 150);
+            this.addItemButton.Location = new System.Drawing.Point(943, 645);
             this.addItemButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.addItemButton.Name = "addItemButton";
             this.addItemButton.Size = new System.Drawing.Size(184, 71);
@@ -209,7 +209,7 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(539, 734);
+            this.totalCostLabel.Location = new System.Drawing.Point(539, 938);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(174, 54);
             this.totalCostLabel.TabIndex = 72;
