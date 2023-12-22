@@ -110,6 +110,83 @@ namespace Dental_Clinic_Management
                 //appointmentDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
             }
         }
+
+
+        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == appointmentDataGridView.Columns["Delete"].Index)
+            {
+                // Get the appointment ID from the selected row
+                int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
+
+                // Call the method to delete the appointment
+                DeleteAppointment(appointmentID);
+
+                // Refresh the DataGridView after deletion
+                string phone = phoneTextBox.Text.Trim();
+                DataGridView dataGrid = appointmentDataGridView;
+                appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
+            }
+        }
+
+        // Add this method to delete the appointment
+        private void DeleteAppointment(int appointmentID)
+        {
+            using (SqlConnection con = getConnection())
+            {
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                {
+                    cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == appointmentDataGridView.Columns["Delete"].Index)
+                {
+                    // Get the appointment ID from the selected row
+                    int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
+
+                    // Call the method to delete the appointment
+                    DeleteAppointment(appointmentID);
+
+                    // Refresh the DataGridView after deletion
+                    string phone = phoneTextBox.Text.Trim();
+                    DataGridView dataGrid = appointmentDataGridView;
+                    appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
+                }
+                else if (e.ColumnIndex == appointmentDataGridView.Columns["Edit"].Index)
+                {
+                    // Get the appointment ID from the selected row
+                    int appointmentID = Convert.ToInt32(appointmentDataGridView.Rows[e.RowIndex].Cells["AppointmentID"].Value);
+
+                    // Call the method to edit the appointment
+                    EditAppointment(appointmentID);
+
+                    // Refresh the DataGridView after editing
+                    string phone = phoneTextBox.Text.Trim();
+                    DataGridView dataGrid = appointmentDataGridView;
+                    appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
+                }
+            }
+        }
+
+        // Add this method to edit the appointment
+        private void EditAppointment(int appointmentID)
+        {
+            // You can open a new form for editing or handle it within the current form
+            // For simplicity, let's assume you have a form called EditAppointmentForm
+            using (Appointment editForm = new  Appointment(appointmentID))
+            {
+                // Show the edit form
+                editForm.ShowDialog();
+            }
+        }
     }
 
 
