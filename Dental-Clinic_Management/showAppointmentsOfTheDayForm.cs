@@ -26,68 +26,91 @@ namespace Dental_Clinic_Management
             InitializeComponent();
         }
 
-        public static class appointmentDataBaseQueries
+        public static void ShowAppointmentsInDataGridView(DataGridView dataGridView, DateTime dateOfTheDay)
         {
-            public static void addappointment(string phone, string time, DateTime date, int patientID)
+            using (SqlConnection con = getConnection())
             {
-                using (SqlConnection con = getConnection())
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand("SELECT a.appointment_id, p.Fname + ' ' + p.Lname AS PatientName, a.pat_phone FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@dateOfTheDay", con))
                 {
-                    con.Open();
+                    cmd.Parameters.AddWithValue("@dateOfTheDay", dateOfTheDay);
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM appointment WHERE pat_phone=@phone AND app_time=@time AND app_date=@date", con))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
-                        cmd.Parameters.AddWithValue("pat_phone", phone);
-                        cmd.Parameters.AddWithValue("app_time", time);
-                        cmd.Parameters.AddWithValue("app_date", date);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            
-                            
-                        }
+                        // Clear existing columns (if any)
+                        dataGridView.Columns.Clear();
+
+                        // Set AutoGenerateColumns to false
+                        dataGridView.AutoGenerateColumns = false;
+
+                        // Manually add columns and map them to DataTable columns
+                        DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
+                        appointmentID.Name = "appointment_id";
+                        appointmentID.DataPropertyName = "appointment_id";
+                        appointmentID.HeaderText = "Appointment ID";
+                        appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dataGridView.Columns.Add(appointmentID);
+
+                        DataGridViewTextBoxColumn patientName = new DataGridViewTextBoxColumn();
+                        patientName.Name = "PatientName";
+                        patientName.DataPropertyName = "PatientName";
+                        patientName.HeaderText = "Patient Name";
+                        patientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dataGridView.Columns.Add(patientName);
+
+                        DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
+                        patphone.Name = "pat_phone";
+                        patphone.DataPropertyName = "pat_phone";
+                        patphone.HeaderText = "Patient Phone";
+                        patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dataGridView.Columns.Add(patphone);
+
+                        // Set the DataSource
+                        dataGridView.DataSource = dt;
                     }
                 }
             }
+        }
 
-            public static void ShowAppointmentsInDataGridView(DataGridView dataGridView,DateTime dateOfTheDay)
+        public static int GetPatientIDByPhone(SqlConnection con, string phone)
+        {
+            try
             {
-                using (SqlConnection con = getConnection())
+                using (SqlCommand cmd = new SqlCommand("SELECT patient_id FROM patient WHERE Phone=@phone", con))
                 {
-                    con.Open();
+                    cmd.Parameters.AddWithValue("@phone", phone);
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM appointment WHERE app_date=@dateOfTheDay", con))
+                    // ExecuteScalar is used to retrieve a single value from the query result
+                    object result = cmd.ExecuteScalar();
+
+                    // Check if a result was found
+                    if (result != null)
                     {
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-
-                            // Clear existing columns (if any)
-                            dataGridView.Columns.Clear();
-
-                            // Set AutoGenerateColumns to false
-                            dataGridView.AutoGenerateColumns = false;
-                            DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
-                            appointmentID.Name = "appointment_id";
-                            appointmentID.DataPropertyName = "appointment_id";
-                            appointmentID.HeaderText = "Appointment ID";
-                            appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            dataGridView.Columns.Add(appointmentID);
-
-                            // Manually add columns and map them to DataTable columns
-                            DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
-                            patphone.Name = "pat_phone";
-                            patphone.DataPropertyName = "pat_phone";
-                            patphone.HeaderText = "Patient Phone";
-                            patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            dataGridView.Columns.Add(patphone);
-]
-                            // Set the DataSource
-                            dataGridView.DataSource = dt;
-                        }
+                        // Convert the result to an integer (patientID)
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        // Return 0 if no matching patientID was found
+                        return 0;
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                return 0;
+            }
+        }
+
+        private void showAppointmentsOfTheDayForm_Load(object sender, EventArgs e)
+        {
+            DateTime dateOfTheDay = DateTime.Now;
+            ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
         }
     }
 }
