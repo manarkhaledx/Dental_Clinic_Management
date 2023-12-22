@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Dental_Clinic_Management
 {
     public partial class Appointment : Form
@@ -274,22 +275,6 @@ namespace Dental_Clinic_Management
             }
         }
 
-
-
-        // Add this method to delete the appointment
-        private void DeleteAppointment(int appointmentID)
-        {
-            using (SqlConnection con = getConnection())
-            {
-                con.Open();
-
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM appointment WHERE app_id = @AppointmentID", con))
-                {
-                    cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
   
 
         private void deleteAppButton_Click(object sender, EventArgs e)
@@ -338,6 +323,24 @@ namespace Dental_Clinic_Management
             else
             {
                 MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            if (appointmentDataGridView.SelectedRows.Count > 0)
+            {
+                // Get the selected appointment ID from the DataGridView
+                int selectedAppointmentId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
+
+            
+                //DELETE COMMENT
+                //Payment paymentForm = new Payment(selectedAppointmentId);
+                //paymentForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select an appointment to proceed with payment.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
