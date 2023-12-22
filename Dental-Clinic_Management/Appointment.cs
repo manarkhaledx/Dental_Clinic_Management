@@ -35,7 +35,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.pat_id = p.patient_id WHERE a.pat_phone LIKE @Phone", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.pat_phone LIKE @Phone", con))
                     {
                         cmd.Parameters.AddWithValue("Phone", phoneNumber + "%");
 
@@ -191,7 +191,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.pat_id = p.patient_id", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id", con))
                     {
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {

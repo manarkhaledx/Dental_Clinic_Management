@@ -32,7 +32,7 @@ namespace Dental_Clinic_Management
             {
                 con.Open();
 
-                using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, p.Fname + ' ' + p.Lname AS PatientName, a.pat_phone FROM appointment a JOIN Patient p ON a.pat_id = p.patient_id WHERE a.app_date=@dateOfTheDay", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, p.Fname + ' ' + p.Lname AS PatientName, a.pat_phone FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@dateOfTheDay", con))
                 {
                     cmd.Parameters.AddWithValue("@dateOfTheDay", dateOfTheDay);
 
