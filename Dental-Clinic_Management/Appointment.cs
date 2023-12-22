@@ -35,7 +35,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT a.appoitment_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.pat_id WHERE a.pat_phone LIKE @Phone", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT a.app_id, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone, a.app_time, a.app_date FROM appointment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.pat_phone LIKE @Phone", con))
                     {
                         cmd.Parameters.AddWithValue("Phone", phoneNumber + "%");
 
@@ -150,7 +150,7 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM appointment WHERE appoitment_id=@AppointmentID", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM appointment WHERE app_id=@AppointmentID", con))
                     {
                         cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
 
@@ -230,7 +230,7 @@ namespace Dental_Clinic_Management
             {
                 con.Open();
 
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM appointment WHERE appoitment_id = @AppointmentID", con))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM appointment WHERE app_id = @AppointmentID", con))
                 {
                     cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
                     cmd.ExecuteNonQuery();
@@ -288,7 +288,7 @@ namespace Dental_Clinic_Management
             if (appointmentDataGridView.SelectedRows.Count > 0)
             {
                 // Get the selected patient ID from the DataGridView
-                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["appointment_id"].Value);
+                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["app_id"].Value);
 
                 // Ask for confirmation
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -314,7 +314,7 @@ namespace Dental_Clinic_Management
             {
                 // Retrieve data from the selected row
                 DataGridViewRow selectedRow = appointmentDataGridView.SelectedRows[0];
-                int appointmentID = Convert.ToInt32(selectedRow.Cells["appointment_id"].Value);
+                int appointmentID = Convert.ToInt32(selectedRow.Cells["app_id"].Value);
                 string phone = selectedRow.Cells["pat_phone"].Value.ToString();
                 string time = selectedRow.Cells["app_time"].Value.ToString();
                 DateTime date = Convert.ToDateTime(selectedRow.Cells["app_date"].Value);
