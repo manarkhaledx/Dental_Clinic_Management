@@ -158,17 +158,24 @@ namespace Dental_Clinic_Management
                         {
                             if (dr.Read())
                             {
+                                dr.Close(); // Close the data reader before executing a new command
+
                                 using (SqlCommand updateCmd = new SqlCommand("UPDATE appointment SET pat_phone=@newPhone, app_time=@newTime, app_date=@newDate WHERE app_id=@AppointmentID", con))
                                 {
                                     updateCmd.Parameters.AddWithValue("@newPhone", newPhone);
                                     updateCmd.Parameters.AddWithValue("@newTime", newTime);
                                     updateCmd.Parameters.AddWithValue("@newDate", newDate);
+                                    updateCmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
 
                                     int rowsAffected = updateCmd.ExecuteNonQuery();
 
                                     if (rowsAffected > 0)
                                     {
                                         MessageBox.Show("Appointment information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                        // Reload data in the DataGridView after the update
+                                      //  appointmentDataGridView(dataGridView, DateTime.Now); // You might need to pass the appropriate date
+
                                     }
                                     else
                                     {
@@ -291,7 +298,7 @@ namespace Dental_Clinic_Management
             if (appointmentDataGridView.SelectedRows.Count > 0)
             {
                 // Get the selected patient ID from the DataGridView
-                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["app_id"].Value);
+                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
 
                 // Ask for confirmation
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -317,10 +324,10 @@ namespace Dental_Clinic_Management
             {
                 // Retrieve data from the selected row
                 DataGridViewRow selectedRow = appointmentDataGridView.SelectedRows[0];
-                int appointmentID = Convert.ToInt32(selectedRow.Cells["app_id"].Value);
-                string phone = selectedRow.Cells["pat_phone"].Value.ToString();
-                string time = selectedRow.Cells["app_time"].Value.ToString();
-                DateTime date = Convert.ToDateTime(selectedRow.Cells["app_date"].Value);
+                int appointmentID = Convert.ToInt32(selectedRow.Cells["AppointmentID"].Value);
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+                string time = selectedRow.Cells["Time"].Value.ToString();
+                DateTime date = Convert.ToDateTime(selectedRow.Cells["Date"].Value);
 
                 // Open the EditPatientForm and pass the patient data
 

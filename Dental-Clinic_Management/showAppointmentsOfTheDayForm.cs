@@ -50,7 +50,7 @@ namespace Dental_Clinic_Management
                         // Manually add columns and map them to DataTable columns
                         DataGridViewTextBoxColumn appointmentID = new DataGridViewTextBoxColumn();
                         appointmentID.Name = "appointment_id";
-                        appointmentID.DataPropertyName = "appointment_id";
+                        appointmentID.DataPropertyName = "app_id";
                         appointmentID.HeaderText = "Appointment ID";
                         appointmentID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         dataGridView.Columns.Add(appointmentID);
@@ -111,6 +111,11 @@ namespace Dental_Clinic_Management
         {
             DateTime dateOfTheDay = DateTime.Now;
             ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+        }
+
+        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
