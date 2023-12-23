@@ -129,5 +129,33 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dentistDashboardForm den=new dentistDashboardForm();
+            den.ShowDialog();
+        }
+
+        private void prescriptionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewReceptionist recep = new ViewReceptionist();
+            recep.ShowDialog();
+        }
+
+        private void billingsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Billing bill = new Billing();
+            bill.ShowDialog();
+        }
+
+        private void appointmentsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            showAppointmentsOfTheDayForm app = new showAppointmentsOfTheDayForm();
+            app.ShowDialog();
+        }
     }
 }

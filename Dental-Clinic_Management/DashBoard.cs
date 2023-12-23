@@ -116,6 +116,11 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

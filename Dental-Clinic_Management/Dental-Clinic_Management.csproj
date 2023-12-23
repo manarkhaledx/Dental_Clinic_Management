@@ -91,12 +91,6 @@
     <Compile Include="addNewReceptionist.Designer.cs">
       <DependentUpon>addNewReceptionist.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPrescriptionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="addPrescriptionForm.Designer.cs">
-      <DependentUpon>addPrescriptionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddReceptionist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,12 +172,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="settings.Designer.cs">
-      <DependentUpon>settings.cs</DependentUpon>
-    </Compile>
     <Compile Include="showAppointmentsOfTheDayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addNewReceptionist.resx">
       <DependentUpon>addNewReceptionist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="addPrescriptionForm.resx">
-      <DependentUpon>addPrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddReceptionist.resx">
       <DependentUpon>AddReceptionist.cs</DependentUpon>
@@ -246,9 +231,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="settings.resx">
-      <DependentUpon>settings.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="showAppointmentsOfTheDayForm.resx">
       <DependentUpon>showAppointmentsOfTheDayForm.cs</DependentUpon>
     </EmbeddedResource>
