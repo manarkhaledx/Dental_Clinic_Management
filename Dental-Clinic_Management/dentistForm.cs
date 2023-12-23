@@ -13,7 +13,7 @@ namespace Dental_Clinic_Management
 {
     public partial class dentistDashboardForm : Form
     {
-        public dentistDashboardForm(int v)
+        public dentistDashboardForm()
         {
             InitializeComponent();
         }
