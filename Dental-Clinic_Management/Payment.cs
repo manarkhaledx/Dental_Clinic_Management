@@ -119,7 +119,7 @@ namespace Dental_Clinic_Management
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
                         cmd.Parameters.AddWithValue("@method", paymentMethod);
                         cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
-                        cmd.Parameters.AddWithValue("@appId", appointmentId);
+                        cmd.Parameters.AddWithValue("@app_id", appointmentId);
                         cmd.ExecuteNonQuery();
 
                         // Insert a new payment record with the updated amount, payment method, and current date
@@ -128,7 +128,7 @@ namespace Dental_Clinic_Management
                         cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
                         cmd.Parameters.AddWithValue("@method", paymentMethod);
-                        cmd.Parameters.AddWithValue("@appId", appointmentId);
+                        cmd.Parameters.AddWithValue("@app_id", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
 
