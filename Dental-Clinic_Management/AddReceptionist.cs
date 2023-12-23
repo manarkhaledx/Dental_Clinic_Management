@@ -131,7 +131,7 @@ namespace Dental_Clinic_Management
                     con.Open();
 
                     // Fetch existing data for the receptionist
-                    using (SqlCommand selectCmd = new SqlCommand("SELECT * FROM Receptionist WHERE ID=@ID", con))
+                    using (SqlCommand selectCmd = new SqlCommand("SELECT * FROM Receptionist WHERE recep_id=@ID", con))
                     {
                         selectCmd.Parameters.AddWithValue("ID", receptionistID);
 
@@ -140,7 +140,7 @@ namespace Dental_Clinic_Management
                             if (dr.Read())
                             {
                                 // Use the fetched data to update the receptionist
-                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Receptionist SET Fname=@NewFname, Lname=@NewLname, Phone=@NewPhone,gender=@NewGender, DOB=@NewDOB, recep_address=@NewAddress, username=@NewUsername , pass=@NewPass WHERE ID=@ID", con))
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Receptionist SET Fname=@NewFname, Lname=@NewLname, Phone=@NewPhone,gender=@NewGender, DOB=@NewDOB, recep_address=@NewAddress, username=@NewUsername , pass=@NewPass WHERE recep_id=@ID", con))
                                 {
                                     updateCmd.Parameters.AddWithValue("NewFname", newFname);
                                     updateCmd.Parameters.AddWithValue("NewLname", newLname);
@@ -152,8 +152,8 @@ namespace Dental_Clinic_Management
                                     updateCmd.Parameters.AddWithValue("NewPass", newPassword);
 
                                     // Use the receptionist ID from the fetched data
-                                    updateCmd.Parameters.AddWithValue("ID", dr["ID"]);
-
+                                    updateCmd.Parameters.AddWithValue("ID", receptionistID);
+                                    dr.Close();
                                     int rowsAffected = updateCmd.ExecuteNonQuery();
 
                                     if (rowsAffected > 0)

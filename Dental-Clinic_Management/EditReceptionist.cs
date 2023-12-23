@@ -60,8 +60,8 @@ namespace Dental_Clinic_Management
                             if (reader.Read())
                             {
                                 // Assuming you have columns named UserName and Password in your database
-                                string userName = reader["UserName"].ToString();
-                                string password = reader["Password"].ToString();
+                                string userName = reader["username"].ToString();
+                                string password = reader["pass"].ToString();
 
                                 // Use the retrieved values as needed
                                 // Example: display in textboxes
@@ -95,7 +95,7 @@ namespace Dental_Clinic_Management
                 if (phone.Length == 11 && int.TryParse(phone, out _))
                 {
                     // Call the method to edit patient information
-                    receptionistDataBaseQueries.EditReceptionist(receptionistID ,userName, fname, lname, phone,password, address, dob, recepFemaleRadioButton);
+                    receptionistDataBaseQueries.EditReceptionist(receptionistID ,userName, fname, lname, phone, address, password, dob, recepFemaleRadioButton);
                     MessageBox.Show("Receptionist information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     ViewReceptionist ob = new ViewReceptionist();
