@@ -458,5 +458,20 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Patient_Load_1(object sender, EventArgs e)
+        {
+            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
+        }
+
+        private void deletePatientButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editPatientButton_Click_1(object sender, EventArgs e)
+        {
+                
+        }
     }
 }

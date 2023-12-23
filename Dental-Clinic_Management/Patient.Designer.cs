@@ -260,6 +260,7 @@
             this.editPatientButton.TabIndex = 79;
             this.editPatientButton.Text = "Edit";
             this.editPatientButton.UseVisualStyleBackColor = false;
+            this.editPatientButton.Click += new System.EventHandler(this.editPatientButton_Click_1);
             // 
             // deletePatientButton
             // 
@@ -275,6 +276,7 @@
             this.deletePatientButton.TabIndex = 78;
             this.deletePatientButton.Text = "Delete";
             this.deletePatientButton.UseVisualStyleBackColor = false;
+            this.deletePatientButton.Click += new System.EventHandler(this.deletePatientButton_Click_1);
             // 
             // totalCostLabel
             // 
@@ -337,6 +339,7 @@
             this.Controls.Add(this.searchTextBox);
             this.Name = "Patient";
             this.Text = "Patient";
+            this.Load += new System.EventHandler(this.Patient_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

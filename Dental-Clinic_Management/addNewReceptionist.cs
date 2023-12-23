@@ -32,50 +32,7 @@ namespace Dental_Clinic_Management
 
         }
 
-        private void signUpReceptiontistLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepFNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepLNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receptPhoneTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepAddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepDobDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepFemaleRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepMaleRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recepGenderGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public bool hasSpecialCharacter(string password)
         {
@@ -136,8 +93,8 @@ namespace Dental_Clinic_Management
 
                                                 MessageBox.Show("Receptionist account created successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 this.Hide();
-                                                Login loginForm = new Login();
-                                                loginForm.ShowDialog();
+                                                ViewReceptionist recep = new ViewReceptionist();
+                                                recep.ShowDialog();
                                                 //
                                                 return;
                                             }
