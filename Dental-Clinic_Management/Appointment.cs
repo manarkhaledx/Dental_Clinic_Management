@@ -332,52 +332,36 @@ namespace Dental_Clinic_Management
 
         }
 
-        private void phoneTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string phone = phoneTextBox.Text.Trim();
-            DataGridView dataGrid = appointmentDataGridView;
 
-            // You can set a minimum length if needed before starting the search
-            if (phone.Length >= 1)
+
+   
+        private void filterAppButton_Click_1(object sender, EventArgs e)
+        {
+            try
             {
-                appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
+                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value.Date;
+                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
-            else
+            catch (Exception ex)
             {
-                // If the TextBox is empty, load all patients
-                appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-
-
-        private void deleteAppButton_Click(object sender, EventArgs e)
+        private void Appointment_Load(object sender, EventArgs e)
         {
-            DataGridView dataGrid = appointmentDataGridView;
-            if (appointmentDataGridView.SelectedRows.Count > 0)
+            try
             {
-                // Get the selected patient ID from the DataGridView
-                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
-
-                // Ask for confirmation
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    // Delete the patient from the database
-                    appointmentDataBaseQueries.deleteAppointment(selectedPatientId);
-
-                    // Refresh the DataGridView after deletion
-                    appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
-                }
+                DateTime dateOfTheDay = DateTime.Today;
+                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void editAppButton_Click(object sender, EventArgs e)
+        private void editAppButton_Click_1(object sender, EventArgs e)
         {
             if (appointmentDataGridView.SelectedRows.Count > 0)
             {
@@ -408,8 +392,8 @@ namespace Dental_Clinic_Management
                 int selectedAppointmentId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
 
 
-               // Payment paymentForm = new Payment(selectedAppointmentId);
-               // paymentForm.ShowDialog();
+                 Payment paymentForm = new Payment(selectedAppointmentId);
+                 paymentForm.ShowDialog();
             }
             else
             {
@@ -417,35 +401,46 @@ namespace Dental_Clinic_Management
             }
         }
 
-        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void deleteAppButton_Click(object sender, EventArgs e)
         {
+            DataGridView dataGrid = appointmentDataGridView;
+            if (appointmentDataGridView.SelectedRows.Count > 0)
+            {
+                // Get the selected patient ID from the DataGridView
+                int selectedPatientId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
 
+                // Ask for confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Delete the patient from the database
+                    appointmentDataBaseQueries.deleteAppointment(selectedPatientId);
+
+                    // Refresh the DataGridView after deletion
+                    appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-   
-        private void filterAppButton_Click_1(object sender, EventArgs e)
+        private void phoneTextBox_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value.Date;
-                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+            string phone = phoneTextBox.Text.Trim();
+            DataGridView dataGrid = appointmentDataGridView;
 
-        private void Appointment_Load(object sender, EventArgs e)
-        {
-            try
+            // You can set a minimum length if needed before starting the search
+            if (phone.Length >= 1)
             {
-                DateTime dateOfTheDay = DateTime.Today;
-                appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+                appointmentDataBaseQueries.SearchPatient(phone, dataGrid);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // If the TextBox is empty, load all patients
+                appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
             }
         }
     }

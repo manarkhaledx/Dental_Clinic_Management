@@ -68,6 +68,7 @@
             this.payButton.TabIndex = 86;
             this.payButton.Text = "Pay";
             this.payButton.UseVisualStyleBackColor = false;
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
             // 
             // phoneTextBox
             // 
@@ -80,6 +81,7 @@
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(318, 48);
             this.phoneTextBox.TabIndex = 84;
+            this.phoneTextBox.TextChanged += new System.EventHandler(this.phoneTextBox_TextChanged);
             // 
             // totalCostLabel
             // 
@@ -283,6 +285,7 @@
             this.editAppButton.TabIndex = 81;
             this.editAppButton.Text = "Edit";
             this.editAppButton.UseVisualStyleBackColor = false;
+            this.editAppButton.Click += new System.EventHandler(this.editAppButton_Click_1);
             // 
             // filterAppButton
             // 
@@ -340,6 +343,7 @@
             this.deleteAppButton.TabIndex = 82;
             this.deleteAppButton.Text = "Delete";
             this.deleteAppButton.UseVisualStyleBackColor = false;
+            this.deleteAppButton.Click += new System.EventHandler(this.deleteAppButton_Click);
             // 
             // Appointment
             // 
