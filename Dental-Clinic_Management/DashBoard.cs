@@ -46,6 +46,20 @@ namespace Dental_Clinic_Management
 
                     int totalPatients = (int)patientCommand.ExecuteScalar();
                     numOfPatientsLabel.Text = "Patients: " + totalPatients;
+
+                    // Get the number of billings
+                    SqlCommand billingCommand = new SqlCommand(
+                        "SELECT COUNT(*) AS TotalBillings " +
+                        "FROM [Clinic].[dbo].[Payment] " +
+                        "WHERE [app_id] IN (" +
+                        "   SELECT [app_id] " +
+                        "   FROM [Clinic].[dbo].[Appointment] " +
+                        "   WHERE CONVERT(DATE, [app_date]) = CONVERT(DATE, GETDATE())" +
+                        ");",
+                        connection);
+
+                    int totalBillings = (int)billingCommand.ExecuteScalar();
+                    numOfTotalBillingsLabel.Text = "Billings: " + totalBillings;
                 }
             }
             catch (Exception ex)
