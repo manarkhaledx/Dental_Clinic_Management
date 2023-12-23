@@ -134,6 +134,11 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void exitPictureBox_Click_1(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 
     }

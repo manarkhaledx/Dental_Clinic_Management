@@ -56,6 +56,7 @@
             this.totalBillingsPanel = new System.Windows.Forms.Panel();
             this.numOfTotalBillingsLabel = new System.Windows.Forms.Label();
             this.totalBillingsLabel = new System.Windows.Forms.Label();
+            this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.appointmentsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsPictureBox)).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.patientsPanel.SuspendLayout();
             this.totalBillingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // appointmentsPanel
@@ -446,6 +448,19 @@
             this.totalBillingsLabel.Text = "Total Billings";
             this.totalBillingsLabel.Click += new System.EventHandler(this.label2_Click_1);
             // 
+            // exitPictureBox
+            // 
+            this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.exitPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitPictureBox.Location = new System.Drawing.Point(1706, 25);
+            this.exitPictureBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.exitPictureBox.Name = "exitPictureBox";
+            this.exitPictureBox.Size = new System.Drawing.Size(29, 29);
+            this.exitPictureBox.TabIndex = 71;
+            this.exitPictureBox.TabStop = false;
+            this.exitPictureBox.Click += new System.EventHandler(this.exitPictureBox_Click_1);
+            // 
             // recepDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,6 +469,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1940, 747);
             this.ControlBox = false;
+            this.Controls.Add(this.exitPictureBox);
             this.Controls.Add(this.totalBillingsPanel);
             this.Controls.Add(this.patientsPanel);
             this.Controls.Add(this.closePictureBox);
@@ -487,6 +503,7 @@
             this.patientsPanel.PerformLayout();
             this.totalBillingsPanel.ResumeLayout(false);
             this.totalBillingsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,6 +537,7 @@
         private System.Windows.Forms.Panel totalBillingsPanel;
         private System.Windows.Forms.Label numOfTotalBillingsLabel;
         private System.Windows.Forms.Label totalBillingsLabel;
+        private System.Windows.Forms.PictureBox exitPictureBox;
     }
 }
 
