@@ -38,15 +38,6 @@ namespace Dental_Clinic_Management
                     int totalAppointments = (int)appointmentCommand.ExecuteScalar();
                     numOfAppointmentsLabel.Text = "Appointments: " + totalAppointments;
 
-                    //Get the number of patients
-                    SqlCommand patientCommand = new SqlCommand(
-                         "SELECT COUNT(*) AS TotalPatients " +
-                          "FROM [Clinic].[dbo].[Patient];",
-                                connection);
-
-                    int totalPatients = (int)patientCommand.ExecuteScalar();
-                    numOfPatientsLabel.Text = "Patients: " + totalPatients;
-
                     // Get the number of billings
                     SqlCommand billingCommand = new SqlCommand(
                         "SELECT COUNT(*) AS TotalBillings " +
@@ -63,7 +54,7 @@ namespace Dental_Clinic_Management
 
                     // Log to confirm that the numbers are for the current day
                     Console.WriteLine($"Total Appointments: {totalAppointments}");
-                    Console.WriteLine($"Total Patients: {totalPatients}");
+                   
                     Console.WriteLine($"Total Billings: {totalBillings}");
                 }
             }

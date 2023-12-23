@@ -412,7 +412,7 @@
             this.totalBillingsDataGridView.RowTemplate.Height = 28;
             this.totalBillingsDataGridView.Size = new System.Drawing.Size(1252, 574);
             this.totalBillingsDataGridView.TabIndex = 50;
-            this.totalBillingsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.totalBillingsDataGridView_CellContentClick);
+           // this.totalBillingsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.totalBillingsDataGridView_CellContentClick);
             // 
             // billingHistoryDateTimePicker
             // 

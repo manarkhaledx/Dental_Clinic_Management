@@ -26,11 +26,7 @@ namespace Dental_Clinic_Management
             InitializeComponent();
         }
 
-        private void totalBillingsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        public static void ShowAppointmentsInDataGridView(DataGridView dataGridView, DateTime date)
+        public static void ShowPaymentsInDataGridView(DataGridView dataGridView, DateTime date)
         {
             try
             {
@@ -38,7 +34,11 @@ namespace Dental_Clinic_Management
                 {
                     con.Open();
 
-                    string queryString = "SELECT a.app_id, a.amount, (p.Fname + ' ' + p.Lname) AS PatientName, a.pat_phone FROM Payment a JOIN Patient p ON a.patient_id = p.patient_id WHERE a.app_date=@date";
+                    string queryString = "SELECT a.app_id, a.amount, p.Fname + ' ' + p.Lname AS PatientName, p.Phone " +
+                                         "FROM Payment a " +
+                                         "JOIN Appointment app ON a.app_id = app.app_id " +
+                                         "JOIN Patient p ON app.patient_id = p.patient_id " +
+                                         "WHERE app.app_date=@date";
 
                     using (SqlCommand cmd = new SqlCommand(queryString, con))
                     {
@@ -75,8 +75,8 @@ namespace Dental_Clinic_Management
                             dataGridView.Columns.Add(patientName);
 
                             DataGridViewTextBoxColumn patphone = new DataGridViewTextBoxColumn();
-                            patphone.Name = "pat_phone";
-                            patphone.DataPropertyName = "pat_phone";
+                            patphone.Name = "Phone";
+                            patphone.DataPropertyName = "Phone";
                             patphone.HeaderText = "Patient Phone";
                             patphone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                             dataGridView.Columns.Add(patphone);
@@ -91,10 +91,13 @@ namespace Dental_Clinic_Management
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
         private void filterBillingButton_Click(object sender, EventArgs e)
         {
             DateTime date = billingHistoryDateTimePicker.Value.Date;
-            ShowAppointmentsInDataGridView(totalBillingsDataGridView,date);
+            ShowPaymentsInDataGridView(totalBillingsDataGridView,date);
         }
     }
 }

@@ -100,7 +100,7 @@ namespace Dental_Clinic_Management
                                     {
                                         // If password is correct, hide the current form and show the dentist dashboard
                                         this.Hide();
-                                        dentistDashboardForm DentistForm = new dentistDashboardForm((int)dr["dentist_id"]);
+                                        dentistDashboardForm DentistForm = new dentistDashboardForm();
                                         DentistForm.ShowDialog();
                                         return;
                                     }
