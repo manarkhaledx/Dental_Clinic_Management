@@ -23,7 +23,7 @@ namespace Dental_Clinic_Management
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source =DESKTOP-8JPNOOB\\MSSQLSERVER01 ;database=Clinic;integrated security = true";
+            con.ConnectionString = "data source =MARK ;database=Clinic;integrated security = true";
             return con;
         }
 
@@ -72,9 +72,24 @@ namespace Dental_Clinic_Management
 
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+       
+
+
+
+
+
+        private void exitButton_Click_1(object sender, EventArgs e)
         {
-            // Check if both username and password fields are not empty
+
+        }
+
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click_1(object sender, EventArgs e)
+        {
             if (!string.IsNullOrEmpty(passwordTextBox.Text) && !string.IsNullOrEmpty(usernameTextBox.Text))
             {
                 try
@@ -159,18 +174,9 @@ namespace Dental_Clinic_Management
             }
         }
 
-
-
-
-
-        private void exitButton_Click_1(object sender, EventArgs e)
+        private void exitButton_Click_2(object sender, EventArgs e)
         {
-
-        }
-
-        private void Login_Load_1(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

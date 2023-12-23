@@ -22,7 +22,7 @@ namespace Dental_Clinic_Management
 
             // Initialize the SqlConnection object
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "data source =DESKTOP-8JPNOOB\\MSSQLSERVER01 ;database=Clinic;integrated security = true";
+            conn.ConnectionString = "data source =MARK ;database=Clinic;integrated security = true";
         }
 
         private static int GetPatientIDByPhone(SqlConnection con, string phone)
@@ -65,7 +65,7 @@ namespace Dental_Clinic_Management
                 DateTime date = appointmentDateTimePicker.Value;
                 if (phoneTextBox.Text != string.Empty && appointmentDateTimePicker.Value != null && timeTextBox.Text != string.Empty)
                 {
-                    using (SqlConnection con = new SqlConnection("data source=DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true"))
+                    using (SqlConnection con = new SqlConnection("data source=MARK;database=Clinic;integrated security=true"))
                     {
                         con.Open();
 

@@ -42,10 +42,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(21, 485);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel1.Location = new System.Drawing.Point(19, 388);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 2);
+            this.panel1.Size = new System.Drawing.Size(681, 2);
             this.panel1.TabIndex = 2;
             // 
             // usernameLabel
@@ -53,9 +53,9 @@
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.usernameLabel.Location = new System.Drawing.Point(80, 111);
+            this.usernameLabel.Location = new System.Drawing.Point(71, 89);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(160, 54);
+            this.usernameLabel.Size = new System.Drawing.Size(133, 45);
             this.usernameLabel.TabIndex = 56;
             this.usernameLabel.Text = "Username";
             // 
@@ -64,26 +64,26 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.passwordLabel.Location = new System.Drawing.Point(80, 235);
+            this.passwordLabel.Location = new System.Drawing.Point(71, 188);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(177, 54);
+            this.passwordLabel.Size = new System.Drawing.Size(146, 45);
             this.passwordLabel.TabIndex = 57;
             this.passwordLabel.Text = " Passoword";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(348, 246);
+            this.passwordTextBox.Location = new System.Drawing.Point(309, 197);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(236, 26);
+            this.passwordTextBox.Size = new System.Drawing.Size(210, 22);
             this.passwordTextBox.TabIndex = 58;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(348, 126);
+            this.usernameTextBox.Location = new System.Drawing.Point(309, 101);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(236, 26);
+            this.usernameTextBox.Size = new System.Drawing.Size(210, 22);
             this.usernameTextBox.TabIndex = 59;
             // 
             // exitButton
@@ -92,13 +92,14 @@
             this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.exitButton.FlatAppearance.BorderSize = 0;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(496, 357);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.exitButton.Location = new System.Drawing.Point(441, 286);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(153, 71);
+            this.exitButton.Size = new System.Drawing.Size(136, 57);
             this.exitButton.TabIndex = 62;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click_2);
             // 
             // loginButton
             // 
@@ -106,21 +107,22 @@
             this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Location = new System.Drawing.Point(135, 357);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.loginButton.Location = new System.Drawing.Point(120, 286);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(153, 71);
+            this.loginButton.Size = new System.Drawing.Size(136, 57);
             this.loginButton.TabIndex = 63;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click_1);
             // 
             // viewPasswordPictureBox
             // 
             this.viewPasswordPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.pngg;
-            this.viewPasswordPictureBox.Location = new System.Drawing.Point(630, 235);
-            this.viewPasswordPictureBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.viewPasswordPictureBox.Location = new System.Drawing.Point(560, 188);
+            this.viewPasswordPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewPasswordPictureBox.Name = "viewPasswordPictureBox";
-            this.viewPasswordPictureBox.Size = new System.Drawing.Size(39, 46);
+            this.viewPasswordPictureBox.Size = new System.Drawing.Size(35, 37);
             this.viewPasswordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.viewPasswordPictureBox.TabIndex = 8;
             this.viewPasswordPictureBox.TabStop = false;
@@ -128,9 +130,9 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 528);
+            this.ClientSize = new System.Drawing.Size(711, 422);
             this.ControlBox = false;
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.exitButton);

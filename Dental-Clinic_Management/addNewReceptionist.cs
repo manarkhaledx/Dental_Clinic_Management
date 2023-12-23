@@ -23,7 +23,7 @@ namespace Dental_Clinic_Management
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security = true";
+            con.ConnectionString = "data source = MARK;database=Clinic;integrated security = true";
             return con;
         }
 
@@ -89,86 +89,7 @@ namespace Dental_Clinic_Management
             return regex.IsMatch(password);
         }
 
-        private void saveReceptionistButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (recepFNameTextBox.Text != string.Empty || recepLNameTextBox.Text != string.Empty || receptPhoneTextBox.Text != string.Empty
-                    || (recepFemaleRadioButton.Checked || recepMaleRadioButton.Checked) || recepDobDateTimePicker.Value != null || recepAddressTextBox.Text != string.Empty
-                    || tb_username.Text != string.Empty || tb_password.Text != string.Empty)
-                {
-                    if (tb_password.Text == tb_Confirmpassword.Text)
-                    {
-                        if (tb_password.Text.Length >= 8 && hasSpecialCharacter(tb_password.Text))
-                        {
-                            using (SqlConnection con = getConnection())
-                            {
-                                con.Open();
-
-                                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Receptionist WHERE username=@username", con))
-                                {
-                                    cmd.Parameters.AddWithValue("username", tb_username.Text);
-
-                                    using (SqlDataReader dr = cmd.ExecuteReader())
-                                    {
-                                        if (dr.Read())
-                                        {
-                                            MessageBox.Show("Username already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                            ClearReceptionistFields();
-                                        }
-                                        else
-                                        {
-                                            dr.Close();
-
-                                            using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Receptionist (Fname, Lname, Phone, gender, DOB, recep_address, username, pass) " +
-                                                "VALUES (@Fname, @Lname, @Phone, @gender, @DOB, @recep_address, @username, @password)", con))
-                                            {
-                                                insertCmd.Parameters.AddWithValue("Fname", recepFNameTextBox.Text);
-                                                insertCmd.Parameters.AddWithValue("Lname", recepLNameTextBox.Text);
-                                                insertCmd.Parameters.AddWithValue("Phone", receptPhoneTextBox.Text);
-                                                insertCmd.Parameters.AddWithValue("gender", recepFemaleRadioButton.Checked ? "Female" : "Male");
-                                                insertCmd.Parameters.AddWithValue("DOB", recepDobDateTimePicker.Value);
-                                                insertCmd.Parameters.AddWithValue("recep_address", recepAddressTextBox.Text);
-                                                insertCmd.Parameters.AddWithValue("username", tb_username.Text);
-                                                insertCmd.Parameters.AddWithValue("password", tb_password.Text);
-
-                                                insertCmd.ExecuteNonQuery();
-
-                                                MessageBox.Show("Receptionist account created successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                this.Hide();
-                                                ViewReceptionist rec = new ViewReceptionist();
-                                                rec.ShowDialog();
-                                                
-                                                return;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Password must be at least 8 characters long and contain at least one special character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            ClearReceptionistFields();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please enter the same password in both fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        ClearReceptionistFields();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearReceptionistFields();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
 
         private void ClearReceptionistFields()
         {
@@ -299,6 +220,87 @@ namespace Dental_Clinic_Management
         private void tb_username_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveReceptionistButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (recepFNameTextBox.Text != string.Empty || recepLNameTextBox.Text != string.Empty || receptPhoneTextBox.Text != string.Empty
+                    || (recepFemaleRadioButton.Checked || recepMaleRadioButton.Checked) || recepDobDateTimePicker.Value != null || recepAddressTextBox.Text != string.Empty
+                    || tb_username.Text != string.Empty || tb_password.Text != string.Empty)
+                {
+                    if (tb_password.Text == tb_Confirmpassword.Text)
+                    {
+                        if (tb_password.Text.Length >= 8 && hasSpecialCharacter(tb_password.Text))
+                        {
+                            using (SqlConnection con = getConnection())
+                            {
+                                con.Open();
+
+                                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Receptionist WHERE username=@username", con))
+                                {
+                                    cmd.Parameters.AddWithValue("username", tb_username.Text);
+
+                                    using (SqlDataReader dr = cmd.ExecuteReader())
+                                    {
+                                        if (dr.Read())
+                                        {
+                                            MessageBox.Show("Username already exists. Please try another.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            ClearReceptionistFields();
+                                        }
+                                        else
+                                        {
+                                            dr.Close();
+
+                                            using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Receptionist (Fname, Lname, Phone, gender, DOB, recep_address, username, pass) " +
+                                                "VALUES (@Fname, @Lname, @Phone, @gender, @DOB, @recep_address, @username, @password)", con))
+                                            {
+                                                insertCmd.Parameters.AddWithValue("Fname", recepFNameTextBox.Text);
+                                                insertCmd.Parameters.AddWithValue("Lname", recepLNameTextBox.Text);
+                                                insertCmd.Parameters.AddWithValue("Phone", receptPhoneTextBox.Text);
+                                                insertCmd.Parameters.AddWithValue("gender", recepFemaleRadioButton.Checked ? "Female" : "Male");
+                                                insertCmd.Parameters.AddWithValue("DOB", recepDobDateTimePicker.Value);
+                                                insertCmd.Parameters.AddWithValue("recep_address", recepAddressTextBox.Text);
+                                                insertCmd.Parameters.AddWithValue("username", tb_username.Text);
+                                                insertCmd.Parameters.AddWithValue("password", tb_password.Text);
+
+                                                insertCmd.ExecuteNonQuery();
+
+                                                MessageBox.Show("Receptionist account created successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.Hide();
+                                                ViewReceptionist rec = new ViewReceptionist();
+                                                rec.ShowDialog();
+
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password must be at least 8 characters long and contain at least one special character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            ClearReceptionistFields();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter the same password in both fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearReceptionistFields();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearReceptionistFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

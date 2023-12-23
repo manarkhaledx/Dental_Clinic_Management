@@ -27,39 +27,7 @@ namespace Dental_Clinic_Management
 
         }
 
-        private void savePatientButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string fname = firstNameTextBox.Text;
-                string lname = lastNameTextBox.Text;
-                string phone = phoneTextBox.Text;
-                string gender = femaleRadioButton.Checked ? "Female" : "Male";
-                DateTime dob = dobDateTimePicker.Value;
-                string address = addressTextBox.Text;
-
-                // Validate phone number input
-                if (phone.Length == 11 && int.TryParse(phone, out _))
-                {
-                    // Call the method to edit patient information
-                    patientDataBaseQueries.EditPatient(phone, fname, lname, phone, address, dob, femaleRadioButton);
-                    MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Patient ob = new Patient();
-                    ob.ShowDialog();
-                    // Optionally, you may navigate to another form or perform additional actions here.
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+       
         private void dobLabel_Click(object sender, EventArgs e)
         {
 
@@ -123,6 +91,39 @@ namespace Dental_Clinic_Management
         private void genderGroupBox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void savePatientButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string fname = firstNameTextBox.Text;
+                string lname = lastNameTextBox.Text;
+                string phone = phoneTextBox.Text;
+                string gender = femaleRadioButton.Checked ? "Female" : "Male";
+                DateTime dob = dobDateTimePicker.Value;
+                string address = addressTextBox.Text;
+
+                // Validate phone number input
+                if (phone.Length == 11 && int.TryParse(phone, out _))
+                {
+                    // Call the method to edit patient information
+                    patientDataBaseQueries.EditPatient(phone, fname, lname, phone, address, dob, femaleRadioButton);
+                    MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Patient ob = new Patient();
+                    ob.ShowDialog();
+                    // Optionally, you may navigate to another form or perform additional actions here.
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

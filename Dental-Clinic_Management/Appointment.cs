@@ -20,7 +20,7 @@ namespace Dental_Clinic_Management
         protected static SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            con.ConnectionString = "data source =MARK;database=Clinic;integrated security=true";
             return con;
         }
         public Appointment()
@@ -368,7 +368,7 @@ namespace Dental_Clinic_Management
                 // Retrieve data from the selected row
                 DataGridViewRow selectedRow = appointmentDataGridView.SelectedRows[0];
                 int appointmentID = Convert.ToInt32(selectedRow.Cells["AppointmentID"].Value);
-                string phone = selectedRow.Cells["Phone"].Value.ToString();
+                string phone = selectedRow.Cells["pat_phone"].Value.ToString();
                 string time = selectedRow.Cells["Time"].Value.ToString();
                 DateTime date = Convert.ToDateTime(selectedRow.Cells["Date"].Value);
 
@@ -448,6 +448,28 @@ namespace Dental_Clinic_Management
             AddAppointment addAppointment = new AddAppointment();
             this.Hide();
             addAppointment.ShowDialog();
+
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            recepDashboardForm rd = new recepDashboardForm();
+            rd.ShowDialog();
+        }
+
+        private void patientButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Patient patient = new Patient();
+            patient.ShowDialog();
+        }
+
+        private void appointmentsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Appointment appointment = new Appointment();
+            appointment.ShowDialog();
 
         }
     }

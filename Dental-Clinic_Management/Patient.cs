@@ -19,7 +19,7 @@ namespace Dental_Clinic_Management
         protected static SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            con.ConnectionString = "data source = MARK;database=Clinic;integrated security=true";
             return con;
         }
         public Patient()
@@ -176,7 +176,7 @@ namespace Dental_Clinic_Management
                         {
                             if (dr.Read())
                             {
-                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone AND ID=@ID", con))
+                                using (SqlCommand updateCmd = new SqlCommand("UPDATE Patient SET Fname=@NewFname, Lname=@NewLname, gender=@NewGender, DOB=@NewDOB, pat_address=@NewAddress WHERE Phone=@Phone AND patient_id=@ID", con))
                                 {
                                     updateCmd.Parameters.AddWithValue("Phone", newPhone);
                                     updateCmd.Parameters.AddWithValue("NewFname", newFname);
@@ -185,7 +185,7 @@ namespace Dental_Clinic_Management
                                     updateCmd.Parameters.AddWithValue("NewDOB", newDOB);
                                     updateCmd.Parameters.AddWithValue("NewAddress", newAddress);
 
-                                    updateCmd.Parameters.AddWithValue("ID", dr["ID"]);
+                                    updateCmd.Parameters.AddWithValue("ID", dr["patient_id"]);
 
                                     dr.Close();
 
@@ -407,6 +407,13 @@ namespace Dental_Clinic_Management
             this.Hide();
             Appointment appointment = new Appointment();
             appointment.ShowDialog();
+        }
+
+        private void addPatient_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddRecordForm addRecordForm = new AddRecordForm();
+            addRecordForm.ShowDialog();
         }
     }
 }

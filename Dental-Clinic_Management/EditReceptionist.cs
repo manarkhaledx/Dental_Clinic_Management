@@ -35,7 +35,7 @@ namespace Dental_Clinic_Management
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true"))
+                using (SqlConnection connection = new SqlConnection("data source = MARK;database=Clinic;integrated security=true"))
                 {
                     connection.Open();
 

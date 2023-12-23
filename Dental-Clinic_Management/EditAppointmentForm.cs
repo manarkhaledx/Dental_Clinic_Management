@@ -13,7 +13,6 @@ namespace Dental_Clinic_Management
 {
     public partial class EditAppointmentForm : Form
     {
-
         private int appointment_id;
         public EditAppointmentForm(int appointment_id, string phone, string time, DateTime date)
         {
@@ -38,7 +37,7 @@ namespace Dental_Clinic_Management
                     // Call the method to edit appointment information
                     appointmentDataBaseQueries.EditAppointment(appointment_id, phone, time, date);
                     MessageBox.Show("Appointment information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide(); 
+                    this.Close(); // Close the current form
                     Appointment app = new Appointment();
                     app.ShowDialog();
                 }
@@ -51,6 +50,11 @@ namespace Dental_Clinic_Management
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void EditAppointmentForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

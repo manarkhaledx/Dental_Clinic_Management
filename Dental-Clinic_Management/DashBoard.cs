@@ -14,7 +14,7 @@ namespace Dental_Clinic_Management
 {
     public partial class recepDashboardForm : Form
     {
-        private const string ConnectionString = "data source=DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+        private const string ConnectionString = "data source=MARK;database=Clinic;integrated security=true";
         public recepDashboardForm()
         {
             InitializeComponent();

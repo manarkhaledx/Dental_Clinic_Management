@@ -26,7 +26,7 @@ namespace Dental_Clinic_Management
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            con.ConnectionString = "data source = MARK;database=Clinic;integrated security=true";
             return con;
         }
 
@@ -135,7 +135,9 @@ namespace Dental_Clinic_Management
             return null; // No radio button selected
         }
 
-        private void savePatientButton_Click(object sender, EventArgs e)
+       
+
+        private void savePatientButton_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -146,6 +148,9 @@ namespace Dental_Clinic_Management
                     if (phoneTextBox.Text.Length == 11 && int.TryParse(phoneTextBox.Text, out _))
                     {
                         patientDataBaseQueries.addPatient(firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, maleRadioButton, dobDateTimePicker.Value, addressTextBox.Text);
+                        this.Hide();
+                        Patient patient = new Patient();
+                        patient.ShowDialog();
                     }
                     else
                     {

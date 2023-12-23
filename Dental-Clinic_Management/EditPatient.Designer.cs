@@ -54,10 +54,10 @@
             this.dobDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.dobDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobDateTimePicker.Location = new System.Drawing.Point(214, 632);
-            this.dobDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dobDateTimePicker.Location = new System.Drawing.Point(190, 506);
+            this.dobDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dobDateTimePicker.Name = "dobDateTimePicker";
-            this.dobDateTimePicker.Size = new System.Drawing.Size(486, 50);
+            this.dobDateTimePicker.Size = new System.Drawing.Size(432, 43);
             this.dobDateTimePicker.TabIndex = 54;
             // 
             // dobLabel
@@ -65,9 +65,9 @@
             this.dobLabel.AutoSize = true;
             this.dobLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.dobLabel.Location = new System.Drawing.Point(63, 631);
+            this.dobLabel.Location = new System.Drawing.Point(56, 505);
             this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(92, 54);
+            this.dobLabel.Size = new System.Drawing.Size(78, 45);
             this.dobLabel.TabIndex = 53;
             this.dobLabel.Text = "DOB";
             // 
@@ -75,19 +75,19 @@
             // 
             this.patientRecordLabel.AutoSize = true;
             this.patientRecordLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientRecordLabel.Location = new System.Drawing.Point(62, 131);
+            this.patientRecordLabel.Location = new System.Drawing.Point(55, 105);
             this.patientRecordLabel.Name = "patientRecordLabel";
-            this.patientRecordLabel.Size = new System.Drawing.Size(417, 65);
+            this.patientRecordLabel.Size = new System.Drawing.Size(343, 52);
             this.patientRecordLabel.TabIndex = 52;
             this.patientRecordLabel.Text = "Patient\'s Record";
             // 
             // femaleRadioButton
             // 
             this.femaleRadioButton.AutoSize = true;
-            this.femaleRadioButton.Location = new System.Drawing.Point(52, 49);
-            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.femaleRadioButton.Location = new System.Drawing.Point(46, 39);
+            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(146, 58);
+            this.femaleRadioButton.Size = new System.Drawing.Size(122, 49);
             this.femaleRadioButton.TabIndex = 13;
             this.femaleRadioButton.TabStop = true;
             this.femaleRadioButton.Text = "Female";
@@ -96,10 +96,10 @@
             // maleRadioButton
             // 
             this.maleRadioButton.AutoSize = true;
-            this.maleRadioButton.Location = new System.Drawing.Point(52, 118);
-            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.maleRadioButton.Location = new System.Drawing.Point(46, 94);
+            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(117, 58);
+            this.maleRadioButton.Size = new System.Drawing.Size(98, 49);
             this.maleRadioButton.TabIndex = 14;
             this.maleRadioButton.TabStop = true;
             this.maleRadioButton.Text = "Male";
@@ -111,22 +111,23 @@
             this.savePatientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.savePatientButton.FlatAppearance.BorderSize = 0;
             this.savePatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePatientButton.Location = new System.Drawing.Point(586, 840);
-            this.savePatientButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.savePatientButton.Location = new System.Drawing.Point(521, 672);
+            this.savePatientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.savePatientButton.Name = "savePatientButton";
-            this.savePatientButton.Size = new System.Drawing.Size(153, 71);
+            this.savePatientButton.Size = new System.Drawing.Size(136, 57);
             this.savePatientButton.TabIndex = 65;
             this.savePatientButton.Text = "Save";
             this.savePatientButton.UseVisualStyleBackColor = false;
+            this.savePatientButton.Click += new System.EventHandler(this.savePatientButton_Click_1);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(74, 326);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel5.Location = new System.Drawing.Point(66, 261);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(628, 2);
+            this.panel5.Size = new System.Drawing.Size(558, 2);
             this.panel5.TabIndex = 64;
             // 
             // firstNameTextBox
@@ -134,10 +135,10 @@
             this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.firstNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.firstNameTextBox.Location = new System.Drawing.Point(74, 268);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.firstNameTextBox.Location = new System.Drawing.Point(66, 214);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(628, 48);
+            this.firstNameTextBox.Size = new System.Drawing.Size(558, 40);
             this.firstNameTextBox.TabIndex = 63;
             this.firstNameTextBox.Text = "First Name";
             // 
@@ -145,10 +146,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(74, 584);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel4.Location = new System.Drawing.Point(66, 467);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(628, 2);
+            this.panel4.Size = new System.Drawing.Size(558, 2);
             this.panel4.TabIndex = 62;
             // 
             // addressTextBox
@@ -156,10 +157,10 @@
             this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.addressTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.addressTextBox.Location = new System.Drawing.Point(74, 526);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.addressTextBox.Location = new System.Drawing.Point(66, 421);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(628, 48);
+            this.addressTextBox.Size = new System.Drawing.Size(558, 40);
             this.addressTextBox.TabIndex = 61;
             this.addressTextBox.Text = "Address";
             // 
@@ -167,10 +168,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(74, 498);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel3.Location = new System.Drawing.Point(66, 398);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(628, 2);
+            this.panel3.Size = new System.Drawing.Size(558, 2);
             this.panel3.TabIndex = 60;
             // 
             // phoneTextBox
@@ -178,10 +179,10 @@
             this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.phoneTextBox.Location = new System.Drawing.Point(74, 440);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.phoneTextBox.Location = new System.Drawing.Point(66, 352);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(628, 48);
+            this.phoneTextBox.Size = new System.Drawing.Size(558, 40);
             this.phoneTextBox.TabIndex = 59;
             this.phoneTextBox.Text = "Phone";
             // 
@@ -189,10 +190,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(74, 414);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel1.Location = new System.Drawing.Point(66, 331);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 2);
+            this.panel1.Size = new System.Drawing.Size(558, 2);
             this.panel1.TabIndex = 58;
             // 
             // lastNameTextBox
@@ -200,10 +201,10 @@
             this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.lastNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.lastNameTextBox.Location = new System.Drawing.Point(74, 355);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.lastNameTextBox.Location = new System.Drawing.Point(66, 284);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(628, 48);
+            this.lastNameTextBox.Size = new System.Drawing.Size(558, 40);
             this.lastNameTextBox.TabIndex = 56;
             this.lastNameTextBox.Text = "Last Name";
             // 
@@ -213,11 +214,11 @@
             this.genderGroupBox.Controls.Add(this.maleRadioButton);
             this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.genderGroupBox.Location = new System.Drawing.Point(42, 721);
-            this.genderGroupBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.genderGroupBox.Location = new System.Drawing.Point(37, 577);
+            this.genderGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.genderGroupBox.Name = "genderGroupBox";
-            this.genderGroupBox.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.genderGroupBox.Size = new System.Drawing.Size(318, 205);
+            this.genderGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.genderGroupBox.Size = new System.Drawing.Size(283, 164);
             this.genderGroupBox.TabIndex = 55;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
@@ -227,18 +228,18 @@
             this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closePictureBox.Location = new System.Drawing.Point(39, 21);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.closePictureBox.Location = new System.Drawing.Point(35, 17);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(36, 40);
+            this.closePictureBox.Size = new System.Drawing.Size(32, 32);
             this.closePictureBox.TabIndex = 57;
             this.closePictureBox.TabStop = false;
             // 
-            // EditPatient
+            // EditPatinet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 948);
+            this.ClientSize = new System.Drawing.Size(722, 758);
             this.Controls.Add(this.dobDateTimePicker);
             this.Controls.Add(this.dobLabel);
             this.Controls.Add(this.patientRecordLabel);
@@ -253,7 +254,8 @@
             this.Controls.Add(this.closePictureBox);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.genderGroupBox);
-            this.Name = "EditPatient";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "EditPatinet";
             this.Text = "EditPatient";
             this.genderGroupBox.ResumeLayout(false);
             this.genderGroupBox.PerformLayout();

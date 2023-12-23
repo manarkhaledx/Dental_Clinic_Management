@@ -18,7 +18,7 @@ namespace Dental_Clinic_Management
             InitializeComponent();
         }
 
-        private const string ConnectionString = "data source=DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+        private const string ConnectionString = "data source=MARK;database=Clinic;integrated security=true";
         private void DisplayCounts()
         {
             try

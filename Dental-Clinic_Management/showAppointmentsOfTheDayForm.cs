@@ -18,7 +18,7 @@ namespace Dental_Clinic_Management
         protected static SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
+            con.ConnectionString = "data source = MARK;database=Clinic;integrated security=true";
             return con;
         }
         public showAppointmentsOfTheDayForm()
@@ -112,18 +112,7 @@ namespace Dental_Clinic_Management
             }
         }
 
-        private void showAppointmentsOfTheDayForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                DateTime dateOfTheDay = DateTime.Now;
-                ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -156,6 +145,19 @@ namespace Dental_Clinic_Management
             this.Hide();
             showAppointmentsOfTheDayForm app = new showAppointmentsOfTheDayForm();
             app.ShowDialog();
+        }
+
+        private void showAppointmentsOfTheDayForm_Load_1(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime dateOfTheDay = DateTime.Today;
+                ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

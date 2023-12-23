@@ -118,6 +118,7 @@
             this.savePatientButton.TabIndex = 51;
             this.savePatientButton.Text = "Save";
             this.savePatientButton.UseVisualStyleBackColor = false;
+            this.savePatientButton.Click += new System.EventHandler(this.savePatientButton_Click_1);
             // 
             // panel5
             // 
