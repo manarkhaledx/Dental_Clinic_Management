@@ -38,16 +38,11 @@ namespace Dental_Clinic_Management
                     int totalAppointments = (int)appointmentCommand.ExecuteScalar();
                     numOfAppointmentsLabel.Text = "Appointments: " + totalAppointments;
 
-                    // Get the number of patients
-                    SqlCommand patientCommand = new SqlCommand(
-                        "SELECT COUNT(*) AS TotalPatients " +
-                        "FROM [Clinic].[dbo].[Patient] " +
-                        "WHERE [patient_id] IN (" +
-                        "   SELECT DISTINCT [patient_id] " +
-                        "   FROM [Clinic].[dbo].[Appointment] " +
-                        "   WHERE CONVERT(DATE, [app_date]) = CONVERT(DATE, GETDATE())" +
-                        ");",
-                        connection);
+                    //Get the number of patients
+                  SqlCommand patientCommand = new SqlCommand(
+                       "SELECT COUNT(*) AS TotalPatients " +
+                        "FROM [Clinic].[dbo].[Patient];",
+                              connection);
 
                     int totalPatients = (int)patientCommand.ExecuteScalar();
                     numOfPatientsLabel.Text = "Patients: " + totalPatients;
