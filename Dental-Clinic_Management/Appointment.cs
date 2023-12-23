@@ -422,11 +422,12 @@ namespace Dental_Clinic_Management
 
         }
 
-        private void Appointment_Load(object sender, EventArgs e)
+   
+        private void filterAppButton_Click_1(object sender, EventArgs e)
         {
             try
             {
-                DateTime dateOfTheDay = DateTime.Today;
+                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value.Date;
                 appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
             catch (Exception ex)
@@ -435,11 +436,11 @@ namespace Dental_Clinic_Management
             }
         }
 
-        private void filterAppButton_Click(object sender, EventArgs e)
+        private void Appointment_Load(object sender, EventArgs e)
         {
             try
             {
-                DateTime dateOfTheDay = billingHistoryDateTimePicker.Value.Date;
+                DateTime dateOfTheDay = DateTime.Today;
                 appointmentDataBaseQueries.ShowAppointmentsInDataGridView(appointmentDataGridView, dateOfTheDay);
             }
             catch (Exception ex)
