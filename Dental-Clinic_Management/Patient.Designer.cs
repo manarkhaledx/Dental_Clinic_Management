@@ -31,11 +31,6 @@
             this.patientDataGridView = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.paymentButton = new System.Windows.Forms.Button();
-            this.patientButton = new System.Windows.Forms.Button();
-            this.appiontmentsButton = new System.Windows.Forms.Button();
-            this.dashboardButton = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,24 +41,28 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.patientButton = new System.Windows.Forms.Button();
+            this.appointmentsButton = new System.Windows.Forms.Button();
+            this.dashboardButton = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // patientDataGridView
             // 
             this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientDataGridView.Location = new System.Drawing.Point(434, 185);
+            this.patientDataGridView.Location = new System.Drawing.Point(488, 231);
             this.patientDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.patientDataGridView.Name = "patientDataGridView";
             this.patientDataGridView.RowHeadersWidth = 62;
             this.patientDataGridView.RowTemplate.Height = 28;
-            this.patientDataGridView.Size = new System.Drawing.Size(1246, 588);
+            this.patientDataGridView.Size = new System.Drawing.Size(1402, 735);
             this.patientDataGridView.TabIndex = 77;
             // 
             // panel7
@@ -76,109 +75,25 @@
             this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(375, 876);
+            this.panel7.Size = new System.Drawing.Size(422, 1095);
             this.panel7.TabIndex = 76;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.panel8.Controls.Add(this.paymentButton);
             this.panel8.Controls.Add(this.patientButton);
-            this.panel8.Controls.Add(this.appiontmentsButton);
+            this.panel8.Controls.Add(this.appointmentsButton);
             this.panel8.Controls.Add(this.dashboardButton);
             this.panel8.Controls.Add(this.pictureBox10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(375, 876);
+            this.panel8.Size = new System.Drawing.Size(422, 1095);
             this.panel8.TabIndex = 22;
-            // 
-            // paymentButton
-            // 
-            this.paymentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.paymentButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.paymentButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.paymentButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_50__1_;
-            this.paymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.paymentButton.Location = new System.Drawing.Point(0, 526);
-            this.paymentButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.paymentButton.Size = new System.Drawing.Size(375, 62);
-            this.paymentButton.TabIndex = 27;
-            this.paymentButton.Text = "Payment";
-            this.paymentButton.UseVisualStyleBackColor = false;
-            // 
-            // patientButton
-            // 
-            this.patientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.patientButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.patientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.patientButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.patientButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_person_50__1_;
-            this.patientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.patientButton.Location = new System.Drawing.Point(0, 218);
-            this.patientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.patientButton.Name = "patientButton";
-            this.patientButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.patientButton.Size = new System.Drawing.Size(375, 62);
-            this.patientButton.TabIndex = 20;
-            this.patientButton.Text = "patient";
-            this.patientButton.UseVisualStyleBackColor = false;
-            // 
-            // appiontmentsButton
-            // 
-            this.appiontmentsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.appiontmentsButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.appiontmentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.appiontmentsButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appiontmentsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.appiontmentsButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_appointment_50__1_;
-            this.appiontmentsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.appiontmentsButton.Location = new System.Drawing.Point(-3, 422);
-            this.appiontmentsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.appiontmentsButton.Name = "appiontmentsButton";
-            this.appiontmentsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.appiontmentsButton.Size = new System.Drawing.Size(375, 62);
-            this.appiontmentsButton.TabIndex = 21;
-            this.appiontmentsButton.Text = " Appointments";
-            this.appiontmentsButton.UseVisualStyleBackColor = false;
-            // 
-            // dashboardButton
-            // 
-            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.dashboardButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboardButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dashboardButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
-            this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardButton.Location = new System.Drawing.Point(0, 316);
-            this.dashboardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.dashboardButton.Size = new System.Drawing.Size(375, 62);
-            this.dashboardButton.TabIndex = 19;
-            this.dashboardButton.Text = "DashBoard";
-            this.dashboardButton.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.pictureBox10.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(375, 187);
-            this.pictureBox10.TabIndex = 17;
-            this.pictureBox10.TabStop = false;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // button3
             // 
@@ -189,11 +104,11 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 615);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(0, 769);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(375, 123);
+            this.button3.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(422, 154);
             this.button3.TabIndex = 21;
             this.button3.Text = "DashBoard";
             this.button3.UseVisualStyleBackColor = false;
@@ -207,11 +122,11 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 441);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(0, 551);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(375, 123);
+            this.button2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(422, 154);
             this.button2.TabIndex = 20;
             this.button2.Text = "DashBoard";
             this.button2.UseVisualStyleBackColor = false;
@@ -225,11 +140,11 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(0, 346);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(375, 123);
+            this.button1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(422, 154);
             this.button1.TabIndex = 19;
             this.button1.Text = "DashBoard";
             this.button1.UseVisualStyleBackColor = false;
@@ -240,9 +155,9 @@
             this.pictureBox9.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(375, 234);
+            this.pictureBox9.Size = new System.Drawing.Size(422, 292);
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
             // 
@@ -253,10 +168,10 @@
             this.editPatientButton.FlatAppearance.BorderSize = 0;
             this.editPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editPatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.editPatientButton.Location = new System.Drawing.Point(739, 827);
-            this.editPatientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.editPatientButton.Location = new System.Drawing.Point(831, 1034);
+            this.editPatientButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.editPatientButton.Name = "editPatientButton";
-            this.editPatientButton.Size = new System.Drawing.Size(136, 57);
+            this.editPatientButton.Size = new System.Drawing.Size(153, 71);
             this.editPatientButton.TabIndex = 79;
             this.editPatientButton.Text = "Edit";
             this.editPatientButton.UseVisualStyleBackColor = false;
@@ -269,10 +184,10 @@
             this.deletePatientButton.FlatAppearance.BorderSize = 0;
             this.deletePatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deletePatientButton.Location = new System.Drawing.Point(1308, 827);
-            this.deletePatientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deletePatientButton.Location = new System.Drawing.Point(1472, 1034);
+            this.deletePatientButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.deletePatientButton.Name = "deletePatientButton";
-            this.deletePatientButton.Size = new System.Drawing.Size(136, 57);
+            this.deletePatientButton.Size = new System.Drawing.Size(153, 71);
             this.deletePatientButton.TabIndex = 78;
             this.deletePatientButton.Text = "Delete";
             this.deletePatientButton.UseVisualStyleBackColor = false;
@@ -283,9 +198,9 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(760, 78);
+            this.totalCostLabel.Location = new System.Drawing.Point(855, 98);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(196, 45);
+            this.totalCostLabel.Size = new System.Drawing.Size(238, 54);
             this.totalCostLabel.TabIndex = 80;
             this.totalCostLabel.Text = "Phone Number:";
             // 
@@ -294,10 +209,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2111, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(2375, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 44);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 55);
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
             // 
@@ -306,10 +221,10 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(2058, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(2315, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(54, 55);
             this.pictureBox2.TabIndex = 75;
             this.pictureBox2.TabStop = false;
             // 
@@ -319,18 +234,87 @@
             this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.searchTextBox.Location = new System.Drawing.Point(994, 78);
+            this.searchTextBox.Location = new System.Drawing.Point(1118, 98);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(283, 40);
+            this.searchTextBox.Size = new System.Drawing.Size(318, 48);
             this.searchTextBox.TabIndex = 81;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
+            // patientButton
+            // 
+            this.patientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.patientButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.patientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.patientButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.patientButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_person_50__1_;
+            this.patientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.patientButton.Location = new System.Drawing.Point(-6, 490);
+            this.patientButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.patientButton.Name = "patientButton";
+            this.patientButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.patientButton.Size = new System.Drawing.Size(422, 79);
+            this.patientButton.TabIndex = 24;
+            this.patientButton.Text = "patient";
+            this.patientButton.UseVisualStyleBackColor = false;
+            this.patientButton.Click += new System.EventHandler(this.patientButton_Click);
+            // 
+            // appointmentsButton
+            // 
+            this.appointmentsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.appointmentsButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.appointmentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.appointmentsButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appointmentsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.appointmentsButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_appointment_50__1_;
+            this.appointmentsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.appointmentsButton.Location = new System.Drawing.Point(-6, 669);
+            this.appointmentsButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.appointmentsButton.Name = "appointmentsButton";
+            this.appointmentsButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.appointmentsButton.Size = new System.Drawing.Size(422, 79);
+            this.appointmentsButton.TabIndex = 25;
+            this.appointmentsButton.Text = " Appointments";
+            this.appointmentsButton.UseVisualStyleBackColor = false;
+            this.appointmentsButton.Click += new System.EventHandler(this.appointmentsButton_Click);
+            // 
+            // dashboardButton
+            // 
+            this.dashboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.dashboardButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboardButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dashboardButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_dashboard_50;
+            this.dashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardButton.Location = new System.Drawing.Point(-6, 312);
+            this.dashboardButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.dashboardButton.Size = new System.Drawing.Size(422, 79);
+            this.dashboardButton.TabIndex = 23;
+            this.dashboardButton.Text = "DashBoard";
+            this.dashboardButton.UseVisualStyleBackColor = false;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
+            this.pictureBox10.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Logo;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(422, 234);
+            this.pictureBox10.TabIndex = 22;
+            this.pictureBox10.TabStop = false;
+            // 
             // Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 876);
+            this.ClientSize = new System.Drawing.Size(1924, 1095);
             this.Controls.Add(this.patientDataGridView);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.editPatientButton);
@@ -346,10 +330,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,11 +344,6 @@
         private System.Windows.Forms.DataGridView patientDataGridView;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button paymentButton;
-        private System.Windows.Forms.Button patientButton;
-        private System.Windows.Forms.Button appiontmentsButton;
-        private System.Windows.Forms.Button dashboardButton;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -375,5 +354,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.Button patientButton;
+        private System.Windows.Forms.Button appointmentsButton;
+        private System.Windows.Forms.Button dashboardButton;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

@@ -129,7 +129,7 @@ namespace Dental_Clinic_Management
                                     {
                                         // If password is correct, hide the current form and show the receptionist dashboard
                                         this.Hide();
-                                        recepDashboardForm receptionistForm = new recepDashboardForm((int)dr["recep_id"]);
+                                        recepDashboardForm receptionistForm = new recepDashboardForm();
                                         receptionistForm.ShowDialog();
                                         return;
                                     }

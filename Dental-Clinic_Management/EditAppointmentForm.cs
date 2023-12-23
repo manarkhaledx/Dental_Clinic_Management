@@ -24,7 +24,7 @@ namespace Dental_Clinic_Management
             appointmentDateTimePicker.Value = date;
         }
 
-        private void saveNewAppointmentButton_Click(object sender, EventArgs e)
+        private void saveNewAppointmentButton_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Dental_Clinic_Management
                     // Call the method to edit appointment information
                     appointmentDataBaseQueries.EditAppointment(appointment_id, phone, time, date);
                     MessageBox.Show("Appointment information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close the current form
+                    this.Hide(); 
                     Appointment app = new Appointment();
                     app.ShowDialog();
                 }

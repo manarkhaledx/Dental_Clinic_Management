@@ -15,7 +15,7 @@ namespace Dental_Clinic_Management
     public partial class recepDashboardForm : Form
     {
         private const string ConnectionString = "data source=DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
-        public recepDashboardForm(int v)
+        public recepDashboardForm()
         {
             InitializeComponent();
             DisplayCounts();
@@ -86,7 +86,9 @@ namespace Dental_Clinic_Management
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Patient pat = new Patient();
+            pat.ShowDialog();
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
@@ -94,16 +96,11 @@ namespace Dental_Clinic_Management
             DisplayCounts();
         }
 
-     
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Appointment app = new Appointment();
+            app.ShowDialog();
         }
 
         private void exitPictureBox_Click(object sender, EventArgs e)
@@ -119,7 +116,9 @@ namespace Dental_Clinic_Management
 
         private void dashboardButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            recepDashboardForm rec = new recepDashboardForm();
+            rec.ShowDialog();
         }
     }
 

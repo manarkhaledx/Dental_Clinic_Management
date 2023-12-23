@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(showAppointmentsOfTheDayForm));
-            this.addAppointmentButton = new System.Windows.Forms.Button();
             this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
             this.currentAppointmentsLabel = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -49,20 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
-            // 
-            // addAppointmentButton
-            // 
-            this.addAppointmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.addAppointmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.addAppointmentButton.FlatAppearance.BorderSize = 0;
-            this.addAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addAppointmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addAppointmentButton.Location = new System.Drawing.Point(1567, 983);
-            this.addAppointmentButton.Name = "addAppointmentButton";
-            this.addAppointmentButton.Size = new System.Drawing.Size(153, 71);
-            this.addAppointmentButton.TabIndex = 67;
-            this.addAppointmentButton.Text = "Add";
-            this.addAppointmentButton.UseVisualStyleBackColor = false;
             // 
             // appointmentDataGridView
             // 
@@ -275,7 +260,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1846, 1118);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.addAppointmentButton);
             this.Controls.Add(this.appointmentDataGridView);
             this.Controls.Add(this.currentAppointmentsLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -292,8 +276,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button addAppointmentButton;
         private System.Windows.Forms.DataGridView appointmentDataGridView;
         private System.Windows.Forms.Label currentAppointmentsLabel;
         private System.Windows.Forms.Panel panel7;

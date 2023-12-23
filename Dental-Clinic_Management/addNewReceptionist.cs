@@ -136,9 +136,9 @@ namespace Dental_Clinic_Management
 
                                                 MessageBox.Show("Receptionist account created successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 this.Hide();
-                                                Login loginForm = new Login();
-                                                loginForm.ShowDialog();
-                                                //
+                                                ViewReceptionist rec = new ViewReceptionist();
+                                                rec.ShowDialog();
+                                                
                                                 return;
                                             }
                                         }

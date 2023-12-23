@@ -382,5 +382,31 @@ namespace Dental_Clinic_Management
         {
             patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            recepDashboardForm rec = new recepDashboardForm();
+            rec.ShowDialog();
+        }
+
+        private void patientButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Patient pat = new Patient();
+            pat.ShowDialog();
+        }
+
+        private void appointmentsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Appointment appointment = new Appointment();
+            appointment.ShowDialog();
+        }
     }
 }

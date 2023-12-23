@@ -390,8 +390,7 @@ namespace Dental_Clinic_Management
             {
                 // Get the selected appointment ID from the DataGridView
                 int selectedAppointmentId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
-
-
+                this.Hide();
                  Payment paymentForm = new Payment(selectedAppointmentId);
                  paymentForm.ShowDialog();
             }

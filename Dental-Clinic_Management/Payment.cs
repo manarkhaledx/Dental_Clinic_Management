@@ -140,6 +140,9 @@ namespace Dental_Clinic_Management
                     totalCost = 0;
                     totalCostLabel.Text = "Total Cost: $0.00";
                     paymentMethodGroupBox.Controls.OfType<RadioButton>().ToList().ForEach(rb => rb.Checked = false);
+                    this.Hide();
+                    Appointment app = new Appointment();
+                    app.ShowDialog();
                 }
                 else
                 {

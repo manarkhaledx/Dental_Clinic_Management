@@ -98,6 +98,7 @@
             this.saveNewAppointmentButton.TabIndex = 69;
             this.saveNewAppointmentButton.Text = "Save";
             this.saveNewAppointmentButton.UseVisualStyleBackColor = false;
+            this.saveNewAppointmentButton.Click += new System.EventHandler(this.saveNewAppointmentButton_Click_1);
             // 
             // appointmentDateTimePicker
             // 

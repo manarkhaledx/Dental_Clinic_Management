@@ -38,7 +38,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.patientButton = new System.Windows.Forms.Button();
-            this.paymentButton = new System.Windows.Forms.Button();
             this.appointmentsButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -152,7 +151,6 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
             this.panel8.Controls.Add(this.patientButton);
-            this.panel8.Controls.Add(this.paymentButton);
             this.panel8.Controls.Add(this.appointmentsButton);
             this.panel8.Controls.Add(this.dashboardButton);
             this.panel8.Controls.Add(this.pictureBox10);
@@ -181,25 +179,6 @@
             this.patientButton.Text = "patient";
             this.patientButton.UseVisualStyleBackColor = false;
             this.patientButton.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // paymentButton
-            // 
-            this.paymentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
-            this.paymentButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.paymentButton.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.paymentButton.Image = global::Dental_Clinic_Management.Properties.Resources.icons8_cash_50__1_;
-            this.paymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.paymentButton.Location = new System.Drawing.Point(0, 844);
-            this.paymentButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.paymentButton.Size = new System.Drawing.Size(422, 79);
-            this.paymentButton.TabIndex = 22;
-            this.paymentButton.Text = "Payment";
-            this.paymentButton.UseVisualStyleBackColor = false;
-            this.paymentButton.Click += new System.EventHandler(this.button7_Click);
             // 
             // appointmentsButton
             // 
@@ -446,7 +425,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button patientButton;
-        private System.Windows.Forms.Button paymentButton;
         private System.Windows.Forms.Button appointmentsButton;
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.PictureBox pictureBox10;

@@ -88,11 +88,15 @@ namespace Dental_Clinic_Management
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Appointment added successfully.");
+                                    this.Hide();
+                                    Appointment app = new Appointment();
+                                    app.ShowDialog();
                                 }
                                 else
                                 {
                                     MessageBox.Show("Failed to add appointment.");
                                 }
+                               
                             }
                         }
                         else
