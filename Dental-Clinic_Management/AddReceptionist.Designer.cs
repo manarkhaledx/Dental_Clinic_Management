@@ -358,6 +358,7 @@
             this.signUpRecepButton.TabIndex = 48;
             this.signUpRecepButton.Text = "SignUp";
             this.signUpRecepButton.UseVisualStyleBackColor = false;
+            this.signUpRecepButton.Click += new System.EventHandler(this.signUpRecepButton_Click);
             // 
             // deleteRecepButton
             // 
@@ -373,6 +374,7 @@
             this.deleteRecepButton.TabIndex = 49;
             this.deleteRecepButton.Text = "Delete";
             this.deleteRecepButton.UseVisualStyleBackColor = false;
+            this.deleteRecepButton.Click += new System.EventHandler(this.deleteRecepButton_Click);
             // 
             // editRecepButton
             // 
@@ -388,6 +390,7 @@
             this.editRecepButton.TabIndex = 50;
             this.editRecepButton.Text = "Edit";
             this.editRecepButton.UseVisualStyleBackColor = false;
+            this.editRecepButton.Click += new System.EventHandler(this.editRecepButton_Click);
             // 
             // ViewReceptionist
             // 
@@ -402,6 +405,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewReceptionist";
             this.Text = "ViewReceptionist";
+            this.Load += new System.EventHandler(this.ViewReceptionist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.recepDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

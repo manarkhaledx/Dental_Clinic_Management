@@ -177,6 +177,18 @@ namespace Dental_Clinic_Management
             //=======================================================================================================================================================
         }
 
+       
+
+      
+
+     
+
+     
+        private void recepDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void signUpRecepButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -187,32 +199,7 @@ namespace Dental_Clinic_Management
         private void ViewReceptionist_Load(object sender, EventArgs e)
         {
             receptionistDataBaseQueries.loadAllReceptionistInDataGridView(recepDataGridView);
-        }
 
-        private void deleteRecepButton_Click(object sender, EventArgs e)
-        {
-            DataGridView dataGrid = recepDataGridView;
-            if (recepDataGridView.SelectedRows.Count > 0)
-            {
-                // Get the selected patient ID from the DataGridView
-                int selectedReceptionisttId = Convert.ToInt32(recepDataGridView.SelectedRows[0].Cells["recep_id"].Value);
-
-                // Ask for confirmation
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this receptionist?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    // Delete the patient from the database
-                    receptionistDataBaseQueries.deleteReceptionist(selectedReceptionisttId);
-
-                    // Refresh the DataGridView after deletion
-                    receptionistDataBaseQueries.loadAllReceptionistInDataGridView(recepDataGridView);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void editRecepButton_Click(object sender, EventArgs e)
@@ -241,9 +228,30 @@ namespace Dental_Clinic_Management
             }
         }
 
-        private void recepDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void deleteRecepButton_Click(object sender, EventArgs e)
         {
+            DataGridView dataGrid = recepDataGridView;
+            if (recepDataGridView.SelectedRows.Count > 0)
+            {
+                // Get the selected patient ID from the DataGridView
+                int selectedReceptionisttId = Convert.ToInt32(recepDataGridView.SelectedRows[0].Cells["recep_id"].Value);
 
+                // Ask for confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this receptionist?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Delete the patient from the database
+                    receptionistDataBaseQueries.deleteReceptionist(selectedReceptionisttId);
+
+                    // Refresh the DataGridView after deletion
+                    receptionistDataBaseQueries.loadAllReceptionistInDataGridView(recepDataGridView);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

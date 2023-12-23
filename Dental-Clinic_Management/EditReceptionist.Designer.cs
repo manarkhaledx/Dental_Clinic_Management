@@ -99,6 +99,7 @@
             this.saveReceptionistButton.TabIndex = 98;
             this.saveReceptionistButton.Text = "Save";
             this.saveReceptionistButton.UseVisualStyleBackColor = false;
+            this.saveReceptionistButton.Click += new System.EventHandler(this.saveReceptionistButton_Click);
             // 
             // recepFNameTextBox
             // 
