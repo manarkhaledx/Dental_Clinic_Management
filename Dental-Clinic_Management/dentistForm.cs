@@ -26,12 +26,12 @@ namespace Dental_Clinic_Management
                     using (SqlConnection connection = new SqlConnection(ConnectionString))
                     {
                         connection.Open();
-
-                        // Get the number of appointments
-                        SqlCommand appointmentCommand = new SqlCommand(
+                    DateTime dateOfTheDay = DateTime.Today;
+                    // Get the number of appointments
+                    SqlCommand appointmentCommand = new SqlCommand(
                             "SELECT COUNT(*) AS TotalAppointments " +
                             "FROM [Clinic].[dbo].[Appointment] " +
-                            "WHERE CONVERT(DATE, [app_date]) = CONVERT(DATE, GETDATE());",
+                            "WHERE CONVERT(DATE, [app_date]) =dateOfTheDay ",
                             connection);
 
                         int totalAppointments = (int)appointmentCommand.ExecuteScalar();
