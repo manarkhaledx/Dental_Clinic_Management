@@ -408,9 +408,8 @@ namespace Dental_Clinic_Management
                 int selectedAppointmentId = Convert.ToInt32(appointmentDataGridView.SelectedRows[0].Cells["AppointmentID"].Value);
 
 
-                //DELETE COMMENT
-                //Payment paymentForm = new Payment(selectedAppointmentId);
-                //paymentForm.ShowDialog();
+                Payment paymentForm = new Payment(selectedAppointmentId);
+                paymentForm.ShowDialog();
             }
             else
             {
