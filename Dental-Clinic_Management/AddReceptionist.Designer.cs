@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReceptionist));
             this.recepDataGridView = new System.Windows.Forms.DataGridView();
-            this.ReceptionistID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fristName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,15 +63,6 @@
             // recepDataGridView
             // 
             this.recepDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.recepDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ReceptionistID,
-            this.fristName,
-            this.lastName,
-            this.gender,
-            this.phone,
-            this.address,
-            this.email,
-            this.dOB});
             this.recepDataGridView.Location = new System.Drawing.Point(309, 31);
             this.recepDataGridView.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.recepDataGridView.Name = "recepDataGridView";
@@ -87,62 +70,7 @@
             this.recepDataGridView.RowTemplate.Height = 28;
             this.recepDataGridView.Size = new System.Drawing.Size(911, 569);
             this.recepDataGridView.TabIndex = 30;
-            // 
-            // ReceptionistID
-            // 
-            this.ReceptionistID.HeaderText = "ReceptionistID";
-            this.ReceptionistID.MinimumWidth = 8;
-            this.ReceptionistID.Name = "ReceptionistID";
-            this.ReceptionistID.Width = 150;
-            // 
-            // fristName
-            // 
-            this.fristName.HeaderText = "FristName";
-            this.fristName.MinimumWidth = 8;
-            this.fristName.Name = "fristName";
-            this.fristName.Width = 150;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "LastName";
-            this.lastName.MinimumWidth = 8;
-            this.lastName.Name = "lastName";
-            this.lastName.Width = 150;
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Gender";
-            this.gender.MinimumWidth = 8;
-            this.gender.Name = "gender";
-            this.gender.Width = 150;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Phone";
-            this.phone.MinimumWidth = 8;
-            this.phone.Name = "phone";
-            this.phone.Width = 150;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 8;
-            this.address.Name = "address";
-            this.address.Width = 150;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 8;
-            this.email.Name = "email";
-            this.email.Width = 150;
-            // 
-            // dOB
-            // 
-            this.dOB.HeaderText = "DOB";
-            this.dOB.MinimumWidth = 8;
-            this.dOB.Name = "dOB";
-            this.dOB.Width = 150;
+            this.recepDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.recepDataGridView_CellContentClick);
             // 
             // panel7
             // 
@@ -509,13 +437,5 @@
         private System.Windows.Forms.Button signUpRecepButton;
         private System.Windows.Forms.Button deleteRecepButton;
         private System.Windows.Forms.Button editRecepButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReceptionistID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fristName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOB;
     }
 }
