@@ -78,7 +78,7 @@
             this.appointmentsPanel.Controls.Add(this.appointmentsPictureBox);
             this.appointmentsPanel.Controls.Add(this.numOfAppointmentsLabel);
             this.appointmentsPanel.Controls.Add(this.appointmentsLabel);
-            this.appointmentsPanel.Location = new System.Drawing.Point(295, 100);
+            this.appointmentsPanel.Location = new System.Drawing.Point(745, 153);
             this.appointmentsPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.appointmentsPanel.Name = "appointmentsPanel";
             this.appointmentsPanel.Size = new System.Drawing.Size(927, 90);
@@ -165,7 +165,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(281, 640);
+            this.panel7.Size = new System.Drawing.Size(281, 747);
             this.panel7.TabIndex = 18;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
@@ -181,7 +181,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(281, 640);
+            this.panel8.Size = new System.Drawing.Size(281, 747);
             this.panel8.TabIndex = 22;
             // 
             // patientButton
@@ -342,7 +342,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1257, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(2157, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 36);
@@ -354,7 +354,7 @@
             this.hidePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hidePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.hidePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hidePictureBox.Location = new System.Drawing.Point(1169, 10);
+            this.hidePictureBox.Location = new System.Drawing.Point(2069, 10);
             this.hidePictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.hidePictureBox.Name = "hidePictureBox";
             this.hidePictureBox.Size = new System.Drawing.Size(36, 36);
@@ -366,7 +366,7 @@
             // 
             this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closePictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.closePictureBox.Location = new System.Drawing.Point(1209, 10);
+            this.closePictureBox.Location = new System.Drawing.Point(2109, 10);
             this.closePictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(31, 36);
@@ -382,7 +382,7 @@
             this.patientsPanel.Controls.Add(this.patientsPictureBox);
             this.patientsPanel.Controls.Add(this.numOfPatientsLabel);
             this.patientsPanel.Controls.Add(this.patientsLabel);
-            this.patientsPanel.Location = new System.Drawing.Point(295, 281);
+            this.patientsPanel.Location = new System.Drawing.Point(745, 334);
             this.patientsPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.patientsPanel.Name = "patientsPanel";
             this.patientsPanel.Size = new System.Drawing.Size(927, 90);
@@ -417,7 +417,7 @@
             this.totalBillingsPanel.Controls.Add(this.numOfTotalBillingsLabel);
             this.totalBillingsPanel.Controls.Add(this.totalBillingsPictureBox);
             this.totalBillingsPanel.Controls.Add(this.totalBillingsLabel);
-            this.totalBillingsPanel.Location = new System.Drawing.Point(304, 443);
+            this.totalBillingsPanel.Location = new System.Drawing.Point(754, 496);
             this.totalBillingsPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.totalBillingsPanel.Name = "totalBillingsPanel";
             this.totalBillingsPanel.Size = new System.Drawing.Size(917, 90);
@@ -452,7 +452,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1940, 747);
             this.ControlBox = false;
             this.Controls.Add(this.totalBillingsPanel);
             this.Controls.Add(this.patientsPanel);

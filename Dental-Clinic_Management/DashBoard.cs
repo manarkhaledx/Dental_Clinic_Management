@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,27 +13,56 @@ namespace Dental_Clinic_Management
 {
     public partial class recepDashboardForm : Form
     {
+        private const string ConnectionString = "data source=DESKTOP-8JPNOOB\\MSSQLSERVER01;database=Clinic;integrated security=true";
         public recepDashboardForm(int v)
         {
             InitializeComponent();
+            DisplayCounts();
+        }
+        private void DisplayCounts()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+
+                    // Get the number of appointments
+                    SqlCommand appointmentCommand = new SqlCommand(
+                        "SELECT COUNT(*) AS TotalAppointments " +
+                        "FROM [Clinic].[dbo].[Appointment] " +
+                        "WHERE CONVERT(DATE, [app_date]) = CONVERT(DATE, GETDATE());",
+                        connection);
+
+                    int totalAppointments = (int)appointmentCommand.ExecuteScalar();
+                    numOfAppointmentsLabel.Text = "Appointments: " + totalAppointments;
+
+                    // Get the number of patients
+                    SqlCommand patientCommand = new SqlCommand(
+                        "SELECT COUNT(DISTINCT [patient_id]) AS TotalPatients " +
+                        "FROM [Clinic].[dbo].[Appointment] " +
+                        "WHERE CONVERT(DATE, [app_date]) = CONVERT(DATE, GETDATE());",
+                        connection);
+
+                    int totalPatients = (int)patientCommand.ExecuteScalar();
+                    numOfPatientsLabel.Text = "Patients: " + totalPatients;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
         public void closeFormChecker()
         {
-            // message to check whether the user wants to close the app or not
-            DialogResult result = MessageBox.Show("Are you Sure you want to close the app", "Quit",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+           
 
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+           
         }
 
         private void a_Click(object sender, EventArgs e)
@@ -77,8 +107,7 @@ namespace Dental_Clinic_Management
 
         private void button10_Click(object sender, EventArgs e)
         {
-            AddRecordForm addRecordForm = new AddRecordForm();
-            addRecordForm.Show();
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -93,7 +122,7 @@ namespace Dental_Clinic_Management
 
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
-            closeFormChecker();
+          
         }
 
         private void label6_Click(object sender, EventArgs e)
