@@ -114,7 +114,7 @@ namespace Dental_Clinic_Management
                         con.Open();
 
                         // Update the 'amount', 'method', 'pay_date', and 'app_id' in the 'Payment' table
-                        string updateQuery = "UPDATE [Clinic].[dbo].[Payment] SET [amount] = [amount] + @totalCost, [method] = @method, [pay_date] = @payDate, [app_id] = @appId WHERE [payment_id] = (SELECT MAX([payment_id]) FROM [Clinic].[dbo].[Payment])";
+                        string updateQuery = "UPDATE [Clinic].[dbo].[Payment] SET [amount] = [amount] + @totalCost, [method] = @method, [pay_date] = @payDate, [app_id] = @app_id WHERE [payment_id] = (SELECT MAX([payment_id]) FROM [Clinic].[dbo].[Payment])";
                         cmd = new SqlCommand(updateQuery, con);
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
                         cmd.Parameters.AddWithValue("@method", paymentMethod);
@@ -123,7 +123,7 @@ namespace Dental_Clinic_Management
                         cmd.ExecuteNonQuery();
 
                         // Insert a new payment record with the updated amount, payment method, and current date
-                        string insertQuery = "INSERT INTO [Clinic].[dbo].[Payment] ([pay_date], [amount], [method], [app_id]) VALUES (@payDate, @totalCost, @method, @appId)";
+                        string insertQuery = "INSERT INTO [Clinic].[dbo].[Payment] ([pay_date], [amount], [method], [app_id]) VALUES (@payDate, @totalCost, @method, @app_id)";
                         cmd = new SqlCommand(insertQuery, con);
                         cmd.Parameters.AddWithValue("@payDate", DateTime.Now);
                         cmd.Parameters.AddWithValue("@totalCost", totalCost);
