@@ -443,6 +443,14 @@ namespace Dental_Clinic_Management
                 appointmentDataBaseQueries.LoadAllAppointmentsInDataGridView(dataGrid);
             }
         }
+
+        private void addbutton_Click(object sender, EventArgs e)
+        {
+            AddAppointment addAppointment = new AddAppointment();
+            this.Hide();
+            addAppointment.ShowDialog();
+
+        }
     }
 
 
