@@ -149,7 +149,7 @@
         2ZEbujL5y/PQoEElQUdC/INzrtIYB36v8H/OyMh/X4NM/sWEN60AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="appointmentsPictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAvx9JREFUeF7snQdYVFfax00vm2Q3u9mS/bItu4kt9t6NmkRTNd1Y6DP03ruIWBAQ
@@ -971,7 +971,7 @@
         gg==
 </value>
   </data>
-  <data name="appointmentsPictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAAvx9JREFUeF7snQdYVFfax00vm2Q3u9mS/bItu4kt9t6NmkRTNd1Y6DP03ruIWBAQ
