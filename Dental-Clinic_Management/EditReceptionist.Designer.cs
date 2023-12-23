@@ -58,10 +58,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(47, 339);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel2.Location = new System.Drawing.Point(63, 417);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 1);
+            this.panel2.Size = new System.Drawing.Size(559, 1);
             this.panel2.TabIndex = 102;
             // 
             // receptPhoneTextBox
@@ -69,10 +69,10 @@
             this.receptPhoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.receptPhoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.receptPhoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.receptPhoneTextBox.Location = new System.Drawing.Point(47, 244);
-            this.receptPhoneTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.receptPhoneTextBox.Location = new System.Drawing.Point(63, 300);
+            this.receptPhoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.receptPhoneTextBox.Name = "receptPhoneTextBox";
-            this.receptPhoneTextBox.Size = new System.Drawing.Size(419, 32);
+            this.receptPhoneTextBox.Size = new System.Drawing.Size(559, 40);
             this.receptPhoneTextBox.TabIndex = 101;
             this.receptPhoneTextBox.Text = "Phone";
             // 
@@ -80,10 +80,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(47, 166);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Location = new System.Drawing.Point(63, 204);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(419, 1);
+            this.panel1.Size = new System.Drawing.Size(559, 1);
             this.panel1.TabIndex = 100;
             // 
             // saveReceptionistButton
@@ -92,10 +92,10 @@
             this.saveReceptionistButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.saveReceptionistButton.FlatAppearance.BorderSize = 0;
             this.saveReceptionistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveReceptionistButton.Location = new System.Drawing.Point(388, 611);
-            this.saveReceptionistButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.saveReceptionistButton.Location = new System.Drawing.Point(517, 752);
+            this.saveReceptionistButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.saveReceptionistButton.Name = "saveReceptionistButton";
-            this.saveReceptionistButton.Size = new System.Drawing.Size(102, 46);
+            this.saveReceptionistButton.Size = new System.Drawing.Size(136, 57);
             this.saveReceptionistButton.TabIndex = 98;
             this.saveReceptionistButton.Text = "Save";
             this.saveReceptionistButton.UseVisualStyleBackColor = false;
@@ -106,10 +106,10 @@
             this.recepFNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.recepFNameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.recepFNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.recepFNameTextBox.Location = new System.Drawing.Point(47, 127);
-            this.recepFNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepFNameTextBox.Location = new System.Drawing.Point(63, 156);
+            this.recepFNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepFNameTextBox.Name = "recepFNameTextBox";
-            this.recepFNameTextBox.Size = new System.Drawing.Size(419, 32);
+            this.recepFNameTextBox.Size = new System.Drawing.Size(559, 40);
             this.recepFNameTextBox.TabIndex = 97;
             this.recepFNameTextBox.Text = "First Name";
             // 
@@ -119,11 +119,11 @@
             this.recepGenderGroupBox.Controls.Add(this.recepMaleRadioButton);
             this.recepGenderGroupBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recepGenderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.recepGenderGroupBox.Location = new System.Drawing.Point(47, 506);
-            this.recepGenderGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepGenderGroupBox.Location = new System.Drawing.Point(63, 623);
+            this.recepGenderGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepGenderGroupBox.Name = "recepGenderGroupBox";
-            this.recepGenderGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.recepGenderGroupBox.Size = new System.Drawing.Size(193, 151);
+            this.recepGenderGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.recepGenderGroupBox.Size = new System.Drawing.Size(257, 186);
             this.recepGenderGroupBox.TabIndex = 96;
             this.recepGenderGroupBox.TabStop = false;
             this.recepGenderGroupBox.Text = "Gender";
@@ -131,10 +131,10 @@
             // recepFemaleRadioButton
             // 
             this.recepFemaleRadioButton.AutoSize = true;
-            this.recepFemaleRadioButton.Location = new System.Drawing.Point(17, 47);
-            this.recepFemaleRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepFemaleRadioButton.Location = new System.Drawing.Point(23, 58);
+            this.recepFemaleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepFemaleRadioButton.Name = "recepFemaleRadioButton";
-            this.recepFemaleRadioButton.Size = new System.Drawing.Size(99, 41);
+            this.recepFemaleRadioButton.Size = new System.Drawing.Size(122, 49);
             this.recepFemaleRadioButton.TabIndex = 13;
             this.recepFemaleRadioButton.TabStop = true;
             this.recepFemaleRadioButton.Text = "Female";
@@ -143,10 +143,10 @@
             // recepMaleRadioButton
             // 
             this.recepMaleRadioButton.AutoSize = true;
-            this.recepMaleRadioButton.Location = new System.Drawing.Point(17, 77);
-            this.recepMaleRadioButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepMaleRadioButton.Location = new System.Drawing.Point(23, 95);
+            this.recepMaleRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepMaleRadioButton.Name = "recepMaleRadioButton";
-            this.recepMaleRadioButton.Size = new System.Drawing.Size(80, 41);
+            this.recepMaleRadioButton.Size = new System.Drawing.Size(98, 49);
             this.recepMaleRadioButton.TabIndex = 14;
             this.recepMaleRadioButton.TabStop = true;
             this.recepMaleRadioButton.Text = "Male";
@@ -157,10 +157,9 @@
             this.recepDobLabel.AutoSize = true;
             this.recepDobLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recepDobLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.recepDobLabel.Location = new System.Drawing.Point(40, 464);
-            this.recepDobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.recepDobLabel.Location = new System.Drawing.Point(53, 571);
             this.recepDobLabel.Name = "recepDobLabel";
-            this.recepDobLabel.Size = new System.Drawing.Size(64, 37);
+            this.recepDobLabel.Size = new System.Drawing.Size(78, 45);
             this.recepDobLabel.TabIndex = 94;
             this.recepDobLabel.Text = "DOB";
             // 
@@ -168,10 +167,9 @@
             // 
             this.signUpReceptiontistLabel.AutoSize = true;
             this.signUpReceptiontistLabel.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpReceptiontistLabel.Location = new System.Drawing.Point(40, 31);
-            this.signUpReceptiontistLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.signUpReceptiontistLabel.Location = new System.Drawing.Point(53, 38);
             this.signUpReceptiontistLabel.Name = "signUpReceptiontistLabel";
-            this.signUpReceptiontistLabel.Size = new System.Drawing.Size(289, 44);
+            this.signUpReceptiontistLabel.Size = new System.Drawing.Size(353, 52);
             this.signUpReceptiontistLabel.TabIndex = 93;
             this.signUpReceptiontistLabel.Text = "Edit Receptionist";
             // 
@@ -180,10 +178,10 @@
             this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_username.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.tb_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.tb_username.Location = new System.Drawing.Point(47, 82);
-            this.tb_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tb_username.Location = new System.Drawing.Point(63, 101);
+            this.tb_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(419, 32);
+            this.tb_username.Size = new System.Drawing.Size(559, 40);
             this.tb_username.TabIndex = 111;
             this.tb_username.Text = "User Name";
             // 
@@ -191,10 +189,10 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(46, 385);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel5.Location = new System.Drawing.Point(61, 474);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(419, 1);
+            this.panel5.Size = new System.Drawing.Size(559, 1);
             this.panel5.TabIndex = 110;
             // 
             // tb_Confirmpassword
@@ -202,10 +200,10 @@
             this.tb_Confirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Confirmpassword.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.tb_Confirmpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.tb_Confirmpassword.Location = new System.Drawing.Point(46, 402);
-            this.tb_Confirmpassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tb_Confirmpassword.Location = new System.Drawing.Point(61, 495);
+            this.tb_Confirmpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Confirmpassword.Name = "tb_Confirmpassword";
-            this.tb_Confirmpassword.Size = new System.Drawing.Size(419, 32);
+            this.tb_Confirmpassword.Size = new System.Drawing.Size(559, 40);
             this.tb_Confirmpassword.TabIndex = 109;
             this.tb_Confirmpassword.Text = "Confirmpassword";
             // 
@@ -213,10 +211,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(46, 441);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel6.Location = new System.Drawing.Point(61, 543);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(419, 1);
+            this.panel6.Size = new System.Drawing.Size(559, 1);
             this.panel6.TabIndex = 108;
             // 
             // tb_password
@@ -224,10 +222,10 @@
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_password.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.tb_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.tb_password.Location = new System.Drawing.Point(46, 346);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tb_password.Location = new System.Drawing.Point(61, 426);
+            this.tb_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(419, 32);
+            this.tb_password.Size = new System.Drawing.Size(559, 40);
             this.tb_password.TabIndex = 107;
             this.tb_password.Text = "Password";
             // 
@@ -235,10 +233,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(47, 224);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel4.Location = new System.Drawing.Point(63, 276);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(419, 1);
+            this.panel4.Size = new System.Drawing.Size(559, 1);
             this.panel4.TabIndex = 106;
             // 
             // recepLNameTextBox
@@ -246,10 +244,10 @@
             this.recepLNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.recepLNameTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.recepLNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.recepLNameTextBox.Location = new System.Drawing.Point(47, 185);
-            this.recepLNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepLNameTextBox.Location = new System.Drawing.Point(63, 228);
+            this.recepLNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepLNameTextBox.Name = "recepLNameTextBox";
-            this.recepLNameTextBox.Size = new System.Drawing.Size(419, 32);
+            this.recepLNameTextBox.Size = new System.Drawing.Size(559, 40);
             this.recepLNameTextBox.TabIndex = 105;
             this.recepLNameTextBox.Text = "Last Name";
             // 
@@ -257,10 +255,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(47, 283);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel3.Location = new System.Drawing.Point(63, 348);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(419, 1);
+            this.panel3.Size = new System.Drawing.Size(559, 1);
             this.panel3.TabIndex = 104;
             // 
             // recepAddressTextBox
@@ -268,10 +266,10 @@
             this.recepAddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.recepAddressTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.recepAddressTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.recepAddressTextBox.Location = new System.Drawing.Point(47, 300);
-            this.recepAddressTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepAddressTextBox.Location = new System.Drawing.Point(63, 369);
+            this.recepAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepAddressTextBox.Name = "recepAddressTextBox";
-            this.recepAddressTextBox.Size = new System.Drawing.Size(419, 32);
+            this.recepAddressTextBox.Size = new System.Drawing.Size(559, 40);
             this.recepAddressTextBox.TabIndex = 103;
             this.recepAddressTextBox.Text = "Address";
             // 
@@ -281,20 +279,20 @@
             this.recepDobDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.recepDobDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.recepDobDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recepDobDateTimePicker.Location = new System.Drawing.Point(128, 467);
-            this.recepDobDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.recepDobDateTimePicker.Location = new System.Drawing.Point(171, 575);
+            this.recepDobDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recepDobDateTimePicker.Name = "recepDobDateTimePicker";
-            this.recepDobDateTimePicker.Size = new System.Drawing.Size(325, 36);
+            this.recepDobDateTimePicker.Size = new System.Drawing.Size(432, 43);
             this.recepDobDateTimePicker.TabIndex = 95;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(130)))), ((int)(((byte)(100)))));
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(47, 120);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel7.Location = new System.Drawing.Point(63, 148);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(419, 1);
+            this.panel7.Size = new System.Drawing.Size(559, 1);
             this.panel7.TabIndex = 112;
             // 
             // closePictureBox
@@ -302,18 +300,18 @@
             this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closePictureBox.Location = new System.Drawing.Point(532, 3);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.closePictureBox.Location = new System.Drawing.Point(709, 4);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(24, 26);
+            this.closePictureBox.Size = new System.Drawing.Size(32, 32);
             this.closePictureBox.TabIndex = 99;
             this.closePictureBox.TabStop = false;
             // 
             // EditReceptionist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 708);
+            this.ClientSize = new System.Drawing.Size(756, 871);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.receptPhoneTextBox);
             this.Controls.Add(this.panel1);
@@ -334,8 +332,10 @@
             this.Controls.Add(this.recepAddressTextBox);
             this.Controls.Add(this.recepDobDateTimePicker);
             this.Controls.Add(this.panel7);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditReceptionist";
             this.Text = "EditReceptionist";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.recepGenderGroupBox.ResumeLayout(false);
             this.recepGenderGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();

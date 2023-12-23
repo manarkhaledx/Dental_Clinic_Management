@@ -265,6 +265,7 @@
             this.Controls.Add(this.currentAppointmentsLabel);
             this.Name = "showAppointmentsOfTheDayForm";
             this.Text = "showAppointmentsOfTheDayForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.showAppointmentsOfTheDayForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);

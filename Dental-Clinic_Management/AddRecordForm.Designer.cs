@@ -260,6 +260,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddRecordForm";
             this.Text = "AddRecordForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddRecordForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             this.genderGroupBox.ResumeLayout(false);

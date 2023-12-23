@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.confirmButton = new System.Windows.Forms.Button();
-            this.serviceCostTextBox = new System.Windows.Forms.TextBox();
             this.serviceCostLabel = new System.Windows.Forms.Label();
             this.serviceNameLabel = new System.Windows.Forms.Label();
             this.addServiceTextBox = new System.Windows.Forms.TextBox();
@@ -66,18 +65,6 @@
             this.confirmButton.Text = "Confirm Payment";
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
-            // serviceCostTextBox
-            // 
-            this.serviceCostTextBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.serviceCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.serviceCostTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
-            this.serviceCostTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.serviceCostTextBox.Location = new System.Drawing.Point(463, 459);
-            this.serviceCostTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.serviceCostTextBox.Name = "serviceCostTextBox";
-            this.serviceCostTextBox.Size = new System.Drawing.Size(283, 40);
-            this.serviceCostTextBox.TabIndex = 82;
             // 
             // serviceCostLabel
             // 
@@ -304,7 +291,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1710, 844);
             this.Controls.Add(this.confirmButton);
-            this.Controls.Add(this.serviceCostTextBox);
             this.Controls.Add(this.serviceCostLabel);
             this.Controls.Add(this.serviceNameLabel);
             this.Controls.Add(this.addServiceTextBox);
@@ -318,6 +304,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Payment_Load);
             this.paymentMethodGroupBox.ResumeLayout(false);
             this.paymentMethodGroupBox.PerformLayout();
@@ -331,7 +318,6 @@
         #endregion
 
         private System.Windows.Forms.Button confirmButton;
-        private System.Windows.Forms.TextBox serviceCostTextBox;
         private System.Windows.Forms.Label serviceCostLabel;
         private System.Windows.Forms.Label serviceNameLabel;
         private System.Windows.Forms.TextBox addServiceTextBox;

@@ -335,6 +335,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "addNewReceptionist";
             this.Text = "addNewReceptionist";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.addNewReceptionist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             this.recepGenderGroupBox.ResumeLayout(false);
