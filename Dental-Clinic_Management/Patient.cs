@@ -31,10 +31,7 @@ namespace Dental_Clinic_Management
 
 
 
-        private void Patient_Load(object sender, EventArgs e)
-        {
-            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
-        }
+     
         public static class patientDataBaseQueries
         {
             public static void addPatient(string fname, string lname, string phone, RadioButton rad, DateTime Date, string address)
@@ -83,81 +80,9 @@ namespace Dental_Clinic_Management
                 }
             }
             //--------------------------------------------------------------------------------------------------------------------------------------------------------
-            public static void deletePatient(string phone)
-            {
-                using (SqlConnection con = getConnection())
-                {
-                    con.Open();
+            
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
-                    {
-                        cmd.Parameters.AddWithValue("Phone", phone);
-
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.Read())
-                            {
-                                dr.Close();
-
-                                using (SqlCommand deleteCmd = new SqlCommand("DELETE FROM Patient WHERE Phone=@Phone", con))
-                                {
-                                    deleteCmd.Parameters.AddWithValue("Phone", phone);
-                                    int rowsAffected = deleteCmd.ExecuteNonQuery();
-
-                                    if (rowsAffected > 0)
-                                    {
-                                        MessageBox.Show("Patient deleted successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        // Optionally, you may navigate to another form or perform additional actions here.
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Failed to delete patient. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Patient not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                }
-            }
-
-            //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-            public static void searchPatient(string phone)
-            {
-                using (SqlConnection con = getConnection())
-                {
-                    con.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE Phone=@Phone", con))
-                    {
-                        cmd.Parameters.AddWithValue("Phone", phone);
-
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.Read())
-                            {
-                                // Patient found, you can display or process the information as needed
-                                string fname = dr["Fname"].ToString();
-                                string lname = dr["Lname"].ToString();
-                                string gender = dr["gender"].ToString();
-                                DateTime dob = Convert.ToDateTime(dr["DOB"]);
-                                string address = dr["pat_address"].ToString();
-
-                                MessageBox.Show($"Patient Information:\n\nName: {fname} {lname}\nGender: {gender}\nDOB: {dob.ToShortDateString()}\nAddress: {address}", "Patient Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Patient not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                }
-            }
+ 
 
             public static void SearchPatient(string phoneNumber, DataGridView dataGridView)
             {
@@ -379,24 +304,35 @@ namespace Dental_Clinic_Management
                 }
             }
         }
-        private void totalCostTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string phone = searchTextBox.Text.Trim();
-            DataGridView dataGrid = patientDataGridView;
+       
 
-            // You can set a minimum length if needed before starting the search
-            if (phone.Length >= 1)
+        
+
+      
+
+        private void editPatientButton_Click(object sender, EventArgs e)
+        {
+            if (patientDataGridView.SelectedRows.Count > 0)
             {
-                patientDataBaseQueries.SearchPatient(phone, dataGrid);
+                // Retrieve data from the selected row
+                DataGridViewRow selectedRow = patientDataGridView.SelectedRows[0];
+                string fname = selectedRow.Cells["Fname"].Value.ToString();
+                string lname = selectedRow.Cells["Lname"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+                string gender = selectedRow.Cells["gender"].Value.ToString();
+                DateTime dob = Convert.ToDateTime(selectedRow.Cells["DOB"].Value);
+                string address = selectedRow.Cells["pat_address"].Value.ToString();
+
+                // Open the EditPatientForm and pass the patient data
+
+                EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
+                this.Hide();
+                editForm.ShowDialog();
             }
             else
             {
-                // If the TextBox is empty, load all patients
-                patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
+                MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
         private void deletePatientButton_Click(object sender, EventArgs e)
@@ -423,40 +359,28 @@ namespace Dental_Clinic_Management
             {
                 MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
-        private void patientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
+            string phone = searchTextBox.Text.Trim();
+            DataGridView dataGrid = patientDataGridView;
 
-        }
-
-        private void editPatientButton_Click(object sender, EventArgs e)
-        {
-            //searchPhone= searchTextBox.Text; 
-
-            //patientDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            if (patientDataGridView.SelectedRows.Count > 0)
+            // You can set a minimum length if needed before starting the search
+            if (phone.Length >= 1)
             {
-                // Retrieve data from the selected row
-                DataGridViewRow selectedRow = patientDataGridView.SelectedRows[0];
-                string fname = selectedRow.Cells["Fname"].Value.ToString();
-                string lname = selectedRow.Cells["Lname"].Value.ToString();
-                string phone = selectedRow.Cells["Phone"].Value.ToString();
-                string gender = selectedRow.Cells["gender"].Value.ToString();
-                DateTime dob = Convert.ToDateTime(selectedRow.Cells["DOB"].Value);
-                string address = selectedRow.Cells["pat_address"].Value.ToString();
-
-                // Open the EditPatientForm and pass the patient data
-
-                EditPatinet editForm = new EditPatinet(fname, lname, phone, gender, dob, address);
-                this.Hide();
-                editForm.ShowDialog();
+                patientDataBaseQueries.SearchPatient(phone, dataGrid);
             }
             else
             {
-                MessageBox.Show("Please select a patient to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // If the TextBox is empty, load all patients
+                patientDataBaseQueries.loadAllPatientsInDataGridView(dataGrid);
             }
+        }
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+            patientDataBaseQueries.loadAllPatientsInDataGridView(patientDataGridView);
         }
     }
 }
