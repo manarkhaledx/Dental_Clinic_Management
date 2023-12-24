@@ -35,43 +35,29 @@
             this.billingsButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
-            this.hidePictureBox = new System.Windows.Forms.PictureBox();
-            this.totalBillingsPanel = new System.Windows.Forms.Panel();
-            this.numOfTotalBillingsLabel = new System.Windows.Forms.Label();
-            this.totalBillingsPictureBox = new System.Windows.Forms.PictureBox();
             this.totalBillingsLabel = new System.Windows.Forms.Label();
-            this.appointmentsPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.totalBillingsPictureBox = new System.Windows.Forms.PictureBox();
+            this.numOfTotalBillingsLabel = new System.Windows.Forms.Label();
+            this.totalBillingsPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.appointmentsPictureBox = new System.Windows.Forms.PictureBox();
-            this.numOfAppointmentsLabel = new System.Windows.Forms.Label();
-            this.appointmentsLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).BeginInit();
-            this.totalBillingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillingsPictureBox)).BeginInit();
-            this.appointmentsPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.totalBillingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentsPictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel8
@@ -86,7 +72,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(375, 768);
+            this.panel8.Size = new System.Drawing.Size(375, 974);
             this.panel8.TabIndex = 22;
             // 
             // appointmentsButton
@@ -177,18 +163,6 @@
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
             // 
-            // exitPictureBox
-            // 
-            this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.exitPictureBox.Location = new System.Drawing.Point(2649, -102);
-            this.exitPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.exitPictureBox.Name = "exitPictureBox";
-            this.exitPictureBox.Size = new System.Drawing.Size(41, 44);
-            this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exitPictureBox.TabIndex = 33;
-            this.exitPictureBox.TabStop = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -255,18 +229,6 @@
             this.button2.Text = "DashBoard";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(2596, -102);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 44);
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -279,79 +241,8 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(375, 768);
+            this.panel7.Size = new System.Drawing.Size(375, 974);
             this.panel7.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2713, -103);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 44);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // closePictureBox
-            // 
-            this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closePictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.Exit;
-            this.closePictureBox.Location = new System.Drawing.Point(2387, 10);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(41, 44);
-            this.closePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closePictureBox.TabIndex = 35;
-            this.closePictureBox.TabStop = false;
-            // 
-            // hidePictureBox
-            // 
-            this.hidePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hidePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
-            this.hidePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hidePictureBox.Location = new System.Drawing.Point(2332, 10);
-            this.hidePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.hidePictureBox.Name = "hidePictureBox";
-            this.hidePictureBox.Size = new System.Drawing.Size(48, 44);
-            this.hidePictureBox.TabIndex = 34;
-            this.hidePictureBox.TabStop = false;
-            // 
-            // totalBillingsPanel
-            // 
-            this.totalBillingsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.totalBillingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalBillingsPanel.Controls.Add(this.numOfTotalBillingsLabel);
-            this.totalBillingsPanel.Controls.Add(this.totalBillingsPictureBox);
-            this.totalBillingsPanel.Controls.Add(this.totalBillingsLabel);
-            this.totalBillingsPanel.Location = new System.Drawing.Point(418, 441);
-            this.totalBillingsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.totalBillingsPanel.Name = "totalBillingsPanel";
-            this.totalBillingsPanel.Size = new System.Drawing.Size(1222, 110);
-            this.totalBillingsPanel.TabIndex = 47;
-            // 
-            // numOfTotalBillingsLabel
-            // 
-            this.numOfTotalBillingsLabel.AutoSize = true;
-            this.numOfTotalBillingsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOfTotalBillingsLabel.Location = new System.Drawing.Point(831, 65);
-            this.numOfTotalBillingsLabel.Name = "numOfTotalBillingsLabel";
-            this.numOfTotalBillingsLabel.Size = new System.Drawing.Size(26, 31);
-            this.numOfTotalBillingsLabel.TabIndex = 5;
-            this.numOfTotalBillingsLabel.Text = "0";
-            // 
-            // totalBillingsPictureBox
-            // 
-            this.totalBillingsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.totalBillingsPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.billing;
-            this.totalBillingsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.totalBillingsPictureBox.Location = new System.Drawing.Point(172, 9);
-            this.totalBillingsPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.totalBillingsPictureBox.Name = "totalBillingsPictureBox";
-            this.totalBillingsPictureBox.Size = new System.Drawing.Size(87, 86);
-            this.totalBillingsPictureBox.TabIndex = 6;
-            this.totalBillingsPictureBox.TabStop = false;
             // 
             // totalBillingsLabel
             // 
@@ -363,54 +254,40 @@
             this.totalBillingsLabel.TabIndex = 1;
             this.totalBillingsLabel.Text = "Total Billings";
             // 
-            // appointmentsPanel
+            // totalBillingsPictureBox
             // 
-            this.appointmentsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.appointmentsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.appointmentsPanel.Controls.Add(this.panel1);
-            this.appointmentsPanel.Controls.Add(this.appointmentsPictureBox);
-            this.appointmentsPanel.Controls.Add(this.numOfAppointmentsLabel);
-            this.appointmentsPanel.Controls.Add(this.appointmentsLabel);
-            this.appointmentsPanel.Location = new System.Drawing.Point(418, 206);
-            this.appointmentsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.appointmentsPanel.Name = "appointmentsPanel";
-            this.appointmentsPanel.Size = new System.Drawing.Size(1235, 110);
-            this.appointmentsPanel.TabIndex = 45;
+            this.totalBillingsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.totalBillingsPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.billing;
+            this.totalBillingsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.totalBillingsPictureBox.Location = new System.Drawing.Point(162, 9);
+            this.totalBillingsPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.totalBillingsPictureBox.Name = "totalBillingsPictureBox";
+            this.totalBillingsPictureBox.Size = new System.Drawing.Size(87, 86);
+            this.totalBillingsPictureBox.TabIndex = 6;
+            this.totalBillingsPictureBox.TabStop = false;
             // 
-            // panel1
+            // numOfTotalBillingsLabel
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1235, 110);
-            this.panel1.TabIndex = 46;
+            this.numOfTotalBillingsLabel.AutoSize = true;
+            this.numOfTotalBillingsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfTotalBillingsLabel.Location = new System.Drawing.Point(831, 65);
+            this.numOfTotalBillingsLabel.Name = "numOfTotalBillingsLabel";
+            this.numOfTotalBillingsLabel.Size = new System.Drawing.Size(26, 31);
+            this.numOfTotalBillingsLabel.TabIndex = 5;
+            this.numOfTotalBillingsLabel.Text = "0";
             // 
-            // pictureBox3
+            // totalBillingsPanel
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(184, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(87, 86);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(843, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "0";
+            this.totalBillingsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.totalBillingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalBillingsPanel.Controls.Add(this.numOfTotalBillingsLabel);
+            this.totalBillingsPanel.Controls.Add(this.totalBillingsPictureBox);
+            this.totalBillingsPanel.Controls.Add(this.totalBillingsLabel);
+            this.totalBillingsPanel.Location = new System.Drawing.Point(456, 384);
+            this.totalBillingsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.totalBillingsPanel.Name = "totalBillingsPanel";
+            this.totalBillingsPanel.Size = new System.Drawing.Size(1202, 110);
+            this.totalBillingsPanel.TabIndex = 47;
             // 
             // label2
             // 
@@ -422,49 +299,62 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Appointments ";
             // 
-            // appointmentsPictureBox
+            // label1
             // 
-            this.appointmentsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.appointmentsPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("appointmentsPictureBox.BackgroundImage")));
-            this.appointmentsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.appointmentsPictureBox.Location = new System.Drawing.Point(184, 11);
-            this.appointmentsPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.appointmentsPictureBox.Name = "appointmentsPictureBox";
-            this.appointmentsPictureBox.Size = new System.Drawing.Size(87, 86);
-            this.appointmentsPictureBox.TabIndex = 6;
-            this.appointmentsPictureBox.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(843, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 31);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // numOfAppointmentsLabel
+            // pictureBox3
             // 
-            this.numOfAppointmentsLabel.AutoSize = true;
-            this.numOfAppointmentsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOfAppointmentsLabel.Location = new System.Drawing.Point(843, 68);
-            this.numOfAppointmentsLabel.Name = "numOfAppointmentsLabel";
-            this.numOfAppointmentsLabel.Size = new System.Drawing.Size(26, 31);
-            this.numOfAppointmentsLabel.TabIndex = 5;
-            this.numOfAppointmentsLabel.Text = "0";
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(160, 7);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(87, 86);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
-            // appointmentsLabel
+            // panel1
             // 
-            this.appointmentsLabel.AutoSize = true;
-            this.appointmentsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointmentsLabel.Location = new System.Drawing.Point(777, 11);
-            this.appointmentsLabel.Name = "appointmentsLabel";
-            this.appointmentsLabel.Size = new System.Drawing.Size(173, 31);
-            this.appointmentsLabel.TabIndex = 1;
-            this.appointmentsLabel.Text = "Appointments ";
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(445, 152);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1186, 103);
+            this.panel1.TabIndex = 46;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2690, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 44);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // dentistDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 768);
+            this.ClientSize = new System.Drawing.Size(1679, 974);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.totalBillingsPanel);
-            this.Controls.Add(this.appointmentsPanel);
-            this.Controls.Add(this.closePictureBox);
-            this.Controls.Add(this.hidePictureBox);
-            this.Controls.Add(this.exitPictureBox);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
@@ -474,22 +364,15 @@
             this.Load += new System.EventHandler(this.dentistDashboardForm_Load);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalBillingsPictureBox)).EndInit();
             this.totalBillingsPanel.ResumeLayout(false);
             this.totalBillingsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.totalBillingsPictureBox)).EndInit();
-            this.appointmentsPanel.ResumeLayout(false);
-            this.appointmentsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,29 +383,21 @@
         private System.Windows.Forms.Button billingsButton;
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox closePictureBox;
-        private System.Windows.Forms.PictureBox hidePictureBox;
         private System.Windows.Forms.Button prescriptionButton;
-        private System.Windows.Forms.Panel totalBillingsPanel;
-        private System.Windows.Forms.Label numOfTotalBillingsLabel;
-        private System.Windows.Forms.PictureBox totalBillingsPictureBox;
-        private System.Windows.Forms.Label totalBillingsLabel;
-        private System.Windows.Forms.Panel appointmentsPanel;
-        private System.Windows.Forms.PictureBox appointmentsPictureBox;
-        private System.Windows.Forms.Label numOfAppointmentsLabel;
-        private System.Windows.Forms.Label appointmentsLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button appointmentsButton;
+        private System.Windows.Forms.Label totalBillingsLabel;
+        private System.Windows.Forms.PictureBox totalBillingsPictureBox;
+        private System.Windows.Forms.Label numOfTotalBillingsLabel;
+        private System.Windows.Forms.Panel totalBillingsPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -120,6 +120,11 @@ namespace Dental_Clinic_Management
             recepDashboardForm rec = new recepDashboardForm();
             rec.ShowDialog();
         }
+
+        private void totalBillingsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -98,5 +98,25 @@ namespace Dental_Clinic_Management
             showAppointmentsOfTheDayForm app = new showAppointmentsOfTheDayForm();
             app.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void appointmentsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void numOfAppointmentsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

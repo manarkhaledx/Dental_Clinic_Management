@@ -116,7 +116,6 @@
     <Compile Include="Billing.Designer.cs">
       <DependentUpon>Billing.cs</DependentUpon>
     </Compile>
-    <Compile Include="clinicDB.cs" />
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
