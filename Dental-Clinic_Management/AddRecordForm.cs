@@ -135,8 +135,6 @@ namespace Dental_Clinic_Management
             return null; // No radio button selected
         }
 
-       
-
         private void savePatientButton_Click_1(object sender, EventArgs e)
         {
             try
@@ -147,21 +145,27 @@ namespace Dental_Clinic_Management
                     // Validate phone number input
                     if (phoneTextBox.Text.Length == 11 && int.TryParse(phoneTextBox.Text, out _))
                     {
-                        patientDataBaseQueries.addPatient(firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, maleRadioButton, dobDateTimePicker.Value, addressTextBox.Text);
-                        this.Hide();
-                        Patient patient = new Patient();
-                        patient.ShowDialog();
+                        // Check if the phone number already exists in the database
+                        if (!IsPhoneNumberExists(phoneTextBox.Text))
+                        {
+                            patientDataBaseQueries.addPatient(firstNameTextBox.Text, lastNameTextBox.Text, phoneTextBox.Text, maleRadioButton, dobDateTimePicker.Value, addressTextBox.Text);
+                            this.Hide();
+                            Patient patient = new Patient();
+                            patient.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("This phone number already exists in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Please enter a valid 11-digit phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
                 else
                 {
                     MessageBox.Show("Please enter a value in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -169,6 +173,24 @@ namespace Dental_Clinic_Management
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private bool IsPhoneNumberExists(string phoneNumber)
+        {
+            using (SqlConnection con = getConnection())
+            {
+                con.Open();
+
+                // Replace "YourTableName" with the actual name of your patient table
+                string query = $"SELECT COUNT(*) FROM Patient WHERE Phone = '{phoneNumber}'";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
 
         private void closePictureBox_Click(object sender, EventArgs e)
         {

@@ -303,12 +303,14 @@ namespace Dental_Clinic_Management
                     command.ExecuteNonQuery();
                 }
             }
+
+
         }
-       
 
-        
 
-      
+
+
+
 
         private void editPatientButton_Click(object sender, EventArgs e)
         {

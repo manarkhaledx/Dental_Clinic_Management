@@ -109,7 +109,6 @@ namespace Dental_Clinic_Management
                 {
                     // Call the method to edit patient information
                     patientDataBaseQueries.EditPatient(phone, fname, lname, phone, address, dob, femaleRadioButton);
-                    MessageBox.Show("Patient information updated successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Patient ob = new Patient();
                     ob.ShowDialog();
@@ -124,6 +123,11 @@ namespace Dental_Clinic_Management
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void femaleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
