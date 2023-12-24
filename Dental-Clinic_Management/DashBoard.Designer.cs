@@ -63,7 +63,7 @@
             // 
             this.totalBillingsLabel.AutoSize = true;
             this.totalBillingsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalBillingsLabel.Location = new System.Drawing.Point(764, 9);
+            this.totalBillingsLabel.Location = new System.Drawing.Point(702, 12);
             this.totalBillingsLabel.Name = "totalBillingsLabel";
             this.totalBillingsLabel.Size = new System.Drawing.Size(155, 31);
             this.totalBillingsLabel.TabIndex = 1;
@@ -87,10 +87,10 @@
             this.totalBillingsPanel.Controls.Add(this.numOfTotalBillingsLabel);
             this.totalBillingsPanel.Controls.Add(this.totalBillingsPictureBox);
             this.totalBillingsPanel.Controls.Add(this.totalBillingsLabel);
-            this.totalBillingsPanel.Location = new System.Drawing.Point(643, 500);
+            this.totalBillingsPanel.Location = new System.Drawing.Point(643, 493);
             this.totalBillingsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalBillingsPanel.Name = "totalBillingsPanel";
-            this.totalBillingsPanel.Size = new System.Drawing.Size(1163, 138);
+            this.totalBillingsPanel.Size = new System.Drawing.Size(1180, 145);
             this.totalBillingsPanel.TabIndex = 23;
             this.totalBillingsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.totalBillingsPanel_Paint);
             // 
@@ -104,7 +104,7 @@
             this.appointmentsPanel.Location = new System.Drawing.Point(646, 214);
             this.appointmentsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.appointmentsPanel.Name = "appointmentsPanel";
-            this.appointmentsPanel.Size = new System.Drawing.Size(1126, 110);
+            this.appointmentsPanel.Size = new System.Drawing.Size(1126, 130);
             this.appointmentsPanel.TabIndex = 13;
             // 
             // pictureBox9
@@ -277,7 +277,7 @@
             this.totalBillingsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.totalBillingsPictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.billing;
             this.totalBillingsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.totalBillingsPictureBox.Location = new System.Drawing.Point(124, 28);
+            this.totalBillingsPictureBox.Location = new System.Drawing.Point(133, 31);
             this.totalBillingsPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalBillingsPictureBox.Name = "totalBillingsPictureBox";
             this.totalBillingsPictureBox.Size = new System.Drawing.Size(87, 86);
@@ -288,7 +288,7 @@
             // 
             this.appointmentsLabel.AutoSize = true;
             this.appointmentsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointmentsLabel.Location = new System.Drawing.Point(777, 11);
+            this.appointmentsLabel.Location = new System.Drawing.Point(696, 21);
             this.appointmentsLabel.Name = "appointmentsLabel";
             this.appointmentsLabel.Size = new System.Drawing.Size(173, 31);
             this.appointmentsLabel.TabIndex = 1;
@@ -309,7 +309,7 @@
             this.appointmentsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.appointmentsPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("appointmentsPictureBox.BackgroundImage")));
             this.appointmentsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.appointmentsPictureBox.Location = new System.Drawing.Point(130, 11);
+            this.appointmentsPictureBox.Location = new System.Drawing.Point(130, 21);
             this.appointmentsPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.appointmentsPictureBox.Name = "appointmentsPictureBox";
             this.appointmentsPictureBox.Size = new System.Drawing.Size(87, 86);
@@ -326,6 +326,7 @@
             this.exitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitButton.TabIndex = 24;
             this.exitButton.TabStop = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // recepDashboardForm
             // 

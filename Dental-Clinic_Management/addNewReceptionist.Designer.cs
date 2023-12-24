@@ -181,12 +181,13 @@
             this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closePictureBox.Location = new System.Drawing.Point(44, 29);
+            this.closePictureBox.Location = new System.Drawing.Point(833, 13);
             this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(32, 32);
             this.closePictureBox.TabIndex = 59;
             this.closePictureBox.TabStop = false;
+            this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
             // 
             // signUpReceptiontistLabel
             // 
@@ -311,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 836);
+            this.ClientSize = new System.Drawing.Size(890, 836);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.panel5);
@@ -332,6 +333,7 @@
             this.Controls.Add(this.recepGenderGroupBox);
             this.Controls.Add(this.recepDobDateTimePicker);
             this.Controls.Add(this.recepDobLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "addNewReceptionist";
             this.Text = "addNewReceptionist";

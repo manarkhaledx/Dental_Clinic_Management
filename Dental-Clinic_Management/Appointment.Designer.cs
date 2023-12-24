@@ -47,11 +47,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.deleteAppButton = new System.Windows.Forms.Button();
             this.addbutton = new System.Windows.Forms.Button();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // payButton
@@ -61,7 +63,7 @@
             this.payButton.FlatAppearance.BorderSize = 0;
             this.payButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.payButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.payButton.Location = new System.Drawing.Point(1527, 741);
+            this.payButton.Location = new System.Drawing.Point(1677, 777);
             this.payButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.payButton.Name = "payButton";
             this.payButton.Size = new System.Drawing.Size(136, 57);
@@ -76,7 +78,7 @@
             this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.phoneTextBox.Location = new System.Drawing.Point(1267, 29);
+            this.phoneTextBox.Location = new System.Drawing.Point(1379, 24);
             this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(283, 40);
@@ -88,7 +90,7 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(1033, 29);
+            this.totalCostLabel.Location = new System.Drawing.Point(1133, 26);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(196, 45);
             this.totalCostLabel.TabIndex = 83;
@@ -166,7 +168,7 @@
             this.billingHistoryDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.billingHistoryDateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ControlText;
             this.billingHistoryDateTimePicker.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billingHistoryDateTimePicker.Location = new System.Drawing.Point(534, 31);
+            this.billingHistoryDateTimePicker.Location = new System.Drawing.Point(541, 26);
             this.billingHistoryDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.billingHistoryDateTimePicker.Name = "billingHistoryDateTimePicker";
             this.billingHistoryDateTimePicker.Size = new System.Drawing.Size(459, 43);
@@ -183,7 +185,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(375, 836);
+            this.panel8.Size = new System.Drawing.Size(469, 1045);
             this.panel8.TabIndex = 22;
             // 
             // patientButton
@@ -199,7 +201,7 @@
             this.patientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.patientButton.Name = "patientButton";
             this.patientButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.patientButton.Size = new System.Drawing.Size(375, 63);
+            this.patientButton.Size = new System.Drawing.Size(474, 63);
             this.patientButton.TabIndex = 28;
             this.patientButton.Text = "patient";
             this.patientButton.UseVisualStyleBackColor = false;
@@ -218,7 +220,7 @@
             this.appointmentsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.appointmentsButton.Name = "appointmentsButton";
             this.appointmentsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.appointmentsButton.Size = new System.Drawing.Size(375, 63);
+            this.appointmentsButton.Size = new System.Drawing.Size(474, 63);
             this.appointmentsButton.TabIndex = 29;
             this.appointmentsButton.Text = " Appointments";
             this.appointmentsButton.UseVisualStyleBackColor = false;
@@ -237,7 +239,7 @@
             this.dashboardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dashboardButton.Name = "dashboardButton";
             this.dashboardButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.dashboardButton.Size = new System.Drawing.Size(375, 63);
+            this.dashboardButton.Size = new System.Drawing.Size(474, 63);
             this.dashboardButton.TabIndex = 27;
             this.dashboardButton.Text = "DashBoard";
             this.dashboardButton.UseVisualStyleBackColor = false;
@@ -251,7 +253,7 @@
             this.pictureBox10.Location = new System.Drawing.Point(-3, 0);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(375, 187);
+            this.pictureBox10.Size = new System.Drawing.Size(469, 191);
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
             // 
@@ -262,7 +264,7 @@
             this.editAppButton.FlatAppearance.BorderSize = 0;
             this.editAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editAppButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.editAppButton.Location = new System.Drawing.Point(973, 741);
+            this.editAppButton.Location = new System.Drawing.Point(1123, 777);
             this.editAppButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editAppButton.Name = "editAppButton";
             this.editAppButton.Size = new System.Drawing.Size(136, 57);
@@ -278,7 +280,7 @@
             this.filterAppButton.FlatAppearance.BorderSize = 0;
             this.filterAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterAppButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.filterAppButton.Location = new System.Drawing.Point(694, 741);
+            this.filterAppButton.Location = new System.Drawing.Point(844, 777);
             this.filterAppButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filterAppButton.Name = "filterAppButton";
             this.filterAppButton.Size = new System.Drawing.Size(136, 57);
@@ -290,7 +292,7 @@
             // appointmentDataGridView
             // 
             this.appointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.appointmentDataGridView.Location = new System.Drawing.Point(534, 108);
+            this.appointmentDataGridView.Location = new System.Drawing.Point(684, 144);
             this.appointmentDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.RowHeadersWidth = 62;
@@ -310,7 +312,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(375, 836);
+            this.panel7.Size = new System.Drawing.Size(469, 1045);
             this.panel7.TabIndex = 78;
             // 
             // deleteAppButton
@@ -320,7 +322,7 @@
             this.deleteAppButton.FlatAppearance.BorderSize = 0;
             this.deleteAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteAppButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteAppButton.Location = new System.Drawing.Point(1277, 741);
+            this.deleteAppButton.Location = new System.Drawing.Point(1427, 777);
             this.deleteAppButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deleteAppButton.Name = "deleteAppButton";
             this.deleteAppButton.Size = new System.Drawing.Size(136, 57);
@@ -336,7 +338,7 @@
             this.addbutton.FlatAppearance.BorderSize = 0;
             this.addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addbutton.Location = new System.Drawing.Point(449, 741);
+            this.addbutton.Location = new System.Drawing.Point(599, 777);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(136, 57);
@@ -345,11 +347,24 @@
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
+            // closePictureBox
+            // 
+            this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closePictureBox.Location = new System.Drawing.Point(2094, 24);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.closePictureBox.Name = "closePictureBox";
+            this.closePictureBox.Size = new System.Drawing.Size(32, 32);
+            this.closePictureBox.TabIndex = 60;
+            this.closePictureBox.TabStop = false;
+            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1710, 836);
+            this.ClientSize = new System.Drawing.Size(2138, 1045);
+            this.Controls.Add(this.closePictureBox);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.payButton);
             this.Controls.Add(this.phoneTextBox);
@@ -360,6 +375,7 @@
             this.Controls.Add(this.appointmentDataGridView);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.deleteAppButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Appointment";
             this.Text = "Appointment";
@@ -370,6 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +413,6 @@
         private System.Windows.Forms.Button appointmentsButton;
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox closePictureBox;
     }
 }

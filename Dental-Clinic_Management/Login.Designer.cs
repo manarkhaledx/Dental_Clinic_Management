@@ -118,7 +118,7 @@
             // 
             // viewPasswordPictureBox
             // 
-            this.viewPasswordPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.pngg;
+            this.viewPasswordPictureBox.Image = global::Dental_Clinic_Management.Properties.Resources.visibleEyeIcon;
             this.viewPasswordPictureBox.Location = new System.Drawing.Point(560, 188);
             this.viewPasswordPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewPasswordPictureBox.Name = "viewPasswordPictureBox";

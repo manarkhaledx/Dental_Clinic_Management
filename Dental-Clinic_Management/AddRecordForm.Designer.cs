@@ -207,6 +207,7 @@
             this.closePictureBox.Size = new System.Drawing.Size(32, 32);
             this.closePictureBox.TabIndex = 43;
             this.closePictureBox.TabStop = false;
+            this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
             // 
             // lastNameTextBox
             // 

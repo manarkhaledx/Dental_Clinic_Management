@@ -121,5 +121,23 @@ namespace Dental_Clinic_Management
         {
 
         }
+
+        private void closePictureBox_Click(object sender, EventArgs e)
+        {
+            closeFormChecker();
+        }
+        public void closeFormChecker()
+        {
+            // message to check whether the user wants to close the app or not
+            DialogResult result = MessageBox.Show("Are you Sure you want to close the app", "Quit",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+
+        }
     }
 }

@@ -20,6 +20,19 @@ namespace Dental_Clinic_Management
             InitializeComponent();
             DisplayCounts();
         }
+        public void closeFormChecker()
+        {
+            // message to check whether the user wants to close the app or not
+            DialogResult result = MessageBox.Show("Are you Sure you want to close the app", "Quit",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+
+        }
         private void DisplayCounts()
         {
             try
@@ -63,12 +76,7 @@ namespace Dental_Clinic_Management
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        public void closeFormChecker()
-        {
-
-
-
-        }
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -105,7 +113,7 @@ namespace Dental_Clinic_Management
 
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
-            closeFormChecker();
+           
         }
 
       
@@ -124,6 +132,11 @@ namespace Dental_Clinic_Management
         private void totalBillingsPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            closeFormChecker();
         }
     }
 

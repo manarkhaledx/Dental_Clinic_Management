@@ -46,6 +46,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.addPatient = new System.Windows.Forms.Button();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -53,12 +54,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // patientDataGridView
             // 
             this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientDataGridView.Location = new System.Drawing.Point(434, 185);
+            this.patientDataGridView.Location = new System.Drawing.Point(595, 150);
             this.patientDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.patientDataGridView.Name = "patientDataGridView";
             this.patientDataGridView.RowHeadersWidth = 62;
@@ -78,7 +80,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(375, 950);
+            this.panel7.Size = new System.Drawing.Size(469, 1188);
             this.panel7.TabIndex = 76;
             // 
             // panel8
@@ -92,7 +94,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(375, 950);
+            this.panel8.Size = new System.Drawing.Size(469, 1188);
             this.panel8.TabIndex = 22;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -109,7 +111,7 @@
             this.patientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.patientButton.Name = "patientButton";
             this.patientButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.patientButton.Size = new System.Drawing.Size(375, 63);
+            this.patientButton.Size = new System.Drawing.Size(474, 63);
             this.patientButton.TabIndex = 24;
             this.patientButton.Text = "patient";
             this.patientButton.UseVisualStyleBackColor = false;
@@ -128,7 +130,7 @@
             this.appointmentsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.appointmentsButton.Name = "appointmentsButton";
             this.appointmentsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.appointmentsButton.Size = new System.Drawing.Size(375, 63);
+            this.appointmentsButton.Size = new System.Drawing.Size(474, 63);
             this.appointmentsButton.TabIndex = 25;
             this.appointmentsButton.Text = " Appointments";
             this.appointmentsButton.UseVisualStyleBackColor = false;
@@ -147,7 +149,7 @@
             this.dashboardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dashboardButton.Name = "dashboardButton";
             this.dashboardButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.dashboardButton.Size = new System.Drawing.Size(375, 63);
+            this.dashboardButton.Size = new System.Drawing.Size(471, 63);
             this.dashboardButton.TabIndex = 23;
             this.dashboardButton.Text = "DashBoard";
             this.dashboardButton.UseVisualStyleBackColor = false;
@@ -161,7 +163,7 @@
             this.pictureBox10.Location = new System.Drawing.Point(-3, 0);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(375, 187);
+            this.pictureBox10.Size = new System.Drawing.Size(469, 212);
             this.pictureBox10.TabIndex = 22;
             this.pictureBox10.TabStop = false;
             // 
@@ -254,7 +256,7 @@
             this.deletePatientButton.FlatAppearance.BorderSize = 0;
             this.deletePatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePatientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deletePatientButton.Location = new System.Drawing.Point(1439, 836);
+            this.deletePatientButton.Location = new System.Drawing.Point(1417, 836);
             this.deletePatientButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deletePatientButton.Name = "deletePatientButton";
             this.deletePatientButton.Size = new System.Drawing.Size(136, 57);
@@ -268,7 +270,7 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.totalCostLabel.Location = new System.Drawing.Point(760, 78);
+            this.totalCostLabel.Location = new System.Drawing.Point(938, 52);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(196, 45);
             this.totalCostLabel.TabIndex = 80;
@@ -279,7 +281,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2110, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(2537, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 44);
@@ -291,7 +293,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Minimize;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(2057, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(2484, 10);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 44);
@@ -304,7 +306,7 @@
             this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Uighur", 22.2F, System.Drawing.FontStyle.Bold);
             this.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(111)))), ((int)(((byte)(24)))));
-            this.searchTextBox.Location = new System.Drawing.Point(994, 78);
+            this.searchTextBox.Location = new System.Drawing.Point(1172, 52);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(283, 40);
@@ -327,11 +329,25 @@
             this.addPatient.UseVisualStyleBackColor = false;
             this.addPatient.Click += new System.EventHandler(this.addPatient_Click);
             // 
+            // closePictureBox
+            // 
+            this.closePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closePictureBox.BackgroundImage = global::Dental_Clinic_Management.Properties.Resources.Exit;
+            this.closePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closePictureBox.Location = new System.Drawing.Point(2092, 13);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.closePictureBox.Name = "closePictureBox";
+            this.closePictureBox.Size = new System.Drawing.Size(32, 32);
+            this.closePictureBox.TabIndex = 83;
+            this.closePictureBox.TabStop = false;
+            this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1709, 950);
+            this.ClientSize = new System.Drawing.Size(2136, 1188);
+            this.Controls.Add(this.closePictureBox);
             this.Controls.Add(this.addPatient);
             this.Controls.Add(this.patientDataGridView);
             this.Controls.Add(this.panel7);
@@ -341,9 +357,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.searchTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Patient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
             this.panel7.ResumeLayout(false);
@@ -352,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +397,6 @@
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button addPatient;
+        private System.Windows.Forms.PictureBox closePictureBox;
     }
 }
